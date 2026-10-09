@@ -1,0 +1,95 @@
+---
+import '@fontsource/source-serif-4/400.css';
+import '@fontsource/source-serif-4/400-italic.css';
+import '@fontsource/public-sans/400.css';
+import '@fontsource/public-sans/500.css';
+import '@fontsource/public-sans/600.css';
+import '@styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+}
+
+const {
+  title,
+  description = 'Ethnoir helps founders navigate ventures and organizations shape entrepreneurship support.',
+  canonical,
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Ethnoir</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Preload fonts (optional, as fontsource handles standard local woff2 serving) -->
+  </head>
+  <body>
+    <div class="site-container">
+      <header class="site-header container">
+        <a href="/" class="brand-link" aria-label="Ethnoir Home" style="display: flex; flex-direction: column; text-decoration: none; gap: 4px;">
+          <span style="font-family: var(--font-heading); font-size: 2rem; line-height: 1; color: var(--color-tidal-ink); letter-spacing: -0.02em;">Ethnoir</span>
+          <span style="font-family: var(--font-body); font-size: 0.55rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-muted-slate);">Clarity for what comes next</span>
+        </a>
+        <nav class="site-nav" aria-label="Main Navigation">
+          <a href="/about" class={currentPath === '/about' ? 'active' : ''}>
+            About
+          </a>
+          <a
+            href="/for-organizations"
+            class={currentPath === '/for-organizations' ? 'active' : ''}
+          >
+            For Organizations
+          </a>
+          <a
+            href="/our-work"
+            class={currentPath.startsWith('/our-work') ? 'active' : ''}
+          >
+            Our Work
+          </a>
+          <a
+            href="/venture-readiness-check-in"
+            class={
+              currentPath === '/venture-readiness-check-in' ? 'active' : ''
+            }
+          >
+            Check-In
+          </a>
+          <a href="/contact" class={currentPath === '/contact' ? 'active' : ''}>
+            Contact
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site-footer container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="/" style="display: flex; flex-direction: column; text-decoration: none; gap: 4px; opacity: 0.8;">
+              <span style="font-family: var(--font-heading); font-size: 1.5rem; line-height: 1; color: var(--color-tidal-ink); letter-spacing: -0.02em;">Ethnoir</span>
+              <span style="font-family: var(--font-body); font-size: 0.45rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-muted-slate);">Clarity for what comes next</span>
+            </a>
+            <p class="copyright">
+              &copy; {new Date().getFullYear()} Ethnoir. All rights reserved.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="/privacy">Privacy Notice</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Our Work | Ethnoir"
+  description="Ethnoir’s completed work is presented with attention to what was delivered, what the evidence supports and what remains unresolved."
+>
+  <!-- SECTION 1: OPENING -->
+  <section class="bg-parchment" style="padding: var(--space-xl) 0 var(--space-2xl) 0;">
+    <div class="container grid-12">
+      <!-- Masterhead Headline -->
+      <div class="col-12 md-col-11" style="padding-top: var(--space-lg); padding-bottom: var(--space-xl);">
+        <h1 class="voice-1" style="font-size: clamp(3rem, 7vw, 5.5rem); margin: 0; line-height: 1.05; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
+          Work worth showing includes what was learned.
+        </h1>
+      </div>
+      
+      <!-- Offset Intro Block -->
+      <div class="col-12 grid-12" style="border-top: 1px solid var(--color-strong-boundary); padding-top: var(--space-lg);">
+        <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
+          <span class="voice-3" style="color: var(--color-muted-slate);">Our Work</span>
+        </div>
+        <div class="col-12 md-col-8">
+          <p class="voice-2" style="font-size: 1.5rem; line-height: 1.4; color: var(--color-tidal-ink); margin-bottom: 0; max-width: 720px;">
+            Ethnoir’s completed work is presented with attention to what was delivered, what the evidence supports and what remains unresolved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: PRINCIPAL COMPLETED CASE -->
+  <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
+    <div class="container grid-12">
+      <div class="col-12 md-col-4">
+        <span class="voice-3" style="color: var(--color-muted-slate);">Principal completed case</span>
+      </div>
+      
+      <div class="col-12 md-col-8">
+        <h2 class="voice-1" style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: var(--space-sm); color: var(--color-tidal-ink);">
+          From Business Problems to Practical Structure
+        </h2>
+        
+        <p class="voice-2" style="font-size: 1.5rem; line-height: 1.4; color: var(--color-deep-teal); margin-bottom: var(--space-xl); max-width: 720px;">
+          What a six-week founder pilot taught Ethnoir about the space between identifying a business constraint and implementing a useful response.
+        </p>
+        
+        <div style="border-left: 1px solid var(--color-quiet-rule); padding-left: var(--space-lg); max-width: 640px; margin-bottom: var(--space-xl);">
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-tidal-ink); margin-bottom: var(--space-md);">
+            The Venture Readiness Lab was a six-week virtual pilot for six active founders. Ethnoir combined a common program structure with individualized interpretation and implementation work.
+          </p>
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-tidal-ink); margin-bottom: var(--space-md);">
+            All six founders reached the final session, and Ethnoir independently reviewed five structural business deliverables. The pilot offers practical evidence about moving from visible business problems toward structural responses—and about what still needs testing before broader claims or scale.
+          </p>
+          <p class="voice-3" style="font-size: 0.875rem; color: var(--color-muted-slate); margin-bottom: 0;">
+            This activity received support from NC IDEA.
+          </p>
+        </div>
+        
+        <a href="/our-work/venture-readiness-lab" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain);">Read the full case study</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: RELATED ROUTES -->
+  <section class="bg-quiet-sand chapter chapter-moderate-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
+    <div class="container grid-12">
+      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
+        <span class="voice-3" style="color: var(--color-muted-slate);">Related routes</span>
+      </div>
+      
+      <div class="col-12 md-col-8">
+        <div class="grid-12" style="border-top: 1px solid var(--color-strong-boundary);">
+          <div class="col-12 md-col-6 padding-right-md border-right-md" style="padding-top: var(--space-md); padding-bottom: var(--space-lg);">
+            <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">
+              <a href="/for-organizations" style="color: var(--color-tidal-ink); text-decoration: none;">For Organizations &rarr;</a>
+            </h3>
+            <p class="voice-2" style="font-size: 1rem; color: var(--color-muted-slate);">
+              Explore questions arising from how entrepreneurship support is understood, designed, delivered and directed.
+            </p>
+          </div>
+          <div class="col-12 md-col-6 padding-left-md" style="padding-top: var(--space-md); padding-bottom: var(--space-lg);">
+            <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">
+              <a href="/venture-readiness-check-in" style="color: var(--color-tidal-ink); text-decoration: none;">Venture Readiness Check-In &rarr;</a>
+            </h3>
+            <p class="voice-2" style="font-size: 1rem; color: var(--color-muted-slate);">
+              Consider current venture conditions and what may deserve attention next.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .col-12 { grid-column: span 12; }
+  
+  @media (min-width: 768px) {
+    .md-col-8 { grid-column: span 8; }
+    .md-col-4 { grid-column: span 4; }
+    .md-col-7 { grid-column: span 7; }
+    .md-col-6 { grid-column: span 6; }
+    .md-col-11 { grid-column: span 11; }
+    .border-right-md { border-right: 1px solid var(--color-quiet-rule); }
+    .padding-right-md { padding-right: var(--space-lg); }
+    .padding-left-md { padding-left: var(--space-lg); }
+  }
+</style>
