@@ -190,13 +190,20 @@ import HomeHero from '../components/HomeHero.astro';
     <div class="container grid-12" style="align-items: center;">
       <div class="col-12 md-col-4" style="margin-bottom: var(--space-lg);">
         <div class="editorial-image-container" style="max-width: 320px; border: 1px solid var(--color-quiet-rule);">
-          <img
-            src="/images/ola.jpeg"
-            alt="Olajumoke Michael, Founder of Ethnoir"
-            class="editorial-image"
-            style="aspect-ratio: 4/5; object-fit: cover; object-position: center top; width: 100%; display: block;"
-            onerror="this.style.display='none';"
-          />
+          <picture>
+            <source srcset="/images/ola.webp" type="image/webp" />
+            <img
+              src="/images/ola.jpeg"
+              alt="Olajumoke Michael, Founder of Ethnoir"
+              class="editorial-image"
+              width="722"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+              style="aspect-ratio: 4/5; object-fit: cover; object-position: center top; width: 100%; height: auto; display: block;"
+              onerror="this.style.display='none';"
+            />
+          </picture>
         </div>
       </div>
 
