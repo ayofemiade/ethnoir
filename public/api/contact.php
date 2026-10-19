@@ -2,12 +2,14 @@
 /**
  * Ethnoir Contact Form Handler
  * 
- * DEPLOYMENT INSTRUCTIONS FOR HOSTINGER:
- * 1. This file must be uploaded to the `public_html/api/` directory (or equivalent public root).
- * 2. It expects a configuration file `contact-config.php` to exist one level ABOVE `public_html` 
- *    for security (e.g. `/home/u123456789/domains/ethnoir.com/contact-config.php`).
- * 3. It expects PHPMailer to be installed or uploaded. If using Hostinger File Manager, 
- *    download PHPMailer and upload the `src/` folder to `/home/u123456789/domains/ethnoir.com/PHPMailer/`.
+ * HOSTINGER DEPLOYMENT (ZERO-CONFIGURATION):
+ * - Works completely out-of-the-box using native PHP mail().
+ * - When uploading your build to Hostinger, this file is automatically placed at `public_html/api/contact.php`.
+ * - All inquiries are automatically routed to omichael@ethnoirconsulting.com.
+ * - No external libraries (like PHPMailer) are required!
+ * 
+ * (Optional) If you ever want to route via custom external SMTP, you can place a `contact-config.php`
+ * file one level above `public_html/`, but this is entirely optional.
  */
 
 header('Content-Type: application/json');
@@ -26,18 +28,29 @@ if (!empty($_POST['website_url'])) {
     exit;
 }
 
-// 2. Load Configuration (Securely outside public web root if possible)
-// Adjust this path for the actual Hostinger deployment structure.
-$configPath = realpath(__DIR__ . '/../../contact-config.php'); 
-if (!$configPath || !file_exists($configPath)) {
-    http_response_code(500);
-    // DO NOT expose path details to the client
-    error_log("Ethnoir Form Error: Missing configuration file.");
-    echo json_encode(['success' => false, 'message' => 'Server configuration error.']);
-    exit;
+// 2. Load Configuration (Securely outside public web root if possible, with fallbacks)
+$config = [];
+$candidatePaths = [
+    realpath(__DIR__ . '/../../contact-config.php'), // 1 level above public_html
+    realpath(__DIR__ . '/../contact-config.php'),    // in public_html
+    realpath(__DIR__ . '/contact-config.php'),       // in public_html/api
+];
+
+foreach ($candidatePaths as $path) {
+    if ($path && file_exists($path)) {
+        $loadedConfig = require $path;
+        if (is_array($loadedConfig)) {
+            $config = $loadedConfig;
+            break;
+        }
+    }
 }
 
-$config = require $configPath;
+// Default settings
+$recipientEmail = !empty($config['recipient_email']) ? $config['recipient_email'] : 'omichael@ethnoirconsulting.com';
+$senderEmail    = !empty($config['sender_email']) ? $config['sender_email'] : 'omichael@ethnoirconsulting.com';
+$phpmailerPath  = !empty($config['phpmailer_path']) ? $config['phpmailer_path'] : realpath(__DIR__ . '/../../PHPMailer/src');
+
 
 // 3. Input Validation and Sanitization
 $name = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING));
@@ -64,14 +77,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-if (!$privacyAck) {
-    http_response_code(400);
-    echo json_encode(['success' => false, 'message' => 'You must acknowledge the privacy notice.']);
-    exit;
-}
-
 // Validate Categories
 $allowedCategories = [
+    'Organization inquiry: a program or support challenge',
     'Institutional or venture-development challenge',
     'Collaboration or referral',
     'Venture Readiness Check-In support',
@@ -85,16 +93,16 @@ if (!in_array($inquiryType, $allowedCategories)) {
 }
 
 // Conditional Validation
-if ($inquiryType === 'Institutional or venture-development challenge') {
-    if (empty($organization) || empty($role) || empty($institutionalDetails)) {
+if ($inquiryType === 'Organization inquiry: a program or support challenge' || $inquiryType === 'Institutional or venture-development challenge') {
+    if (empty($organization) || empty($role)) {
         http_response_code(400);
-        echo json_encode(['success' => false, 'message' => 'Please provide organization, role, and institutional details.']);
+        echo json_encode(['success' => false, 'message' => 'Please provide your organization name and your role.']);
         exit;
     }
 } else if ($inquiryType === 'Venture Readiness Check-In support') {
     if (empty($checkinIssue)) {
         http_response_code(400);
-        echo json_encode(['success' => false, 'message' => 'Please select the issue you experienced with the Check-In.']);
+        echo json_encode(['success' => false, 'message' => 'Please select what happened when you used the Check-In.']);
         exit;
     }
 }
@@ -111,15 +119,16 @@ if (!empty($role)) $message .= "Role: $role\n";
 $message .= "\n--- INQUIRY DETAILS ---\n";
 $message .= "Type: $inquiryType\n";
 
-if ($inquiryType === 'Institutional or venture-development challenge') {
-    $message .= "Institutional Question/Decision:\n$institutionalDetails\n\n";
-} else if ($inquiryType === 'Venture Readiness Check-In support') {
+if ($inquiryType === 'Venture Readiness Check-In support' && !empty($checkinIssue)) {
     $message .= "Check-In Issue: $checkinIssue\n\n";
+}
+if (!empty($institutionalDetails)) {
+    $message .= "Institutional Context:\n$institutionalDetails\n\n";
 }
 
 $message .= "Description:\n$description\n\n";
 $message .= "--- SYSTEM ---\n";
-$message .= "Privacy Acknowledged: Yes\n";
+$message .= "Marketing Subscription: None created\n";
 $message .= "Timestamp: " . gmdate('Y-m-d H:i:s') . " UTC\n";
 
 // Prevent Email Header Injection in the reply-to
@@ -128,10 +137,10 @@ $cleanName = str_replace(["\r", "\n"], '', $name);
 
 // 5. Send Email Using PHPMailer (Authenticated SMTP)
 // We check if PHPMailer classes are available where configured.
-if (file_exists($config['phpmailer_path'] . '/PHPMailer.php')) {
-    require_once $config['phpmailer_path'] . '/Exception.php';
-    require_once $config['phpmailer_path'] . '/PHPMailer.php';
-    require_once $config['phpmailer_path'] . '/SMTP.php';
+if (!empty($phpmailerPath) && file_exists($phpmailerPath . '/PHPMailer.php') && !empty($config['smtp_host'])) {
+    require_once $phpmailerPath . '/Exception.php';
+    require_once $phpmailerPath . '/PHPMailer.php';
+    require_once $phpmailerPath . '/SMTP.php';
     
     $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
 
@@ -140,14 +149,14 @@ if (file_exists($config['phpmailer_path'] . '/PHPMailer.php')) {
         $mail->isSMTP();
         $mail->Host       = $config['smtp_host'];
         $mail->SMTPAuth   = true;
-        $mail->Username   = $config['smtp_user'];
-        $mail->Password   = $config['smtp_pass'];
+        $mail->Username   = !empty($config['smtp_user']) ? $config['smtp_user'] : $senderEmail;
+        $mail->Password   = !empty($config['smtp_pass']) ? $config['smtp_pass'] : '';
         $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS; // Usually Port 465 on Hostinger
-        $mail->Port       = $config['smtp_port'];
+        $mail->Port       = !empty($config['smtp_port']) ? $config['smtp_port'] : 465;
 
         // Recipients
-        $mail->setFrom($config['sender_email'], 'Ethnoir Website Form');
-        $mail->addAddress($config['recipient_email']);
+        $mail->setFrom($senderEmail, 'Ethnoir Website Form');
+        $mail->addAddress($recipientEmail);
         $mail->addReplyTo($cleanEmail, $cleanName);
 
         // Content
@@ -166,21 +175,36 @@ if (file_exists($config['phpmailer_path'] . '/PHPMailer.php')) {
         echo json_encode(['success' => false, 'message' => 'The server could not send the message at this time.']);
     }
 } else {
-    // FALLBACK: If PHPMailer is not installed, log the error and use native mail() as a last resort,
-    // though this is heavily discouraged due to deliverability issues.
-    error_log("Ethnoir Warning: PHPMailer not found at {$config['phpmailer_path']}. Falling back to native mail().");
+    // Standard Native PHP mail() delivery (Default & recommended for Hostinger)
+    error_log("Ethnoir Notice: Using native PHP mail() to $recipientEmail.");
     
-    $headers = "From: " . $config['sender_email'] . "\r\n";
-    $headers .= "Reply-To: " . $cleanName . " <" . $cleanEmail . ">\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
-
-    $success = @mail($config['recipient_email'], $subject, $message, $headers);
+    // Properly format sender headers with UTF-8 support
+    $fromHeader = "Ethnoir Inquiries <" . $senderEmail . ">";
+    $replyToHeader = mb_encode_mimeheader($cleanName, "UTF-8") . " <" . $cleanEmail . ">";
+    
+    $headers = [];
+    $headers[] = "MIME-Version: 1.0";
+    $headers[] = "Content-Type: text/plain; charset=UTF-8; format=flowed";
+    $headers[] = "Content-Transfer-Encoding: 8bit";
+    $headers[] = "From: " . $fromHeader;
+    $headers[] = "Reply-To: " . $replyToHeader;
+    $headers[] = "X-Mailer: PHP/" . phpversion();
+    
+    $headerString = implode("\r\n", $headers);
+    
+    // Attempt sending with -f envelope parameter for Hostinger SPF/DMARC compatibility
+    $success = @mail($recipientEmail, $subject, $message, $headerString, "-f " . $senderEmail);
+    
+    // If the -f parameter is restricted by server configuration, retry without it
+    if (!$success) {
+        $success = @mail($recipientEmail, $subject, $message, $headerString);
+    }
     
     if ($success) {
         echo json_encode(['success' => true]);
     } else {
-        error_log("Ethnoir Error: Native mail() failed to send.");
+        error_log("Ethnoir Error: Native PHP mail() failed to send.");
         http_response_code(500);
-        echo json_encode(['success' => false, 'message' => 'The server could not send the message at this time.']);
+        echo json_encode(['success' => false, 'message' => 'The server could not send the message at this time. Please try emailing directly to ' . $recipientEmail]);
     }
 }

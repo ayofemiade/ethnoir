@@ -1,283 +1,306 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HomeHero from '../components/HomeHero.astro';
 ---
 
 <Layout
-  title="Home"
-  description="Ethnoir helps people navigating ventures and organizations shaping entrepreneurship make sense of current conditions."
+  title="Ethnoir | Helping founders and support organizations see what a business needs next"
+  description="Ethnoir helps founders work out what deserves attention in their business, and helps organizations that support entrepreneurs understand what participants need."
 >
-  <!-- CHAPTER 01: ARRIVE -->
-  <section class="bg-parchment chapter" style="padding-top: var(--space-lg); padding-bottom: var(--space-2xl);">
-    <div class="container hero-grid">
-      <div class="registration">01</div>
-      <div style="max-width: 800px; padding-right: var(--space-lg);">
-        <h1 class="voice-1" style="margin-bottom: var(--space-md); padding-right: var(--space-xl); font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.05;">
-          Better venture decisions<br/>begin with understanding<br/>what is actually happening.
-        </h1>
-        <p class="voice-2">
-          Ethnoir helps people navigating ventures and organizations shaping entrepreneurship make sense of current conditions, clarify what matters and make better-informed decisions about direction and support.
-        </p>
-        <div class="actions-group" style="flex-wrap: wrap;">
-          <a href="/contact" class="btn-primary" style="background: var(--color-tidal-ink); color: var(--color-porcelain); border-color: var(--color-tidal-ink);">
-            Discuss a venture-development challenge
-          </a>
-          <a href="/venture-readiness-check-in" class="link-secondary">
-            Explore the Check-In &rarr;
-          </a>
-        </div>
-      </div>
-      <div style="align-self: start; text-align: left;">
-        <div class="editorial-image-container" style="position: relative; z-index: 10;">
-          <img src="/images/hero.jpg" alt="A subtle, abstract frosted glass sculpture refracting light" class="editorial-image" style="aspect-ratio: 4/5; object-fit: cover; object-position: center;" />
-        </div>
-        <div style="margin-top: calc(-1 * var(--space-lg)); margin-left: calc(-1 * var(--space-md)); position: relative; z-index: 20; background: var(--color-parchment); padding: var(--space-sm) var(--space-md) 0 var(--space-sm); width: fit-content;">
-          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.4; color: var(--color-deep-body);">
-            People.<br/>
-            Ventures.<br/>
-            <span style="font-family: var(--font-heading); font-style: italic; color: var(--color-muted-slate);">What comes next.</span>
-          </p>
-          <div style="width: 40px; height: 1px; background: var(--color-quiet-rule); margin-top: var(--space-md);"></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- SECTION 1: HERO -->
+  <HomeHero />
 
-  <!-- CHAPTER 02: WHY THIS WORK MATTERS -->
-  <section class="bg-porcelain chapter chapter-moderate-spacing">
-    <div class="container two-columns">
-      <div>
-        <span class="voice-3">Why this work matters</span>
-        <h2 class="voice-1">
-          The same answer does not fit every venture.
+  <!-- SECTION: ONE ANSWER RARELY FITS -->
+  <section class="bg-porcelain chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
+    <div class="container grid-12">
+      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">
+          Perspective
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-tidal-ink); line-height: 1.15;">
+          The same advice does not fit every business.
         </h2>
       </div>
-      <div style="padding-top: var(--space-md);">
-        <p class="voice-2">
-          A new possibility, an operating business and a venture facing a major change may need very different things. Even ventures at a similar stage can have different goals, constraints and definitions of progress.
+      <div class="col-12 md-col-7 md-col-8-offset">
+        <p class="voice-2" style="font-size: 1.25rem; line-height: 1.6; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
+          A founder testing a first offer, an owner whose sales swing from month to month and someone deciding whether to close a business are asking different questions.
         </p>
-        <p class="voice-2" style="margin-top: var(--space-md);">
-          Ethnoir looks beyond a <span style="display:inline-block; margin: 0 4px;">single score</span>, <span style="display:inline-block; margin: 0 4px;">stage</span> or <span style="display:inline-block; margin: 0 4px;">standard formula</span>. We consider what is happening, where the venture is trying to go and which conditions matter to the decision at hand.
-        </p>
-        <p class="voice-2">
-          The goal is not to prescribe one path. It is to create a clearer basis for deciding what makes sense next.
+        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-deep-body-ink); margin: 0;">
+          Ethnoir starts with what is happening in the business and where its owner wants it to go, not with a single score, stage or formula.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- CHAPTER 03: TWO ARENAS -->
-  <section class="bg-parchment chapter chapter-moderate-spacing">
-    <div class="container two-columns">
-      <div class="thin-rule-y" style="padding-right: var(--space-lg);">
-        <span class="voice-3">For people navigating ventures</span>
-        <p class="voice-2">
-          When customers, revenue, operations, finances and competing priorities all demand attention, it can be difficult to see what matters most.
-        </p>
-        <p class="voice-2">
-          Ethnoir helps people examine current conditions and consider what may deserve attention next.
-        </p>
-        <div style="margin-top: var(--space-lg);">
-          <a href="/venture-readiness-check-in" class="link-secondary">Explore the Venture Readiness Check-In</a>
-        </div>
-      </div>
-      <div>
-        <span class="voice-3">For organizations shaping entrepreneurship</span>
-        <p class="voice-2">
-          Programs, resources and opportunities are more useful when they respond to the people and ventures they are intended to support.
-        </p>
-        <p class="voice-2">
-          Ethnoir works with relevant organizations to examine venture conditions and questions arising from how entrepreneurship support is designed, delivered or directed.
-        </p>
-        <div class="subtle-top-rule">
-          <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-muted-slate);">
-            Not every venture needs the same next step. Ethnoir uses diagnostic and implementation-focused approaches and is developing an institutional application designed to help organizations understand participant needs and consider how support is placed or routed. That application remains to be tested with a partner organization.
-          </p>
-        </div>
-        <div style="margin-top: var(--space-md);">
-          <a href="/for-organizations" class="link-secondary">For Organizations</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CHAPTER 04: HOW ETHNOIR CONTRIBUTES -->
-  <section class="bg-porcelain chapter chapter-large-spacing">
-    <div class="container two-columns">
-      <div>
-        <h2 class="voice-1" style="max-width: 500px;">
-          From scattered information to clearer judgment
-        </h2>
-        <p class="voice-2" style="margin-top: var(--space-md);">
-          Ethnoir brings together relevant information, identifies patterns and gaps, and helps turn what is learned into a clearer basis for judgment.
-        </p>
-      </div>
-      <div style="padding-top: var(--space-xs);">
-        <div class="thin-rule-x" style="display: flex; gap: var(--space-md); align-items: baseline;">
-          <span style="font-size: 0.875rem; color: var(--color-muted-slate);">01</span>
-          <p class="voice-2" style="margin-bottom: 0;">Interpreting current venture conditions</p>
-        </div>
-        <div class="thin-rule-x" style="display: flex; gap: var(--space-md); align-items: baseline;">
-          <span style="font-size: 0.875rem; color: var(--color-muted-slate);">02</span>
-          <p class="voice-2" style="margin-bottom: 0;">Helping people consider what may deserve attention next</p>
-        </div>
-        <div class="thin-rule-x" style="display: flex; gap: var(--space-md); align-items: baseline;">
-          <span style="font-size: 0.875rem; color: var(--color-muted-slate);">03</span>
-          <p class="voice-2" style="margin-bottom: 0;">Designing structured founder support</p>
-        </div>
-        <div class="thin-rule-x" style="display: flex; gap: var(--space-md); align-items: baseline;">
-          <span style="font-size: 0.875rem; color: var(--color-muted-slate);">04</span>
-          <p class="voice-2" style="margin-bottom: 0;">Learning from Ethnoir’s own venture-development work</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CHAPTER 05: EVIDENCE -->
-  <section class="bg-quiet-sand chapter chapter-large-spacing">
-    <div class="container">
+  <!-- SECTION: TWO GROUPS -->
+  <section class="bg-parchment chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
+    <div class="container grid-12">
       
-      <!-- Narrative Anchor -->
-      <div style="max-width: 760px; margin-bottom: var(--space-xl);">
-        <span class="voice-3">Evidence of current work</span>
-        <h2 class="voice-1" style="margin-bottom: var(--space-md);">
-          The Venture Readiness Lab
-        </h2>
-        <p class="voice-2" style="font-size: 1.25rem;">
-          In 2026, Ethnoir designed and delivered a six-week pilot for founders working through operational, revenue, financial and implementation questions in their businesses.
-        </p>
-      </div>
-      
-      <!-- Architectural Stats Grid -->
-      <div class="stats-grid" style="margin-bottom: 0;">
-        <div class="stat-block">
-          <div class="stat-huge">06</div>
-          <div class="stat-caption">weeks</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-huge">06</div>
-          <div class="stat-caption">active founders</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-huge">05</div>
-          <div class="stat-caption">participants with structural deliverables independently reviewed</div>
-        </div>
-      </div>
-      
-      <!-- Architecturally Centered Conclusion Block -->
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <!-- Vertical Plumb Line -->
-        <div style="width: 1px; height: 80px; background-color: var(--color-quiet-rule); margin-bottom: var(--space-md);"></div>
-        
-        <span class="voice-3" style="margin-bottom: var(--space-lg);">What the pilot made clear</span>
-        
-        <h3 class="voice-1" style="max-width: 760px; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--space-md); line-height: 1.15; color: var(--color-tidal-ink);">
-          The pilot also brought important questions about materials, pacing, technology, financial content and continued implementation into clearer view.
+      <!-- Group 1: Founders -->
+      <div class="col-12 md-col-6 thin-rule-y" style="padding-right: var(--space-xl); margin-bottom: var(--space-xl);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: var(--space-xs);">
+          For founders and business owners
+        </span>
+        <h3 class="voice-1" style="font-size: 1.875rem; color: var(--color-tidal-ink); line-height: 1.2; margin-bottom: var(--space-md);">
+          Not sure what to work on first?
         </h3>
-        
-        <p class="voice-2" style="max-width: 500px; color: var(--color-muted-slate); margin-bottom: var(--space-xl);">
-          Those lessons are informing what Ethnoir retains, changes and tests next.
+        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.55; color: var(--color-deep-body-ink); margin-bottom: var(--space-lg);">
+          The Venture Readiness Check-In is a short self-check across customers, sales, operations, money and your own capacity. Get a practical snapshot of your business readiness and a suggested next step. You can read how it works.
         </p>
-        
-        <a href="/our-work" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain);">View Our Work &rarr;</a>
+        <a href="/venture-readiness-check-in" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; align-self: flex-start; display: inline-block;">
+          Explore the Check-In &rarr;
+        </a>
       </div>
-      
+
+      <!-- Group 2: Organizations -->
+      <div class="col-12 md-col-6" style="padding-left: var(--space-md); margin-bottom: var(--space-xl);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: var(--space-xs);">
+          For organizations that support entrepreneurs
+        </span>
+        <h3 class="voice-1" style="font-size: 1.875rem; color: var(--color-tidal-ink); line-height: 1.2; margin-bottom: var(--space-md);">
+          Does your support fit the people it is meant to serve?
+        </h3>
+        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.55; color: var(--color-deep-body-ink); margin-bottom: var(--space-lg);">
+          Bring a specific question: what participants are dealing with, why part of a program is hard to use, or what evidence should change your approach. A first conversation is exploratory and commits neither side.
+        </p>
+        <a href="/for-organizations" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 500; display: inline-block;">
+          For Organizations &rarr;
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- CHAPTER 06: THE CHECK-IN -->
-  <section class="bg-quiet-sand chapter chapter-moderate-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
-    <div class="container two-columns">
-      <div class="editorial-image-container">
-        <img src="/images/check-in.jpg" alt="A premium notebook on a textured desk representing readiness" class="editorial-image" style="aspect-ratio: 4/3; object-fit: cover;" />
-      </div>
-      <div style="display: flex; flex-direction: column; justify-content: center; padding-left: var(--space-md);">
-        <span class="voice-3">Venture Readiness Check-In</span>
-        <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.5rem); margin-bottom: var(--space-sm);">
-          Unsure what deserves attention in your business right now?
+  <!-- SECTION: WHAT ETHNOIR DOES -->
+  <section class="bg-porcelain chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
+    <div class="container grid-12">
+      <div class="col-12 md-col-4" style="margin-bottom: var(--space-lg);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">
+          Approach
+        </span>
+        <h2 class="voice-1" style="font-size: 2.25rem; color: var(--color-tidal-ink); line-height: 1.15;">
+          What Ethnoir does
         </h2>
-        <p class="voice-2">
-          The Venture Readiness Check-In is a short resource for people who have begun testing an idea with customers or are actively operating a business.
-        </p>
-        <p class="voice-2" style="margin-bottom: var(--space-lg);">
-          It asks you to reflect on customer activity, revenue, operations, financial visibility, repeatability and your capacity to carry the work. The result offers a starting point for considering which area may deserve attention next.
-        </p>
-        
-        <div style="display: flex; flex-direction: column; gap: var(--space-sm); align-items: flex-start;">
-          <a href="/venture-readiness-check-in" class="btn-primary" style="background: var(--color-tidal-ink); color: var(--color-porcelain);">
-            Explore the Check-In &rarr;
-          </a>
-          <span style="font-family: var(--font-body); font-size: 0.875rem; color: var(--color-muted-slate);">
-            This is not a funding decision, program application, business diagnosis or grade.
-          </span>
+      </div>
+
+      <div class="col-12 md-col-7 md-col-8-offset">
+        <div style="border-top: 1px solid var(--color-quiet-rule);">
+          
+          <div style="padding: var(--space-md) 0; border-bottom: 1px solid var(--color-quiet-rule);">
+            <h3 class="voice-1" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin-bottom: 6px;">
+              Looks closely at a business.
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.5; color: var(--color-deep-body-ink); margin: 0;">
+              We gather the information that matters, separate what is known from what is assumed, and describe what appears to be happening.
+            </p>
+          </div>
+
+          <div style="padding: var(--space-md) 0; border-bottom: 1px solid var(--color-quiet-rule);">
+            <h3 class="voice-1" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin-bottom: 6px;">
+              Designs practical support.
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.5; color: var(--color-deep-body-ink); margin: 0;">
+              We plan who a program is for, the session sequence, participant materials, activities and follow-up.
+            </p>
+          </div>
+
+          <div style="padding: var(--space-md) 0; border-bottom: 1px solid var(--color-quiet-rule);">
+            <h3 class="voice-1" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin-bottom: 6px;">
+              Learns from delivery.
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.5; color: var(--color-deep-body-ink); margin: 0;">
+              We review what happened and decide what to keep, change or test.
+            </p>
+          </div>
+
+        </div>
+
+        <div style="background-color: var(--color-parchment); padding: var(--space-md); border-left: 2px solid var(--color-deep-teal); margin-top: var(--space-lg);">
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.5; color: var(--color-tidal-ink); margin: 0; font-weight: 500;">
+            Ethnoir helps organizations supporting entrepreneurs connect program design, practical delivery and learning from evidence.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CHAPTER 07: FOUNDER -->
-  <section class="bg-parchment chapter chapter-moderate-spacing">
-    <div class="container two-columns" style="align-items: center;">
-      <div>
-        <span class="voice-3">Founded by</span>
-        <h2 class="voice-1" style="font-size: clamp(2.5rem, 4vw, 3rem); margin-bottom: var(--space-sm);">Olajumoke Michael</h2>
-        <p class="voice-2">
-          Olajumoke Michael founded Ethnoir in 2025 in Winston-Salem, North Carolina.
-        </p>
-        <p class="voice-2">
-          Her professional experience spans entrepreneurship support, program strategy and delivery, institutional operations, stakeholder coordination and program learning across nonprofit, higher-education, government and economic-development settings.
-        </p>
-        <div style="margin-top: var(--space-md);">
-          <a href="/about" class="link-secondary">About Ethnoir &rarr;</a>
-        </div>
+  <!-- SECTION: EVIDENCE -->
+  <section class="bg-quiet-sand chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
+    <div class="container grid-12">
+      <div class="col-12" style="margin-bottom: var(--space-md);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">
+          Evidence
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-tidal-ink); line-height: 1.15; max-width: 800px;">
+          What Ethnoir has actually done
+        </h2>
       </div>
-      <div class="editorial-image-container" style="max-width: 480px; margin: 0 auto;">
-        <img src="/images/ola.jpeg" alt="Olajumoke Michael, Founder of Ethnoir" class="editorial-image" style="aspect-ratio: 4/5; object-fit: cover; object-position: center top;" />
-      </div>
-    </div>
-  </section>
 
-  <!-- CHAPTER 08: THE INSTITUTIONAL INVITATION -->
-  <section class="bg-tidal-ink chapter chapter-large-spacing">
-    <div class="container" style="max-width: 960px;">
-      <h2 class="voice-1" style="margin-bottom: var(--space-lg); padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-quiet-rule);">
-        Start with the challenge, not a predetermined service.
-      </h2>
-      <div class="two-columns">
-        <div>
-          <p class="voice-2">
-            If your organization is trying to understand the conditions affecting entrepreneurs or examine a question arising from how venture support is designed, delivered or directed, Ethnoir welcomes the conversation.
-          </p>
-        </div>
-        <div>
-          <p class="voice-2">
-            Share the question, decision or support challenge you are working through. From there, we can determine whether Ethnoir may be a useful fit.
-          </p>
-          <div class="actions-group">
-            <a href="/contact" class="btn-primary">
-              Discuss a venture-development challenge
-            </a>
-            <a href="/our-work" class="link-secondary">
-              View Our Work
-            </a>
+      <div class="col-12 md-col-9" style="margin-bottom: var(--space-lg);">
+        <p class="voice-2" style="font-size: 1.1875rem; line-height: 1.55; color: var(--color-deep-body-ink);">
+          In summer 2026 Ethnoir designed and ran the Venture Readiness Lab, a six-week virtual pilot in which founders each worked on one problem in their own business. We built the session sequence, workbooks and exercises, ran six weekly sessions and two office hours, tracked attendance, reviewed what founders produced and recorded what to change.
+        </p>
+      </div>
+
+      <!-- Architectural Fact Strip -->
+      <div class="col-12" style="margin-bottom: var(--space-lg);">
+        <div class="fact-strip-container">
+          <div class="fact-item">
+            <span class="fact-number voice-1">6 weeks</span>
+            <span class="fact-desc voice-3">June 24–July 31, 2026</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-number voice-1">6 active founders</span>
+            <span class="fact-desc voice-3">reached the final session</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-number voice-1">5 deliverables</span>
+            <span class="fact-desc voice-3">reviewed and confirmed by the Founder</span>
           </div>
         </div>
       </div>
+
+      <!-- Limitation / Evaluation Disclosure -->
+      <div class="col-12 md-col-8" style="margin-bottom: var(--space-lg);">
+        <p class="voice-2" style="font-size: 1rem; line-height: 1.5; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
+          The Founder, who also ran the program, reviewed and confirmed the five deliverables. That was not an outside evaluation. The pilot was smaller than planned and did not measure business results.
+        </p>
+        
+        <div style="display: flex; align-items: center; gap: var(--space-md); padding: var(--space-sm) 0; border-top: 1px solid var(--color-quiet-rule);">
+          <p class="voice-3" style="font-size: 0.9375rem; color: var(--color-tidal-ink); margin: 0; font-weight: 500;">
+            This activity received support from NC IDEA.
+          </p>
+          <div class="nc-idea-badge" style="padding: 4px 10px; background: var(--color-parchment); border: 1px solid var(--color-quiet-rule); font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-tidal-ink);">
+            NC IDEA Supported
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <a href="/our-work" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-block;">
+          View Our Work &rarr;
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- CHAPTER 09: THE FINAL CHOICE -->
-  <section class="bg-parchment chapter chapter-tight-spacing">
-    <div class="container" style="text-align: center; max-width: 600px;">
-      <h3 class="voice-2" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">
-        Navigating a venture yourself?
-      </h3>
-      <p class="voice-2" style="margin-bottom: var(--space-md);">
-        The Venture Readiness Check-In offers another place to begin.
-      </p>
-      <a href="/venture-readiness-check-in" class="link-secondary">
-        Explore the Check-In &rarr;
-      </a>
+  <!-- SECTION: FOUNDER -->
+  <section class="bg-parchment chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
+    <div class="container grid-12" style="align-items: center;">
+      <div class="col-12 md-col-4" style="margin-bottom: var(--space-lg);">
+        <div class="editorial-image-container" style="max-width: 320px; border: 1px solid var(--color-quiet-rule);">
+          <img
+            src="/images/ola.jpeg"
+            alt="Olajumoke Michael, Founder of Ethnoir"
+            class="editorial-image"
+            style="aspect-ratio: 4/5; object-fit: cover; object-position: center top; width: 100%; display: block;"
+            onerror="this.style.display='none';"
+          />
+        </div>
+      </div>
+
+      <div class="col-12 md-col-7 md-col-8-offset">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">
+          Founder
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-tidal-ink); margin-bottom: var(--space-md); line-height: 1.15;">
+          Olajumoke Michael
+        </h2>
+        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-deep-body-ink); margin-bottom: var(--space-lg);">
+          Olajumoke founded Ethnoir in 2025 and leads it from Winston-Salem, North Carolina. Her earlier work covers entrepreneurship support, program delivery, institutional operations and program learning across nonprofit, higher-education, government and economic-development settings.
+        </p>
+        <a href="/about" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 500; display: inline-block;">
+          About Ethnoir &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: CLOSING INVITATION -->
+  <section class="bg-tidal-ink chapter chapter-large-spacing">
+    <div class="container grid-12">
+      <div class="col-12 md-col-9" style="max-width: 840px;">
+        <h2 class="voice-1" style="font-size: clamp(2.25rem, 4.5vw, 3.5rem); color: var(--color-porcelain); line-height: 1.15; margin-bottom: var(--space-md); letter-spacing: -0.02em;">
+          Bring us a specific question.
+        </h2>
+        <p class="voice-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--color-parchment); margin-bottom: var(--space-xl);">
+          You do not need a finished project plan. Describe what your organization is trying to understand, and we will work out whether Ethnoir can responsibly help.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-lg);">
+          <a href="/contact?type=institutional" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none;">
+            Discuss an entrepreneurship-support challenge
+          </a>
+          <a href="/our-work" class="link-secondary voice-3" style="color: var(--color-parchment); font-size: 1rem;">
+            View Our Work &rarr;
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
 </Layout>
+
+<style>
+  .col-12 { grid-column: span 12; }
+  
+  .fact-strip-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    background-color: var(--color-parchment);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-quiet-rule);
+  }
+  
+  .fact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-quiet-rule);
+  }
+  
+  .fact-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .fact-number {
+    font-size: 1.75rem;
+    color: var(--color-tidal-ink);
+    line-height: 1.1;
+  }
+  
+  .fact-desc {
+    font-size: 0.9375rem;
+    color: var(--color-muted-slate);
+  }
+
+  @media (min-width: 768px) {
+    .md-col-10 { grid-column: span 10; }
+    .md-col-9 { grid-column: span 9; }
+    .md-col-8 { grid-column: span 8; }
+    .md-col-7 { grid-column: span 7; }
+    .md-col-6 { grid-column: span 6; }
+    .md-col-4 { grid-column: span 4; }
+    .md-col-8-offset { grid-column: 5 / span 8; }
+
+    .fact-strip-container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+    
+    .fact-item {
+      padding-bottom: 0;
+      border-bottom: none;
+      border-right: 1px solid var(--color-quiet-rule);
+      padding-right: var(--space-md);
+    }
+    
+    .fact-item:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+</style>

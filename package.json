@@ -14,13 +14,15 @@
     "lint": "eslint .",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "bundle:hostinger": "astro build && powershell -Command \"Compress-Archive -Path dist/* -DestinationPath hostinger-deploy.zip -Force\""
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "@fontsource/public-sans": "^5.3.0",
     "@fontsource/source-serif-4": "^5.3.0",
     "astro": "^7.3.7",
+    "gsap": "^3.15.0",
     "zod": "^4.6.5"
   },
   "allowScripts": {

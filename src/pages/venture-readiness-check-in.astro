@@ -2,14 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 
 // Centralized configuration for the Check-In availability state.
-// Set to false (Scenario B) because the Tally integration and email delivery 
-// cannot be independently verified at this time.
-const isCheckInActive = false;
+// Activated following verification of live result delivery.
+const isCheckInActive = true;
 ---
 
 <Layout
   title="Venture Readiness Check-In | Ethnoir"
-  description="A short Ethnoir resource that helps you step back, look across several areas of your business and consider what may deserve attention next."
+  description="Get a practical snapshot of your business readiness and a suggested next step."
 >
   <!-- SECTION 1: OPENING AND ACCESS -->
   <section class="bg-parchment" style="padding: var(--space-lg) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
@@ -19,40 +18,51 @@ const isCheckInActive = false;
       </div>
       
       <div class="col-12 md-col-9" style="margin-bottom: var(--space-lg);">
-        <h1 class="voice-1" style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; line-height: 1.1; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
-          When several parts of the business need attention, where do you begin?
+        <h1 class="voice-1" style="font-size: clamp(2.5rem, 6vw, 4.25rem); margin: 0; line-height: 1.1; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
+          When several parts of your business need attention, where do you begin?
         </h1>
       </div>
       
       <div class="col-12 grid-12">
         <div class="col-12 md-col-6 padding-right-md" style="margin-bottom: var(--space-lg);">
           <p class="voice-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--color-deep-teal); margin-bottom: var(--space-md);">
-            The Venture Readiness Check-In is a short Ethnoir resource that helps you step back, look across several areas of your business and consider what may deserve attention next.
+            The Venture Readiness Check-In is a short Ethnoir resource that helps you step back, look across several areas of your business and decide what to look at next.
           </p>
           <p class="voice-2" style="font-size: 1.125rem; line-height: 1.5; color: var(--color-tidal-ink); margin: 0;">
-            It is designed to support reflection and better-informed judgment—not to give every venture the same answer.
+            It is designed to support your own judgment, not to give every business the same answer.
           </p>
         </div>
         
         <div class="col-12 md-col-5 md-col-7-offset" style="border-left: 2px solid var(--color-quiet-rule); padding-left: var(--space-md);">
-          <!-- Practical details inline list -->
-          <ul class="practical-details voice-3" style="list-style: none; padding: 0; margin: 0 0 var(--space-lg) 0; color: var(--color-deep-body-ink);">
-            <li>12 scored questions plus a short profile</li>
-            <li>Approximately 4–6 minutes</li>
-            <li>Result intended by email</li>
-          </ul>
+          <!-- Practical details strip -->
+          <div class="voice-3" style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-deep-teal); font-weight: 600; margin-bottom: var(--space-xs);">
+            A short profile and business questions &middot; Result intended by email
+          </div>
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5; margin-bottom: var(--space-md);">
+            Get a practical snapshot of your business readiness and a suggested next step. Answer based on what is true in your business today.
+          </p>
           
           <!-- Availability State -->
           {isCheckInActive ? (
             <div>
-              <a href="https://tally.so/r/placeholder" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain);">Start the Check-In</a>
+              <a
+                href="https://tally.so/r/XxEDD4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+                style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-block;"
+              >
+                Start the Check-In &rarr;
+              </a>
             </div>
           ) : (
             <div style="background-color: var(--color-porcelain); padding: var(--space-md); border: 1px solid var(--color-quiet-rule);">
               <p class="voice-2" style="font-size: 0.9375rem; margin-bottom: var(--space-sm); color: var(--color-tidal-ink);">
                 The Check-In is currently undergoing an operational review. You can learn how it works below, and active access will be made available when the review is complete.
               </p>
-              <a href="/contact" class="link-secondary voice-3" style="font-size: 0.875rem; color: var(--color-tidal-ink);">Contact Ethnoir about the Check-In &rarr;</a>
+              <a href="/contact?type=checkin-support" class="link-secondary voice-3" style="font-size: 0.875rem; color: var(--color-tidal-ink);">
+                Contact Ethnoir about the Check-In &rarr;
+              </a>
             </div>
           )}
         </div>
@@ -64,28 +74,32 @@ const isCheckInActive = false;
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
       <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Who it is for</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Is the Check-In relevant to you?</h2>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Audience</span>
+        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Who it is for</h2>
       </div>
       
       <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.25rem; margin-bottom: var(--space-md);">The Check-In may be useful if you:</p>
+        <p class="voice-2" style="font-size: 1.25rem; margin-bottom: var(--space-md);">
+          The Check-In may be useful if you:
+        </p>
         
         <ul class="editorial-list voice-2" style="margin-bottom: var(--space-lg);">
-          <li>have begun testing an idea with potential customers;</li>
-          <li>are actively operating a business;</li>
+          <li>have started testing an idea with potential customers;</li>
+          <li>run a business;</li>
           <li>are trying to decide which part of the business needs closer attention; or</li>
-          <li>feel pulled among customer, revenue, operational, financial or capacity concerns.</li>
+          <li>feel pulled among customer, sales, operations, money or capacity concerns.</li>
         </ul>
         
         <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-teal); margin-bottom: var(--space-xl); padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-quiet-rule);">
-          You do not need to be seeking funding, preparing for rapid growth or applying to an Ethnoir program.
+          You do not need to be seeking funding, planning fast growth or applying to an Ethnoir program.
         </p>
         
-        <!-- Too early guidance -->
-        <div style="background-color: var(--color-quiet-sand); padding: var(--space-md);">
-          <h3 class="voice-1" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">It may be too early if your idea is still untested.</h3>
-          <p class="voice-2" style="font-size: 1rem; margin: 0; color: var(--color-deep-body-ink);">
+        <!-- Too early guidance callout -->
+        <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border-left: 2px solid var(--color-deep-teal);">
+          <h3 class="voice-1" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">
+            It may be too early if your idea is still untested.
+          </h3>
+          <p class="voice-2" style="font-size: 1rem; margin: 0; color: var(--color-deep-body-ink); line-height: 1.6;">
             If you have not yet spoken with potential customers or gathered early evidence about the problem you want to address, exploring the problem and testing your assumptions may be a more useful place to begin.
           </p>
         </div>
@@ -98,7 +112,7 @@ const isCheckInActive = false;
     <div class="container">
       <div style="text-align: center; margin-bottom: var(--space-xl);">
         <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">What it considers</span>
-        <h2 class="voice-1" style="font-size: 2.5rem; color: var(--color-tidal-ink); margin: 0;">Six areas that can shape what makes sense next</h2>
+        <h2 class="voice-1" style="font-size: 2.25rem; color: var(--color-tidal-ink); margin: 0;">Six areas that can shape what makes sense next</h2>
       </div>
       
       <div class="grid-12">
@@ -129,69 +143,58 @@ const isCheckInActive = false;
       </div>
       
       <div style="max-width: 800px; margin: var(--space-lg) auto 0; padding-top: var(--space-md); border-top: 1px solid var(--color-quiet-rule); text-align: center;">
-        <p class="voice-2" style="font-size: 1rem; color: var(--color-muted-slate); margin: 0;">
-          These areas do not represent everything that could matter in a venture. They provide a structured view of several conditions that may be relevant to your next decision.
+        <p class="voice-2" style="font-size: 1rem; color: var(--color-muted-slate); margin: 0; line-height: 1.6;">
+          These areas do not cover everything that could matter. They give a structured view of several conditions that may be relevant to your next decision.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4: WHAT THE USER RECEIVES -->
+  <!-- SECTION 4: WHAT YOU RECEIVE -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
       <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">What you receive and how to use it</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">A starting point for reflection</h2>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Deliverable</span>
+        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">What you receive</h2>
       </div>
       
       <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-md);">
-          Your result includes a readiness stage used within the Check-In, an explanation of what that stage generally means, and guidance about the kind of work that may deserve attention next.
+        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-lg); color: var(--color-tidal-ink);">
+          Your result includes your stage under the current Check-In model, an explanation of the 20–86 score, observations based on your answers and a suggested practical next step. The score summarizes self-reported answers; it is not a percentage, grade, funding probability or independently verified assessment. Compare the guidance with what you know about your business.
         </p>
         
-        <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-sm);">You can use it to:</p>
-        <ul class="editorial-list voice-2" style="margin-bottom: var(--space-lg);">
-          <li>step back from competing concerns;</li>
-          <li>notice an area that may need closer attention;</li>
-          <li>identify questions to investigate;</li>
-          <li>compare the result with what you already know; or</li>
-          <li>prepare for a conversation with an adviser or specialist.</li>
-        </ul>
-        
-        <div style="background-color: var(--color-parchment); padding: var(--space-md); border-left: 2px solid var(--color-quiet-rule);">
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">
-            The result reflects the information collected through the Check-In. Combine it with your knowledge of the venture, its direction and its circumstances.
-          </p>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-tidal-ink); margin: 0;">
-            You may agree with the result, question part of it or decide that another condition matters more. It may support acting, waiting, gathering more evidence or seeking appropriate expertise.
+        <div style="background-color: var(--color-parchment); padding: var(--space-md); border-left: 2px solid var(--color-deep-teal);">
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin: 0; line-height: 1.6;">
+            The result is based on self-reported answers. Combine it with your knowledge of the business, its direction and its circumstances. It does not establish a verified root cause, and you may decide another issue deserves attention first.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5: APPLICATIONS -->
+  <!-- SECTION 5: HOW THIS APPROACH MAY BE USED -->
   <section class="bg-quiet-sand chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container">
       <div style="text-align: center; margin-bottom: var(--space-xl);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">How this approach may be used</span>
-        <h2 class="voice-1" style="font-size: 2.25rem; color: var(--color-tidal-ink); margin: 0;">Current founder application—and a proposed institutional application</h2>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Applications</span>
+        <h2 class="voice-1" style="font-size: 2.25rem; color: var(--color-tidal-ink); margin: 0;">How this approach may be used</h2>
       </div>
       
       <div class="grid-12">
         <div class="col-12 md-col-6 padding-right-md border-right-md" style="margin-bottom: var(--space-lg);">
-          <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">For people navigating ventures</h3>
-          <p class="voice-2" style="font-size: 1.125rem;">
-            The current founder-facing application helps a person consider a readiness stage, a primary bottleneck and a next capability-building priority. The result is a starting point for judgment, not a final decision.
+          <h3 class="voice-1" style="font-size: 1.375rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">
+            For founders and business owners
+          </h3>
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.6; color: var(--color-deep-body-ink); margin: 0;">
+            Use the result to organize questions, identify an area to investigate or prepare for a conversation with an adviser. It is a starting point for judgment, not a final decision.
           </p>
         </div>
         <div class="col-12 md-col-6 padding-left-md">
-          <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">For organizations</h3>
-          <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-md);">
-            Ethnoir is developing a proposed institutional application focused on participant understanding, segmentation, routing or program placement, and learning about capability change. It remains untested with a partner organization. 
-          </p>
-          <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); font-weight: 500; margin: 0;">
-            Any institutional use of founder-level diagnostic information would require appropriate consent, privacy and data-governance design.
+          <h3 class="voice-1" style="font-size: 1.375rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">
+            For organizations
+          </h3>
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.6; color: var(--color-deep-body-ink); margin: 0;">
+            A proposed institutional application is being developed. It has not been tested with a partner organization, and any use of founder-level information would need consent, privacy and data-governance design.
           </p>
         </div>
       </div>
@@ -202,29 +205,27 @@ const isCheckInActive = false;
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
       <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">What the Check-In does not do</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">A useful resource—not a decision made for you</h2>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Boundaries</span>
+        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">What the Check-In does not do</h2>
       </div>
       
-      <div class="col-12 md-col-7-offset">
-        <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-sm);">The Check-In is:</p>
-        
-        <ul class="editorial-list voice-2" style="margin-bottom: var(--space-md);">
-          <li>not a funding or program-eligibility decision;</li>
-          <li>not a definitive business diagnosis;</li>
-          <li>not legal, financial, tax or other specialist advice;</li>
-          <li>not a guarantee of the correct next step; and</li>
-          <li>not a grade or judgment about your potential.</li>
+      <div class="col-12 md-col-8">
+        <ul class="editorial-list voice-2" style="margin-bottom: var(--space-lg);">
+          <li>It is not a funding or program-eligibility decision.</li>
+          <li>It is not a definitive business diagnosis.</li>
+          <li>It is not legal, financial, tax or other specialist advice.</li>
+          <li>It is not a guarantee of the correct next step.</li>
+          <li>It is not a grade or judgment about your potential.</li>
         </ul>
         
-        <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-teal); margin: 0;">
+        <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-teal); margin: 0; line-height: 1.5;">
           It offers general guidance based on a limited set of responses at a particular point in time.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 7: TIME AND PROCESS -->
+  <!-- SECTION 7: WHAT TO EXPECT -->
   <section class="bg-parchment chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container">
       <div style="text-align: center; margin-bottom: var(--space-xl);">
@@ -236,22 +237,22 @@ const isCheckInActive = false;
         <div class="col-12 md-col-4 process-step">
           <div class="step-number voice-1">1</div>
           <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Complete a short profile</h3>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink);">
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5;">
             Provide basic contact and business-context information so the Check-In can process and deliver your result.
           </p>
         </div>
         <div class="col-12 md-col-4 process-step">
           <div class="step-number voice-1">2</div>
-          <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Answer 12 scored questions</h3>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink);">
-            Answer based on what is true in the business today—not only what you intend or expect.
+          <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Answer the business questions</h3>
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5;">
+            Answer based on what is true in the business today, not only what you intend or expect.
           </p>
         </div>
         <div class="col-12 md-col-4 process-step" style="border-right: none;">
           <div class="step-number voice-1">3</div>
           <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Receive your result by email</h3>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink);">
-            The current process is intended to email your readiness-stage explanation and general guidance after submission.
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5;">
+            Submitting requests your result; occasional updates are optional. Allow up to 30 minutes for an automatic result. Answers needing human review may take longer.
           </p>
         </div>
       </div>
@@ -268,29 +269,25 @@ const isCheckInActive = false;
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
       <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Privacy and data</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Before you begin</h2>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Data governance</span>
+        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Privacy and data</h2>
       </div>
       
       <div class="col-12 md-col-8">
         <div style="max-width: 680px;">
-          <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-md);">
-            The Check-In collects the information you choose to provide, including your contact details, responses and limited information about your business and its current circumstances.
-          </p>
-          <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-md);">
-            Ethnoir uses this information to operate the Check-In, calculate and deliver your result, respond to support requests, understand how the resource is being used and improve its usefulness.
-          </p>
-          <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-lg); color: var(--color-muted-slate);">
-            The current experience uses Tally and connected service providers to process submissions and deliver results.
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-md); color: var(--color-deep-body-ink);">
+            The Check-In collects your contact details, answers and the business context requested by the form. Ethnoir uses Tally, Airtable, Make and MailerLite to process submissions, generate and deliver results, retain operational delivery records and provide support. Occasional updates use a separate optional checkbox; leaving it unchecked does not prevent an eligible new result request from being delivered.
           </p>
           
-          <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); margin-bottom: var(--space-lg);">
-            <p class="voice-2" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 500; margin: 0;">
+          <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border-left: 2px solid var(--color-deep-teal); margin-bottom: var(--space-lg);">
+            <p class="voice-2" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 500; margin: 0; line-height: 1.5;">
               Do not submit Social Security numbers, bank-account or payment-card information, passwords, health information or other sensitive personal information through the Check-In.
             </p>
           </div>
           
-          <a href="/privacy" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink);">Read the Ethnoir Privacy Notice &rarr;</a>
+          <a href="/privacy" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink);">
+            Read the Ethnoir Privacy Notice &rarr;
+          </a>
         </div>
       </div>
     </div>
@@ -300,51 +297,70 @@ const isCheckInActive = false;
   <section class="bg-parchment chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
       <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Support</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Need help with your result?</h2>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Assistance</span>
+        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Support</h2>
       </div>
       
       <div class="col-12 md-col-8">
         <div style="max-width: 680px;">
-          <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-md);">
-            If you complete the Check-In but do not receive your result, or believe something may have been processed incorrectly, contact Ethnoir and include the email address you used for the Check-In.
-          </p>
-          <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-teal); margin-bottom: var(--space-lg);">
-            Do not send passwords, financial records or other sensitive information.
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-md); color: var(--color-deep-body-ink);">
+            Need help with your result? Check promotions, updates and spam. If it does not arrive, you previously unsubscribed from Ethnoir emails, or something appears incorrect, contact <a href="mailto:omichael@ethnoirconsulting.com" style="color: var(--color-tidal-ink); text-decoration: underline;">omichael@ethnoirconsulting.com</a> and include the email used. Do not send passwords, financial records or other sensitive information.
           </p>
           
-          <a href="/contact" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink);">Contact Ethnoir Support &rarr;</a>
+          <a href="/contact?type=checkin-support" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink);">
+            Contact Ethnoir Support &rarr;
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 10: FINAL CTA (CONDITIONAL) -->
+  <!-- SECTION 10: CLOSING BLOCK -->
   <section class="bg-tidal-ink chapter chapter-large-spacing">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto;">
         {isCheckInActive ? (
           <div>
-            <h2 class="voice-1" style="font-size: 2.5rem; color: var(--color-porcelain); margin-bottom: var(--space-sm);">Ready to take a closer look?</h2>
-            <p class="voice-2" style="font-size: 1.25rem; color: var(--color-parchment); margin-bottom: var(--space-lg);">
-              The Check-In offers a structured starting point for considering what may deserve attention next.
+            <h2 class="voice-1" style="font-size: clamp(2rem, 5vw, 2.75rem); color: var(--color-porcelain); margin-bottom: var(--space-sm);">
+              Take the Check-In
+            </h2>
+            <p class="voice-2" style="font-size: 1.25rem; color: var(--color-parchment); margin-bottom: var(--space-lg); line-height: 1.5;">
+              Step back, consider what is happening in your business and choose a practical starting point. You can use the guidance whether or not you join an Ethnoir program.
             </p>
-            <div style="margin-bottom: var(--space-md);">
-              <a href="https://tally.so/r/placeholder" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink);">Start the Venture Readiness Check-In</a>
+            <div style="display: flex; flex-direction: column; sm-flex-direction: row; justify-content: center; align-items: center; gap: var(--space-md);">
+              <a
+                href="https://tally.so/r/XxEDD4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+                style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none;"
+              >
+                Start the Check-In &rarr;
+              </a>
+              <a
+                href="/our-work"
+                class="link-secondary voice-3"
+                style="color: var(--color-parchment); text-decoration: none;"
+              >
+                View Our Work &rarr;
+              </a>
             </div>
-            <p class="voice-3" style="font-size: 0.875rem; color: var(--color-muted-slate);">
-              You will complete the Check-In through Tally and receive your result by email.
-            </p>
           </div>
         ) : (
           <div>
-            <h2 class="voice-1" style="font-size: 2.5rem; color: var(--color-porcelain); margin-bottom: var(--space-sm);">Learn how the Check-In works</h2>
+            <h2 class="voice-1" style="font-size: 2.5rem; color: var(--color-porcelain); margin-bottom: var(--space-sm);">
+              Take the Check-In
+            </h2>
             <p class="voice-2" style="font-size: 1.25rem; color: var(--color-parchment); margin-bottom: var(--space-lg);">
               The Check-In remains an Ethnoir resource, but its submission and result-delivery process is being reviewed before new website traffic is directed to it.
             </p>
             <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-md);">
-              <a href="/contact" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink);">Contact Ethnoir about the Check-In</a>
-              <a href="/our-work" class="link-secondary voice-3" style="color: var(--color-parchment);">View Our Work &rarr;</a>
+              <a href="/contact?type=checkin-support" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink);">
+                Contact Ethnoir about the Check-In
+              </a>
+              <a href="/our-work" class="link-secondary voice-3" style="color: var(--color-parchment);">
+                View Our Work &rarr;
+              </a>
             </div>
           </div>
         )}
@@ -357,15 +373,6 @@ const isCheckInActive = false;
 <style>
   .col-12 { grid-column: span 12; }
   
-  .practical-details li {
-    padding-bottom: 4px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid var(--color-quiet-rule);
-  }
-  .practical-details li:last-child {
-    border-bottom: none;
-  }
-  
   .editorial-list {
     list-style: none;
     padding: 0;
@@ -377,6 +384,7 @@ const isCheckInActive = false;
     border-bottom: 1px solid var(--color-quiet-rule);
     font-size: 1.125rem;
     color: var(--color-tidal-ink);
+    line-height: 1.5;
   }
   
   .area-item {
@@ -387,12 +395,13 @@ const isCheckInActive = false;
   .area-item h3 {
     font-size: 1.25rem;
     color: var(--color-tidal-ink);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
   .area-item p {
     font-size: 1rem;
     color: var(--color-deep-body-ink);
     margin: 0;
+    line-height: 1.5;
   }
   
   .process-step {

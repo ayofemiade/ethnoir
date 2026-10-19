@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page Not Found | Ethnoir"
+  description="The requested page could not be found."
+>
+  <section class="bg-parchment chapter" style="padding-top: var(--space-2xl); padding-bottom: var(--space-2xl); min-height: 70vh; display: flex; align-items: center;">
+    <div class="container grid-12">
+      <div class="col-12 md-col-10" style="max-width: 760px;">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: var(--space-sm);">
+          404 &middot; Not Found
+        </span>
+        
+        <h1 class="voice-1" style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: var(--space-md); color: var(--color-tidal-ink);">
+          The page you are looking for could not be found.
+        </h1>
+        
+        <p class="voice-2" style="font-size: 1.25rem; line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-xl);">
+          The link you followed may be broken, outdated, or the page may have moved. Use the links below to return to the site.
+        </p>
+        
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md); margin-bottom: var(--space-2xl);">
+          <a href="/" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            <span>Return to Home</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="/contact" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink); text-decoration: none;">
+            Contact Ethnoir &rarr;
+          </a>
+        </div>
+        
+        <div style="border-top: 1px solid var(--color-quiet-rule); padding-top: var(--space-md);">
+          <span class="voice-3" style="color: var(--color-muted-slate); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: var(--space-xs);">
+            Site Navigation
+          </span>
+          <nav style="display: flex; flex-wrap: wrap; gap: var(--space-md);">
+            <a href="/about" style="color: var(--color-tidal-ink); text-decoration: none; font-size: 1rem;">About</a>
+            <a href="/for-organizations" style="color: var(--color-tidal-ink); text-decoration: none; font-size: 1rem;">For Organizations</a>
+            <a href="/our-work" style="color: var(--color-tidal-ink); text-decoration: none; font-size: 1rem;">Our Work</a>
+            <a href="/venture-readiness-check-in" style="color: var(--color-tidal-ink); text-decoration: none; font-size: 1rem;">Check-In</a>
+            <a href="/privacy" style="color: var(--color-tidal-ink); text-decoration: none; font-size: 1rem;">Privacy Notice</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
