@@ -1,9 +1,4 @@
 ---
-import '@fontsource/source-serif-4/400.css';
-import '@fontsource/source-serif-4/400-italic.css';
-import '@fontsource/public-sans/400.css';
-import '@fontsource/public-sans/500.css';
-import '@fontsource/public-sans/600.css';
 import '@styles/global.css';
 
 interface Props {
@@ -43,6 +38,9 @@ const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://et
     <meta name="twitter:description" content={description} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Preload Critical Heading & Body Fonts for Instant First Contentful Paint -->
+    <link rel="preload" href="/fonts/source-serif-4-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="dns-prefetch" href="//tally.so" />
     <link rel="preconnect" href="https://tally.so" crossorigin />
   </head>
@@ -50,7 +48,7 @@ const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://et
     <div class="site-container">
       <header class="site-header container">
         <a href="/" class="brand-link" aria-label="Ethnoir Home" style="text-decoration: none;">
-          <span style="font-family: var(--font-heading); font-size: 2rem; line-height: 1; color: var(--color-tidal-ink); letter-spacing: -0.02em;">Ethnoir</span>
+          <span style="font-family: var(--font-heading); font-size: 1.75rem; line-height: 1; color: var(--color-tidal-ink); letter-spacing: -0.02em;">Ethnoir</span>
         </a>
         <nav class="site-nav" aria-label="Main Navigation">
           <a href="/about" class={currentPath === '/about' ? 'active' : ''}>
