@@ -50,7 +50,9 @@ const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://et
         <a href="/" class="brand-link" aria-label="Ethnoir Home" style="text-decoration: none;">
           <span style="font-family: var(--font-heading); font-size: 1.75rem; line-height: 1; color: var(--color-tidal-ink); letter-spacing: -0.02em;">Ethnoir</span>
         </a>
-        <nav class="site-nav" aria-label="Main Navigation">
+
+        <!-- Desktop Navigation -->
+        <nav class="site-nav desktop-nav" aria-label="Main Navigation">
           <a href="/about" class={currentPath === '/about' ? 'active' : ''}>
             About
           </a>
@@ -78,7 +80,75 @@ const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://et
             Contact
           </a>
         </nav>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          type="button"
+          class="mobile-menu-btn"
+          id="mobile-menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav-drawer"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="menu-icon-box" aria-hidden="true">
+            <span class="menu-bar bar-top"></span>
+            <span class="menu-bar bar-bottom"></span>
+          </span>
+          <span class="menu-label">Menu</span>
+        </button>
       </header>
+
+      <!-- Mobile Navigation Drawer & Backdrop -->
+      <div id="mobile-nav-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+      <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="drawer-header">
+          <span class="drawer-brand">Ethnoir</span>
+          <button
+            type="button"
+            class="drawer-close-btn"
+            id="mobile-menu-close"
+            aria-label="Close navigation menu"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="drawer-nav">
+          <a href="/" class={`drawer-link ${currentPath === '/' ? 'active' : ''}`}>
+            <span class="drawer-link-title">Home</span>
+            <span class="drawer-link-desc">Overview & Focus</span>
+          </a>
+          <a href="/about" class={`drawer-link ${currentPath === '/about' ? 'active' : ''}`}>
+            <span class="drawer-link-title">About</span>
+            <span class="drawer-link-desc">Background, Lead & Values</span>
+          </a>
+          <a href="/for-organizations" class={`drawer-link ${currentPath === '/for-organizations' ? 'active' : ''}`}>
+            <span class="drawer-link-title">For Organizations</span>
+            <span class="drawer-link-desc">Program Advisory & Support</span>
+          </a>
+          <a href="/our-work" class={`drawer-link ${currentPath.startsWith('/our-work') ? 'active' : ''}`}>
+            <span class="drawer-link-title">Our Work</span>
+            <span class="drawer-link-desc">Past Initiatives & Delivery</span>
+          </a>
+          <a href="/venture-readiness-check-in" class={`drawer-link ${currentPath === '/venture-readiness-check-in' ? 'active' : ''}`}>
+            <span class="drawer-link-title">Venture Readiness Check-In</span>
+            <span class="drawer-link-desc">Self-Assessment for Founders</span>
+          </a>
+          <a href="/contact" class={`drawer-link ${currentPath === '/contact' ? 'active' : ''}`}>
+            <span class="drawer-link-title">Contact</span>
+            <span class="drawer-link-desc">Inquiries & Discussions</span>
+          </a>
+        </nav>
+
+        <div class="drawer-footer">
+          <a href="/venture-readiness-check-in" class="drawer-cta-primary">
+            Start the Check-In &rarr;
+          </a>
+        </div>
+      </aside>
 
       <main>
         <slot />
@@ -114,5 +184,58 @@ const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://et
         </div>
       </footer>
     </div>
+
+    <script>
+      function initMobileNav() {
+        const toggleBtn = document.getElementById('mobile-menu-toggle');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const drawer = document.getElementById('mobile-nav-drawer');
+        const backdrop = document.getElementById('mobile-nav-backdrop');
+        const drawerLinks = drawer?.querySelectorAll('.drawer-link');
+
+        if (!toggleBtn || !drawer || !backdrop) return;
+
+        function openMenu() {
+          toggleBtn.setAttribute('aria-expanded', 'true');
+          drawer.setAttribute('aria-hidden', 'false');
+          backdrop.classList.add('is-open');
+          drawer.classList.add('is-open');
+          toggleBtn.classList.add('is-active');
+          document.body.classList.add('menu-open');
+        }
+
+        function closeMenu() {
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+          backdrop.classList.remove('is-open');
+          drawer.classList.remove('is-open');
+          toggleBtn.classList.remove('is-active');
+          document.body.classList.remove('menu-open');
+        }
+
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = toggleBtn.getAttribute('aria-expanded') === 'true';
+          isOpen ? closeMenu() : openMenu();
+        });
+
+        closeBtn?.addEventListener('click', closeMenu);
+        backdrop.addEventListener('click', closeMenu);
+
+        drawerLinks?.forEach((link) => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+            closeMenu();
+            toggleBtn.focus();
+          }
+        });
+      }
+
+      initMobileNav();
+      document.addEventListener('astro:after-swap', initMobileNav);
+    </script>
   </body>
 </html>
