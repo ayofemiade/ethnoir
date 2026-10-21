@@ -352,14 +352,13 @@
     let baseR = 170;
     let marks: Mark[] = [];
     const lens = { x: 0, y: 0 };
-    const intro = { v: reduced ? 1 : 0 };
+    // Lens presence: 0 = hidden (the field is just quiet noise), 1 = fully shown.
+    // It only rises while the pointer is moving over the hero.
+    const vis = { v: 0 };
     const target = { x: 0, y: 0 };
     let lastMove = -1e9;
-
-    const idlePoint = (time: number) =>
-      w < 760
-        ? { x: w * 0.5 + Math.sin(time * 0.45) * w * 0.26, y: h * 0.3 + Math.sin(time * 0.31 + 1.2) * h * 0.1 }
-        : { x: w * 0.7 + Math.sin(time * 0.45) * w * 0.12, y: h * 0.5 + Math.sin(time * 0.31 + 1.2) * h * 0.2 };
+    let pointerIn = false;
+    const LINGER_MS = 1100; // how long the lens stays after the pointer stops
 
     function build() {
       const s = w < 760 ? 30 : 40;
@@ -389,7 +388,7 @@
 
     function draw(time: number, dt: number) {
       ctx!.clearRect(0, 0, w, h);
-      const R = baseR * (1 - Math.pow(1 - intro.v, 3));
+      const R = baseR * (1 - Math.pow(1 - vis.v, 3));
       const k = reduced ? 1 : 1 - Math.exp(-dt * 8);
 
       if (R > 1) {
@@ -439,7 +438,7 @@
       }
 
       if (R > 1) {
-        const a = clamp(intro.v, 0, 1);
+        const a = clamp(vis.v, 0, 1);
         // lens ring
         ctx!.lineWidth = 1;
         ctx!.strokeStyle = `rgba(255,253,248,${0.38 * a})`;
@@ -486,9 +485,8 @@
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
       baseR = w < 760 ? 118 : clamp(w * 0.14, 150, 210);
       build();
-      const p = idlePoint(0);
-      lens.x = target.x = p.x;
-      lens.y = target.y = p.y;
+      lens.x = target.x = w * 0.7;
+      lens.y = target.y = h * 0.5;
       if (reduced) draw(0, 1);
     }
 
@@ -508,14 +506,13 @@
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       const time = now / 1000;
-      if (intro.v < 1) {
-        intro.v = Math.min(1, intro.v + dt * 0.85);
-      }
-      const active = now - lastMove < 2500;
-      const tgt = active ? target : idlePoint(time);
-      const f = 1 - Math.exp(-dt * (active ? 7 : 3));
-      lens.x += (tgt.x - lens.x) * f;
-      lens.y += (tgt.y - lens.y) * f;
+      // Show the lens only while the pointer is moving over the hero.
+      const want = pointerIn && now - lastMove < LINGER_MS ? 1 : 0;
+      vis.v += (want - vis.v) * (1 - Math.exp(-dt * (want ? 9 : 3.5)));
+      if (!want && vis.v < 0.003) vis.v = 0;
+      const f = 1 - Math.exp(-dt * 7);
+      lens.x += (target.x - lens.x) * f;
+      lens.y += (target.y - lens.y) * f;
       draw(time, dt);
       if (running) raf = requestAnimationFrame(frame);
     }
@@ -541,18 +538,26 @@
       document.hidden ? stop() : inView && start();
     });
 
-    hero.addEventListener(
-      'pointermove',
-      (e) => {
-        const r = canvas.getBoundingClientRect();
-        target.x = e.clientX - r.left;
-        target.y = e.clientY - r.top;
-        lastMove = performance.now();
-      },
-      { passive: true },
-    );
-    hero.addEventListener('pointerleave', () => {
-      lastMove = -1e9;
+    // Mouse move, pen, or a tap/drag on touch all reveal the lens.
+    const reveal = (e: PointerEvent) => {
+      const r = canvas.getBoundingClientRect();
+      target.x = e.clientX - r.left;
+      target.y = e.clientY - r.top;
+      // If the lens is hidden, appear right under the pointer instead of sweeping in.
+      if (vis.v < 0.05) {
+        lens.x = target.x;
+        lens.y = target.y;
+      }
+      pointerIn = true;
+      lastMove = performance.now();
+    };
+    hero.addEventListener('pointermove', reveal, { passive: true });
+    hero.addEventListener('pointerdown', reveal, { passive: true });
+    hero.addEventListener('pointerleave', (e) => {
+      if (e.pointerType !== 'touch') pointerIn = false;
+    });
+    hero.addEventListener('pointercancel', () => {
+      pointerIn = false;
     });
 
     start();
