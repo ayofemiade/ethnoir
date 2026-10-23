@@ -15,7 +15,7 @@ const {
 
 const currentPath = Astro.url.pathname;
 const pageTitle = title.includes('Ethnoir') ? title : `${title} | Ethnoir`;
-const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://ethnoir.com').href;
+const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://ethnoirconsulting.com').href;
 ---
 
 <!doctype html>
@@ -145,7 +145,7 @@ const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://et
 
         <div class="drawer-footer">
           <a href="/venture-readiness-check-in" class="drawer-cta-primary">
-            Start the Check-In &rarr;
+            Explore the Check-In &rarr;
           </a>
         </div>
       </aside>

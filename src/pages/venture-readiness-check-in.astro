@@ -8,7 +8,7 @@ const isCheckInActive = true;
 
 <Layout
   title="Venture Readiness Check-In | Ethnoir"
-  description="Get a practical snapshot of your business readiness and a suggested next step."
+  description="How Ethnoir’s Check-In works, what it considers and how to use its result."
 >
   <!-- SECTION 1: OPENING AND ACCESS -->
   <section class="bg-parchment" style="padding: var(--space-lg) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
@@ -38,33 +38,24 @@ const isCheckInActive = true;
           <div class="voice-3" style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-deep-teal); font-weight: 600; margin-bottom: var(--space-xs);">
             A short profile and business questions &middot; Result intended by email
           </div>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5; margin-bottom: var(--space-md);">
-            Get a practical snapshot of your business readiness and a suggested next step. Answer based on what is true in your business today.
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5; margin-bottom: var(--space-sm);">
+            The form shows whether new requests are currently being accepted.
           </p>
           
-          <!-- Availability State -->
-          {isCheckInActive ? (
-            <div>
-              <a
-                href="https://tally.so/r/XxEDD4"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-primary"
-                style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-block;"
-              >
-                Start the Check-In &rarr;
-              </a>
-            </div>
-          ) : (
-            <div style="background-color: var(--color-porcelain); padding: var(--space-md); border: 1px solid var(--color-quiet-rule);">
-              <p class="voice-2" style="font-size: 0.9375rem; margin-bottom: var(--space-sm); color: var(--color-tidal-ink);">
-                The Check-In is currently undergoing an operational review. You can learn how it works below, and active access will be made available when the review is complete.
-              </p>
-              <a href="/contact?type=checkin-support" class="link-secondary voice-3" style="font-size: 0.875rem; color: var(--color-tidal-ink);">
-                Contact Ethnoir about the Check-In &rarr;
-              </a>
-            </div>
-          )}
+          <div style="display: flex; flex-direction: column; gap: var(--space-sm); align-items: flex-start; margin-top: var(--space-md);">
+            <a
+              href="https://tally.so/r/XxEDD4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+              style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-block;"
+            >
+              Go to the Check-In form &rarr;
+            </a>
+            <a href="/contact?type=checkin-support" class="link-secondary voice-3" style="font-size: 0.875rem; color: var(--color-tidal-ink);">
+              Need help with an existing submission? &rarr;
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -160,7 +151,7 @@ const isCheckInActive = true;
       
       <div class="col-12 md-col-8">
         <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-lg); color: var(--color-tidal-ink);">
-          Your result includes your stage under the current Check-In model, an explanation of the 20–86 score, observations based on your answers and a suggested practical next step. The score summarizes self-reported answers; it is not a percentage, grade, funding probability or independently verified assessment. Compare the guidance with what you know about your business.
+          Your result includes your stage under the current Check-In model, an explanation of your score, observations based on your answers and a suggested practical next step. The score summarizes self-reported answers; it is not a percentage, grade, funding probability or independently verified assessment. Compare the guidance with what you know about your business.
         </p>
         
         <div style="background-color: var(--color-parchment); padding: var(--space-md); border-left: 2px solid var(--color-deep-teal);">
@@ -250,9 +241,9 @@ const isCheckInActive = true;
         </div>
         <div class="col-12 md-col-4 process-step" style="border-right: none;">
           <div class="step-number voice-1">3</div>
-          <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Receive your result by email</h3>
+          <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Request your result by email</h3>
           <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5;">
-            Submitting requests your result; occasional updates are optional. Allow up to 30 minutes for an automatic result. Answers needing human review may take longer.
+            When the Check-In is accepting submissions, submitting the form requests your readiness-stage explanation and general guidance. Occasional updates are optional.
           </p>
         </div>
       </div>
@@ -319,51 +310,39 @@ const isCheckInActive = true;
   <section class="bg-tidal-ink chapter chapter-large-spacing">
     <div class="container">
       <div style="text-align: center; max-width: 720px; margin: 0 auto;">
-        {isCheckInActive ? (
-          <div>
-            <h2 class="voice-1" style="font-size: clamp(2rem, 5vw, 2.75rem); color: var(--color-porcelain); margin-bottom: var(--space-sm);">
-              Take the Check-In
-            </h2>
-            <p class="voice-2" style="font-size: 1.25rem; color: var(--color-parchment); margin-bottom: var(--space-lg); line-height: 1.5;">
-              Step back, consider what is happening in your business and choose a practical starting point. You can use the guidance whether or not you join an Ethnoir program.
-            </p>
-            <div style="display: flex; flex-direction: column; sm-flex-direction: row; justify-content: center; align-items: center; gap: var(--space-md);">
-              <a
-                href="https://tally.so/r/XxEDD4"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-primary"
-                style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none;"
-              >
-                Start the Check-In &rarr;
-              </a>
-              <a
-                href="/our-work"
-                class="link-secondary voice-3"
-                style="color: var(--color-parchment); text-decoration: none;"
-              >
-                View Our Work &rarr;
-              </a>
-            </div>
+        <div>
+          <h2 class="voice-1" style="font-size: clamp(2rem, 5vw, 2.75rem); color: var(--color-porcelain); margin-bottom: var(--space-sm);">
+            Using the Check-In
+          </h2>
+          <p class="voice-2" style="font-size: 1.25rem; color: var(--color-parchment); margin-bottom: var(--space-lg); line-height: 1.5;">
+            Step back, consider what is happening in your business and choose a practical starting point. You can use the guidance whether or not you join an Ethnoir program.
+          </p>
+          <div style="display: flex; flex-direction: column; sm-flex-direction: row; justify-content: center; align-items: center; gap: var(--space-md); flex-wrap: wrap;">
+            <a
+              href="https://tally.so/r/XxEDD4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+              style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none;"
+            >
+              Go to the Check-In form &rarr;
+            </a>
+            <a
+              href="/contact?type=checkin-support"
+              class="link-secondary voice-3"
+              style="color: var(--color-parchment); text-decoration: none;"
+            >
+              Need help with an existing submission? &rarr;
+            </a>
+            <a
+              href="/our-work"
+              class="link-secondary voice-3"
+              style="color: var(--color-parchment); text-decoration: none;"
+            >
+              View Our Work &rarr;
+            </a>
           </div>
-        ) : (
-          <div>
-            <h2 class="voice-1" style="font-size: 2.5rem; color: var(--color-porcelain); margin-bottom: var(--space-sm);">
-              Take the Check-In
-            </h2>
-            <p class="voice-2" style="font-size: 1.25rem; color: var(--color-parchment); margin-bottom: var(--space-lg);">
-              The Check-In remains an Ethnoir resource, but its submission and result-delivery process is being reviewed before new website traffic is directed to it.
-            </p>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-md);">
-              <a href="/contact?type=checkin-support" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink);">
-                Contact Ethnoir about the Check-In
-              </a>
-              <a href="/our-work" class="link-secondary voice-3" style="color: var(--color-parchment);">
-                View Our Work &rarr;
-              </a>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   </section>

@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://ethnoir.com', // Replace with the actual production domain
+  site: 'https://ethnoirconsulting.com',
   integrations: [sitemap()],
   output: 'static',
   build: {
