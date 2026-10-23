@@ -9,8 +9,22 @@
 ---
 
 <section class="hero" aria-label="Introduction" data-hero>
-  <canvas class="hero__field" aria-hidden="true" data-field></canvas>
-  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__bg-wrap" aria-hidden="true">
+    <picture>
+      <source srcset="/images/hero-bg.webp" type="image/webp" />
+      <img
+        src="/images/hero-bg.jpg"
+        alt=""
+        class="hero__bg-img"
+        width="1920"
+        height="1080"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
+    <div class="hero__scrim"></div>
+  </div>
 
   <div class="container hero__inner">
     <h1 class="hero__title">
@@ -83,12 +97,23 @@
       linear-gradient(160deg, #0f2c35 0%, var(--ink) 55%, var(--ink-deep) 100%);
   }
 
-  .hero__field {
+  .hero__bg-wrap {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
+    overflow: hidden;
+  }
+
+  .hero__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% center;
+    opacity: 0.38;
+    filter: saturate(0.9) brightness(0.92);
+    transform: scale(1.02);
   }
 
   .hero__scrim {
@@ -96,12 +121,21 @@
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(
-      90deg,
-      rgba(8, 24, 32, 0.84) 0%,
-      rgba(8, 24, 32, 0.62) 42%,
-      rgba(8, 24, 32, 0) 78%
-    );
+    background:
+      linear-gradient(
+        90deg,
+        rgba(8, 24, 32, 0.95) 0%,
+        rgba(8, 24, 32, 0.88) 36%,
+        rgba(8, 24, 32, 0.52) 68%,
+        rgba(8, 24, 32, 0.68) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(8, 24, 32, 0.45) 0%,
+        transparent 20%,
+        transparent 75%,
+        rgba(8, 24, 32, 0.85) 100%
+      );
   }
 
   .hero__inner {
@@ -278,12 +312,16 @@
       align-items: flex-end;
       min-height: clamp(34rem, calc(100svh - 4.5rem), 48rem);
     }
+    .hero__bg-img {
+      object-position: 75% center;
+      opacity: 0.28;
+    }
     .hero__scrim {
       background: linear-gradient(
         180deg,
-        rgba(8, 24, 32, 0.35) 0%,
-        rgba(8, 24, 32, 0.72) 45%,
-        rgba(8, 24, 32, 0.9) 100%
+        rgba(8, 24, 32, 0.45) 0%,
+        rgba(8, 24, 32, 0.82) 42%,
+        rgba(8, 24, 32, 0.96) 100%
       );
     }
     .hero__cta {
@@ -307,281 +345,19 @@
 </style>
 
 <script>
-  type RGB = [number, number, number];
+  const hero = document.querySelector<HTMLElement>('[data-hero]');
+  const cta = hero?.querySelector<HTMLElement>('[data-cta]');
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
 
-  interface Mark {
-    hx: number; // home (aligned) position
-    hy: number;
-    ox: number; // scatter offset
-    oy: number;
-    rot: number; // scatter rotation
-    ph: number; // drift phase
-    sp: number; // drift speed
-    c: RGB; // lit colour
-    t: number; // 0 = noise, 1 = clear
-  }
-
-  const PALETTE: { c: RGB; w: number }[] = [
-    { c: [79, 193, 184], w: 0.58 }, // sea glass
-    { c: [242, 176, 74], w: 0.2 }, // amber
-    { c: [226, 105, 75], w: 0.08 }, // coral
-    { c: [255, 253, 248], w: 0.14 }, // porcelain
-  ];
-  const MUTED: RGB = [118, 158, 164];
-
-  const pickColor = (): RGB => {
-    let r = Math.random();
-    for (const p of PALETTE) {
-      r -= p.w;
-      if (r <= 0) return p.c;
-    }
-    return PALETTE[0].c;
-  };
-  const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
-
-  function initHero(hero: HTMLElement, canvas: HTMLCanvasElement) {
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const finePointer = window.matchMedia('(pointer: fine)').matches;
-
-    let w = 1;
-    let h = 1;
-    let dpr = 1;
-    let baseR = 170;
-    let marks: Mark[] = [];
-    const lens = { x: 0, y: 0 };
-    // Lens presence: 0 = hidden (the field is just quiet noise), 1 = fully shown.
-    // It only rises while the pointer is moving over the hero.
-    const vis = { v: 0 };
-    const target = { x: 0, y: 0 };
-    let lastMove = -1e9;
-    let pointerIn = false;
-    const LINGER_MS = 1100; // how long the lens stays after the pointer stops
-
-    function build() {
-      const s = w < 760 ? 30 : 40;
-      const cols = Math.ceil(w / s) + 2;
-      const rows = Math.ceil(h / s) + 2;
-      const x0 = (w - (cols - 1) * s) / 2;
-      const y0 = (h - (rows - 1) * s) / 2;
-      marks = [];
-      for (let j = 0; j < rows; j++) {
-        for (let i = 0; i < cols; i++) {
-          const a = Math.random() * Math.PI * 2;
-          const d = s * (0.5 + Math.random() * 1.5);
-          marks.push({
-            hx: x0 + i * s,
-            hy: y0 + j * s,
-            ox: Math.cos(a) * d,
-            oy: Math.sin(a) * d,
-            rot: Math.random() * Math.PI,
-            ph: Math.random() * Math.PI * 2,
-            sp: 0.5 + Math.random() * 0.9,
-            c: pickColor(),
-            t: 0,
-          });
-        }
-      }
-    }
-
-    function draw(time: number, dt: number) {
-      ctx!.clearRect(0, 0, w, h);
-      const R = baseR * (1 - Math.pow(1 - vis.v, 3));
-      const k = reduced ? 1 : 1 - Math.exp(-dt * 8);
-
-      if (R > 1) {
-        const bloom = ctx!.createRadialGradient(lens.x, lens.y, 0, lens.x, lens.y, R * 2.7);
-        bloom.addColorStop(0, 'rgba(79,193,184,0.22)');
-        bloom.addColorStop(0.5, 'rgba(27,138,140,0.09)');
-        bloom.addColorStop(1, 'rgba(27,138,140,0)');
-        ctx!.fillStyle = bloom;
-        ctx!.fillRect(0, 0, w, h);
-
-        const warm = ctx!.createRadialGradient(lens.x, lens.y, 0, lens.x, lens.y, R);
-        warm.addColorStop(0, 'rgba(242,176,74,0.12)');
-        warm.addColorStop(1, 'rgba(242,176,74,0)');
-        ctx!.fillStyle = warm;
-        ctx!.beginPath();
-        ctx!.arc(lens.x, lens.y, R, 0, Math.PI * 2);
-        ctx!.fill();
-      }
-
-      const inner = R * 0.6;
-      ctx!.lineCap = 'round';
-      for (const m of marks) {
-        let tt = 0;
-        if (R > 1) {
-          const d = Math.hypot(m.hx - lens.x, m.hy - lens.y);
-          tt = 1 - clamp((d - inner) / (R - inner), 0, 1);
-          tt = tt * tt * (3 - 2 * tt);
-        }
-        m.t += (tt - m.t) * k;
-        const t = m.t;
-        const e = 1 - t;
-        const x = m.hx + m.ox * e + Math.sin(time * m.sp + m.ph) * 7 * e;
-        const y = m.hy + m.oy * e + Math.cos(time * m.sp * 0.83 + m.ph) * 7 * e;
-        const rot = m.rot * e;
-        const half = (4.5 + 8.5 * t) / 2;
-        const cx = Math.cos(rot) * half;
-        const cy = Math.sin(rot) * half;
-        const r = Math.round(MUTED[0] + (m.c[0] - MUTED[0]) * t);
-        const g = Math.round(MUTED[1] + (m.c[1] - MUTED[1]) * t);
-        const b = Math.round(MUTED[2] + (m.c[2] - MUTED[2]) * t);
-        ctx!.strokeStyle = `rgba(${r},${g},${b},${(0.2 + 0.75 * t).toFixed(3)})`;
-        ctx!.lineWidth = 1.4 + 0.9 * t;
-        ctx!.beginPath();
-        ctx!.moveTo(x - cx, y - cy);
-        ctx!.lineTo(x + cx, y + cy);
-        ctx!.stroke();
-      }
-
-      if (R > 1) {
-        const a = clamp(vis.v, 0, 1);
-        // lens ring
-        ctx!.lineWidth = 1;
-        ctx!.strokeStyle = `rgba(255,253,248,${0.38 * a})`;
-        ctx!.beginPath();
-        ctx!.arc(lens.x, lens.y, R, 0, Math.PI * 2);
-        ctx!.stroke();
-        // graduated ticks, like a viewfinder dial
-        for (let i = 0; i < 120; i++) {
-          const ang = (i / 120) * Math.PI * 2;
-          const major = i % 10 === 0;
-          const mid = i % 5 === 0;
-          const len = major ? 12 : mid ? 7 : 3.5;
-          const r1 = R + 6;
-          const r2 = r1 + len;
-          ctx!.strokeStyle = `rgba(255,253,248,${(major ? 0.6 : 0.22) * a})`;
-          ctx!.beginPath();
-          ctx!.moveTo(lens.x + Math.cos(ang) * r1, lens.y + Math.sin(ang) * r1);
-          ctx!.lineTo(lens.x + Math.cos(ang) * r2, lens.y + Math.sin(ang) * r2);
-          ctx!.stroke();
-        }
-        // centre reticle
-        ctx!.strokeStyle = `rgba(242,176,74,${0.9 * a})`;
-        ctx!.lineWidth = 1.2;
-        ctx!.beginPath();
-        for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
-          ctx!.moveTo(lens.x + dx * 6, lens.y + dy * 6);
-          ctx!.lineTo(lens.x + dx * 13, lens.y + dy * 13);
-        }
-        ctx!.stroke();
-        ctx!.fillStyle = `rgba(242,176,74,${a})`;
-        ctx!.beginPath();
-        ctx!.arc(lens.x, lens.y, 2.2, 0, Math.PI * 2);
-        ctx!.fill();
-      }
-    }
-
-    function resize() {
-      const rect = hero.getBoundingClientRect();
-      w = Math.max(1, rect.width);
-      h = Math.max(1, rect.height);
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
-      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
-      baseR = w < 760 ? 118 : clamp(w * 0.14, 150, 210);
-      build();
-      lens.x = target.x = w * 0.7;
-      lens.y = target.y = h * 0.5;
-      if (reduced) draw(0, 1);
-    }
-
-    resize();
-    new ResizeObserver(resize).observe(hero);
-
-    // ---- Static path: render one calm frame and stop.
-    if (reduced) return;
-
-    // ---- Live path
-    let running = false;
-    let inView = true;
-    let raf = 0;
-    let last = performance.now();
-
-    function frame(now: number) {
-      const dt = Math.min(0.05, (now - last) / 1000);
-      last = now;
-      const time = now / 1000;
-      // Show the lens only while the pointer is moving over the hero.
-      const want = pointerIn && now - lastMove < LINGER_MS ? 1 : 0;
-      vis.v += (want - vis.v) * (1 - Math.exp(-dt * (want ? 9 : 3.5)));
-      if (!want && vis.v < 0.003) vis.v = 0;
-      const f = 1 - Math.exp(-dt * 7);
-      lens.x += (target.x - lens.x) * f;
-      lens.y += (target.y - lens.y) * f;
-      draw(time, dt);
-      if (running) raf = requestAnimationFrame(frame);
-    }
-    const start = () => {
-      if (running) return;
-      running = true;
-      last = performance.now();
-      raf = requestAnimationFrame(frame);
-    };
-    const stop = () => {
-      running = false;
-      cancelAnimationFrame(raf);
-    };
-
-    new IntersectionObserver(
-      ([entry]) => {
-        inView = entry.isIntersecting;
-        inView && !document.hidden ? start() : stop();
-      },
-      { threshold: 0 },
-    ).observe(hero);
-    document.addEventListener('visibilitychange', () => {
-      document.hidden ? stop() : inView && start();
-    });
-
-    // Mouse move, pen, or a tap/drag on touch all reveal the lens.
-    const reveal = (e: PointerEvent) => {
-      const r = canvas.getBoundingClientRect();
-      target.x = e.clientX - r.left;
-      target.y = e.clientY - r.top;
-      // If the lens is hidden, appear right under the pointer instead of sweeping in.
-      if (vis.v < 0.05) {
-        lens.x = target.x;
-        lens.y = target.y;
-      }
-      pointerIn = true;
-      lastMove = performance.now();
-    };
-    hero.addEventListener('pointermove', reveal, { passive: true });
-    hero.addEventListener('pointerdown', reveal, { passive: true });
-    hero.addEventListener('pointerleave', (e) => {
-      if (e.pointerType !== 'touch') pointerIn = false;
-    });
-    hero.addEventListener('pointercancel', () => {
-      pointerIn = false;
-    });
-
-    start();
-
-    // CTA cursor magnet with hardware-accelerated spring
-    const cta = hero.querySelector<HTMLElement>('[data-cta]');
-    if (finePointer && cta) {
-      initMagnet(cta);
-    }
-  }
-
-  function initMagnet(el: HTMLElement) {
-    el.addEventListener('pointermove', (e) => {
-      const r = el.getBoundingClientRect();
+  if (finePointer && cta) {
+    cta.addEventListener('pointermove', (e) => {
+      const r = cta.getBoundingClientRect();
       const x = (e.clientX - (r.left + r.width / 2)) * 0.12;
       const y = (e.clientY - (r.top + r.height / 2)) * 0.25;
-      el.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0)`;
+      cta.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0)`;
     });
-    el.addEventListener('pointerleave', () => {
-      el.style.transform = 'translate3d(0, 0, 0)';
+    cta.addEventListener('pointerleave', () => {
+      cta.style.transform = 'translate3d(0, 0, 0)';
     });
   }
-
-  const hero = document.querySelector<HTMLElement>('[data-hero]');
-  const canvas = hero?.querySelector<HTMLCanvasElement>('[data-field]');
-  if (hero && canvas) initHero(hero, canvas);
 </script>
