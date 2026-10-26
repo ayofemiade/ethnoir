@@ -6,19 +6,23 @@ import Layout from '../layouts/Layout.astro';
   title="Contact Ethnoir"
   description="Contact Ethnoir about an entrepreneurship-support question, a collaboration, or help with the Venture Readiness Check-In."
 >
-  <!-- SECTION A: OPENING -->
-  <section class="bg-parchment" style="padding: var(--space-lg) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
+  <!-- SECTION A: OPENING MASTHEAD -->
+  <section class="bg-parchment" style="padding: var(--space-2xl) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-9" style="margin-bottom: var(--space-lg);">
-        <h1 class="voice-1" style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; line-height: 1.1; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
+      <div class="col-12 lg-col-10" style="margin-bottom: var(--space-lg);">
+        <h1 class="voice-1" style="font-size: clamp(2.75rem, 6.5vw, 5rem); margin: 0; line-height: 1.05; letter-spacing: -0.025em; color: var(--color-tidal-ink);">
           Contact Ethnoir
         </h1>
       </div>
       
-      <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--color-deep-teal); margin-bottom: var(--space-sm);">
-          Use this page to bring a question about supporting entrepreneurs, propose a collaboration, ask for help with the Venture Readiness Check-In, or send a general inquiry.
-        </p>
+      <div class="col-12" style="border-top: 1px solid var(--color-strong-boundary); padding-top: var(--space-lg);">
+        <div class="grid-12" style="margin: 0;">
+          <div class="col-12 md-col-9 lg-col-8">
+            <p class="voice-2" style="font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.45; color: var(--color-deep-teal); margin: 0;">
+              Use this page to bring a question about supporting entrepreneurs, propose a collaboration, ask for help with the Venture Readiness Check-In, or send a general inquiry.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -26,29 +30,33 @@ import Layout from '../layouts/Layout.astro';
   <!-- SECTION B: INQUIRY TYPES -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">What would you like to contact Ethnoir about?</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-md);">
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          What would you like to contact Ethnoir about?
+        </h2>
       </div>
       
-      <div class="col-12 md-col-8">
-        <div class="inquiry-type-item">
-          <h3 class="voice-1">Organization inquiry: a program or support challenge</h3>
-          <p class="voice-2">For organizations with a question about entrepreneurs, support programs, resources or related decisions.</p>
-        </div>
-        
-        <div class="inquiry-type-item">
-          <h3 class="voice-1">Collaboration or referral</h3>
-          <p class="voice-2">For people or organizations proposing a relevant collaboration, opportunity or referral.</p>
-        </div>
-        
-        <div class="inquiry-type-item">
-          <h3 class="voice-1">Venture Readiness Check-In support</h3>
-          <p class="voice-2">For a missing result, a broken link or something that may have been processed incorrectly.</p>
-        </div>
-        
-        <div class="inquiry-type-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
-          <h3 class="voice-1">General inquiry</h3>
-          <p class="voice-2">For a relevant question that fits none of the above.</p>
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl)); display: flex; flex-direction: column; gap: var(--space-md);">
+          <div class="inquiry-type-item">
+            <h3 class="voice-1">Organization inquiry: a program or support challenge</h3>
+            <p class="voice-2">For organizations with a question about entrepreneurs, support programs, resources or related decisions.</p>
+          </div>
+          
+          <div class="inquiry-type-item">
+            <h3 class="voice-1">Collaboration or referral</h3>
+            <p class="voice-2">For people or organizations proposing a relevant collaboration, opportunity or referral.</p>
+          </div>
+          
+          <div class="inquiry-type-item">
+            <h3 class="voice-1">Venture Readiness Check-In support</h3>
+            <p class="voice-2">For a missing result, a broken link or something that may have been processed incorrectly.</p>
+          </div>
+          
+          <div class="inquiry-type-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+            <h3 class="voice-1">General inquiry</h3>
+            <p class="voice-2">For a relevant question that fits none of the above.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -57,16 +65,22 @@ import Layout from '../layouts/Layout.astro';
   <!-- SECTION C: STARTING AN ORGANIZATION INQUIRY GUIDANCE -->
   <section class="bg-quiet-sand chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Start with the challenge, not a predetermined service.</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-md);">
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          Start with the challenge, not a predetermined service.
+        </h2>
       </div>
       
-      <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-md);">
-          Describe the support you offer, who it is intended for and what is proving difficult. This could concern participant needs, access, application, delivery processes or evidence. Tell us the decision you need to make and any relevant timing. You do not need a finished scope of work.
-        </p>
-        
-        <a href="/for-organizations" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink);">Learn more about working with organizations &rarr;</a>
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl)); max-width: 760px;">
+          <p class="voice-2" style="font-size: 1.1875rem; line-height: 1.65; margin-bottom: var(--space-md); color: var(--color-deep-body-ink);">
+            Describe the support you offer, who it is intended for and what is proving difficult. This could concern participant needs, access, application, delivery processes or evidence. Tell us the decision you need to make and any relevant timing. You do not need a finished scope of work.
+          </p>
+          
+          <a href="/for-organizations" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 600; text-decoration: none;">
+            Learn more about working with organizations &rarr;
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -74,191 +88,213 @@ import Layout from '../layouts/Layout.astro';
   <!-- SECTION D, E: THE FORM -->
   <section class="bg-parchment chapter chapter-large-spacing">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-lg);">
-        <div class="sticky" style="top: 120px;">
-          <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1; margin-bottom: var(--space-md);">Share your inquiry</h2>
-          <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-md); line-height: 1.5;">
+      <!-- Left Companion Guidance -->
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-xl);">
+        <div class="sticky" style="top: 120px; display: flex; flex-direction: column; gap: var(--space-md);">
+          <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+            Share your inquiry
+          </h2>
+          <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-body-ink); margin: 0; line-height: 1.55;">
             Complete the short form below.
           </p>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-muted-slate); line-height: 1.5;">
-            Submitting an inquiry does not create a client relationship or guarantee that Ethnoir will be able to take the work forward.
-          </p>
+          <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-muted-slate); border-radius: 2px;">
+            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); line-height: 1.5; margin: 0;">
+              Submitting an inquiry does not create a client relationship or guarantee that Ethnoir will be able to take the work forward.
+            </p>
+          </div>
         </div>
       </div>
       
-      <div class="col-12 md-col-7 md-col-8-offset">
-        <!-- Success Message (Hidden initially) -->
-        <div id="form-success-message" style="display: none; background-color: var(--color-porcelain); padding: var(--space-lg); border: 1px solid var(--color-quiet-rule); margin-bottom: var(--space-xl);">
-          <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">Your inquiry has been received.</h2>
-          <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-lg); line-height: 1.6;">
-            Thank you for contacting Ethnoir. Your message will be reviewed, and Ethnoir may follow up using the email address you provided if additional information or a conversation would be useful.
-          </p>
-          <a href="/" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-block;">Return to Home</a>
-        </div>
-        
-        <!-- Error Summary (Hidden initially) -->
-        <div id="form-error-summary" style="display: none; background-color: #FDF4F4; padding: var(--space-md); border-left: 4px solid #D93838; margin-bottom: var(--space-lg);">
-          <h3 class="voice-1" style="font-size: 1.25rem; color: #D93838; margin-bottom: 4px;">There was a problem with your submission</h3>
-          <p id="form-error-text" class="voice-2" style="font-size: 1rem; color: var(--color-tidal-ink); margin: 0;">Please review the errors below and try again.</p>
-        </div>
-
-        <form id="ethnoir-contact-form" action="/api/contact.php" method="POST" novalidate>
-          
-          <!-- Name -->
-          <div class="form-group">
-            <label for="name" class="voice-1 form-label">Name <span class="required-mark">*</span></label>
-            <p class="voice-2 form-help">Your first and last name.</p>
-            <input type="text" id="name" name="name" class="form-control voice-2" required autocomplete="name">
-            <div class="form-error voice-3" id="error-name">Please provide your first and last name.</div>
+      <!-- Right Form Area -->
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl)); max-width: 760px;">
+          <!-- Success Message (Hidden initially) -->
+          <div id="form-success-message" style="display: none; background-color: var(--color-porcelain); padding: var(--space-xl); border: 1px solid var(--color-quiet-rule); border-top: 3px solid var(--color-deep-teal); margin-bottom: var(--space-xl); border-radius: 2px;">
+            <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); margin: 0 0 var(--space-sm) 0;">
+              Your inquiry has been received.
+            </h2>
+            <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-lg); line-height: 1.6;">
+              Thank you for contacting Ethnoir. Your message will be reviewed, and Ethnoir may follow up using the email address you provided if additional information or a conversation would be useful.
+            </p>
+            <a href="/" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-block; padding: var(--space-xs) var(--space-md); border-radius: 2px;">
+              Return to Home
+            </a>
           </div>
           
-          <!-- Email address -->
-          <div class="form-group">
-            <label for="email" class="voice-1 form-label">Email address <span class="required-mark">*</span></label>
-            <p class="voice-2 form-help">Where Ethnoir can contact you about this inquiry.</p>
-            <input type="email" id="email" name="email" class="form-control voice-2" required autocomplete="email">
-            <div class="form-error voice-3" id="error-email">Please provide a valid email address.</div>
+          <!-- Error Summary (Hidden initially) -->
+          <div id="form-error-summary" style="display: none; background-color: #FDF4F4; padding: var(--space-md); border: 1px solid #E8B4B4; border-left: 4px solid #D93838; margin-bottom: var(--space-lg); border-radius: 2px;">
+            <h3 class="voice-1" style="font-size: 1.25rem; color: #D93838; margin: 0 0 4px 0;">
+              There was a problem with your submission
+            </h3>
+            <p id="form-error-text" class="voice-2" style="font-size: 1rem; color: var(--color-tidal-ink); margin: 0;">
+              Please review the errors below and try again.
+            </p>
           </div>
 
-          <!-- Inquiry Type (Radio Group) -->
-          <div class="form-group">
-            <fieldset class="form-fieldset">
-              <legend class="voice-1 form-label" style="margin-bottom: var(--space-sm);">What would you like to contact Ethnoir about? <span class="required-mark">*</span></legend>
-              
-              <div class="radio-option">
-                <input type="radio" id="type-organization" name="inquiry_type" value="Organization inquiry: a program or support challenge" required>
-                <div>
-                  <label for="type-organization" class="voice-2" style="font-weight: 600;">Organization inquiry: a program or support challenge</label>
-                  <p class="voice-2 form-help" style="margin: 2px 0 0 0;">For organizations with a question about entrepreneurs, support programs, resources or related decisions.</p>
-                </div>
-              </div>
-              
-              <div class="radio-option">
-                <input type="radio" id="type-collaboration" name="inquiry_type" value="Collaboration or referral" required>
-                <div>
-                  <label for="type-collaboration" class="voice-2" style="font-weight: 600;">Collaboration or referral</label>
-                  <p class="voice-2 form-help" style="margin: 2px 0 0 0;">For people or organizations proposing a relevant collaboration, opportunity or referral.</p>
-                </div>
-              </div>
-              
-              <div class="radio-option">
-                <input type="radio" id="type-checkin" name="inquiry_type" value="Venture Readiness Check-In support" required>
-                <div>
-                  <label for="type-checkin" class="voice-2" style="font-weight: 600;">Venture Readiness Check-In support</label>
-                  <p class="voice-2 form-help" style="margin: 2px 0 0 0;">For a missing result, a broken link or something that may have been processed incorrectly.</p>
-                </div>
-              </div>
-              
-              <div class="radio-option">
-                <input type="radio" id="type-general" name="inquiry_type" value="General inquiry" required>
-                <div>
-                  <label for="type-general" class="voice-2" style="font-weight: 600;">General inquiry</label>
-                  <p class="voice-2 form-help" style="margin: 2px 0 0 0;">For a relevant question that fits none of the above.</p>
-                </div>
-              </div>
-              
-              <div class="form-error voice-3" id="error-type">Please select an inquiry type.</div>
-            </fieldset>
-          </div>
-          
-          <!-- CONDITIONAL: Organization Fields (Shown/Required for Organization inquiry) -->
-          <div id="cond-organization" style="display: none; background-color: var(--color-quiet-sand); padding: var(--space-md); margin-bottom: var(--space-lg); border-left: 2px solid var(--color-deep-teal);">
-            <!-- Organization -->
-            <div class="form-group" style="margin-bottom: var(--space-md);">
-              <label for="organization" class="voice-1 form-label">Organization <span id="org-req-mark" class="required-mark">*</span></label>
-              <p class="voice-2 form-help">If you are contacting Ethnoir on behalf of an organization.</p>
-              <input type="text" id="organization" name="organization" class="form-control voice-2">
-              <div class="form-error voice-3" id="error-organization">Please provide your organization name.</div>
+          <form id="ethnoir-contact-form" action="/api/contact.php" method="POST" novalidate>
+            
+            <!-- Name -->
+            <div class="form-group">
+              <label for="name" class="voice-1 form-label">Name <span class="required-mark">*</span></label>
+              <p class="voice-2 form-help">Your first and last name.</p>
+              <input type="text" id="name" name="name" class="form-control voice-2" required autocomplete="name">
+              <div class="form-error voice-3" id="error-name">Please provide your first and last name.</div>
             </div>
             
-            <!-- Role -->
-            <div class="form-group" style="margin-bottom: 0;">
-              <label for="role" class="voice-1 form-label">Your role <span id="role-req-mark" class="required-mark">*</span></label>
-              <p class="voice-2 form-help">Your role in the organization or in relation to this inquiry.</p>
-              <input type="text" id="role" name="role" class="form-control voice-2">
-              <div class="form-error voice-3" id="error-role">Please provide your role.</div>
+            <!-- Email address -->
+            <div class="form-group">
+              <label for="email" class="voice-1 form-label">Email address <span class="required-mark">*</span></label>
+              <p class="voice-2 form-help">Where Ethnoir can contact you about this inquiry.</p>
+              <input type="email" id="email" name="email" class="form-control voice-2" required autocomplete="email">
+              <div class="form-error voice-3" id="error-email">Please provide a valid email address.</div>
             </div>
-          </div>
-          
-          <!-- CONDITIONAL: Check-In Support Field (Shown/Required for Check-In support) -->
-          <div class="form-group conditional-group" id="cond-checkin" style="display: none; background-color: var(--color-quiet-sand); padding: var(--space-md); margin-bottom: var(--space-lg); border-left: 2px solid var(--color-deep-teal);">
-            <fieldset class="form-fieldset">
-              <legend class="voice-1 form-label" style="margin-bottom: var(--space-sm);">What happened when you used the Check-In? <span class="required-mark">*</span></legend>
-              
-              <div class="radio-option">
-                <input type="radio" id="checkin-issue-1" name="checkin_issue" value="I did not receive my result">
-                <label for="checkin-issue-1" class="voice-2">I did not receive my result</label>
-              </div>
-              
-              <div class="radio-option">
-                <input type="radio" id="checkin-issue-2" name="checkin_issue" value="A link did not work">
-                <label for="checkin-issue-2" class="voice-2">A link did not work</label>
-              </div>
-              
-              <div class="radio-option">
-                <input type="radio" id="checkin-issue-3" name="checkin_issue" value="I believe my result may have been processed incorrectly">
-                <label for="checkin-issue-3" class="voice-2">I believe my result may have been processed incorrectly</label>
-              </div>
-              
-              <div class="radio-option">
-                <input type="radio" id="checkin-issue-4" name="checkin_issue" value="I have a privacy or data question">
-                <label for="checkin-issue-4" class="voice-2">I have a privacy or data question</label>
-              </div>
-              
-              <div class="radio-option">
-                <input type="radio" id="checkin-issue-5" name="checkin_issue" value="Something else">
-                <label for="checkin-issue-5" class="voice-2">Something else</label>
-              </div>
-              
-              <div class="form-error voice-3" id="error-checkin-issue">Please select what happened.</div>
-            </fieldset>
+
+            <!-- Inquiry Type (Radio Group) -->
+            <div class="form-group">
+              <fieldset class="form-fieldset">
+                <legend class="voice-1 form-label" style="margin-bottom: var(--space-sm);">
+                  What would you like to contact Ethnoir about? <span class="required-mark">*</span>
+                </legend>
+                
+                <div class="radio-card">
+                  <input type="radio" id="type-organization" name="inquiry_type" value="Organization inquiry: a program or support challenge" required>
+                  <div class="radio-content">
+                    <label for="type-organization" class="voice-2 radio-title">Organization inquiry: a program or support challenge</label>
+                    <p class="voice-2 form-help" style="margin: 2px 0 0 0;">For organizations with a question about entrepreneurs, support programs, resources or related decisions.</p>
+                  </div>
+                </div>
+                
+                <div class="radio-card">
+                  <input type="radio" id="type-collaboration" name="inquiry_type" value="Collaboration or referral" required>
+                  <div class="radio-content">
+                    <label for="type-collaboration" class="voice-2 radio-title">Collaboration or referral</label>
+                    <p class="voice-2 form-help" style="margin: 2px 0 0 0;">For people or organizations proposing a relevant collaboration, opportunity or referral.</p>
+                  </div>
+                </div>
+                
+                <div class="radio-card">
+                  <input type="radio" id="type-checkin" name="inquiry_type" value="Venture Readiness Check-In support" required>
+                  <div class="radio-content">
+                    <label for="type-checkin" class="voice-2 radio-title">Venture Readiness Check-In support</label>
+                    <p class="voice-2 form-help" style="margin: 2px 0 0 0;">For a missing result, a broken link or something that may have been processed incorrectly.</p>
+                  </div>
+                </div>
+                
+                <div class="radio-card">
+                  <input type="radio" id="type-general" name="inquiry_type" value="General inquiry" required>
+                  <div class="radio-content">
+                    <label for="type-general" class="voice-2 radio-title">General inquiry</label>
+                    <p class="voice-2 form-help" style="margin: 2px 0 0 0;">For a relevant question that fits none of the above.</p>
+                  </div>
+                </div>
+                
+                <div class="form-error voice-3" id="error-type">Please select an inquiry type.</div>
+              </fieldset>
+            </div>
             
-            <p class="voice-2 form-help" style="margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid var(--color-quiet-rule);">
-              Use the email address submitted with the Check-In. Do not paste your full answers or sensitive business information here.
-            </p>
-          </div>
-          
-          <!-- Briefly describe your inquiry -->
-          <div class="form-group" style="margin-top: var(--space-md);">
-            <label for="description" class="voice-1 form-label">Briefly describe your inquiry <span class="required-mark">*</span></label>
-            <p class="voice-2 form-help" id="description-help" style="line-height: 1.5;">
-              For Organization inquiry: describe the support you offer, who it serves, what is proving difficult and the decision you need to make. For other inquiry types: briefly describe your question, situation or proposed connection. Do not include sensitive or confidential information.
-            </p>
-            <textarea id="description" name="description" class="form-control voice-2" rows="5" required></textarea>
-            <div class="form-error voice-3" id="error-description">Please describe your inquiry.</div>
-          </div>
-          
-          <!-- Privacy Section -->
-          <div style="background-color: var(--color-porcelain); padding: var(--space-lg); border: 1px solid var(--color-strong-boundary); margin: var(--space-xl) 0;">
-            <h2 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">Share only what is needed for an initial inquiry.</h2>
-            <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-md); line-height: 1.6;">
-              Please do not submit financial statements, bank or payment information, passwords, government identification numbers, health information, detailed participant records, confidential business documents or other sensitive personal information through this form.
-            </p>
-            <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-md); line-height: 1.6;">
-              If additional information would be useful, Ethnoir can discuss an appropriate way to provide it later.
-            </p>
-            <div style="padding-top: var(--space-md); border-top: 1px solid var(--color-quiet-rule);">
-              <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin: 0; line-height: 1.5;">
-                Ethnoir uses your information to review and respond to this inquiry. Read the <a href="/privacy" style="color: var(--color-deep-teal); text-decoration: underline;">Privacy Notice</a>. No marketing subscription is created by this form.
+            <!-- CONDITIONAL: Organization Fields -->
+            <div id="cond-organization" style="display: none; background-color: var(--color-quiet-sand); padding: var(--space-lg); margin-bottom: var(--space-lg); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-deep-teal); border-radius: 2px;">
+              <!-- Organization -->
+              <div class="form-group" style="margin-bottom: var(--space-md);">
+                <label for="organization" class="voice-1 form-label">Organization <span id="org-req-mark" class="required-mark">*</span></label>
+                <p class="voice-2 form-help">If you are contacting Ethnoir on behalf of an organization.</p>
+                <input type="text" id="organization" name="organization" class="form-control voice-2">
+                <div class="form-error voice-3" id="error-organization">Please provide your organization name.</div>
+              </div>
+              
+              <!-- Role -->
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="role" class="voice-1 form-label">Your role <span id="role-req-mark" class="required-mark">*</span></label>
+                <p class="voice-2 form-help">Your role in the organization or in relation to this inquiry.</p>
+                <input type="text" id="role" name="role" class="form-control voice-2">
+                <div class="form-error voice-3" id="error-role">Please provide your role.</div>
+              </div>
+            </div>
+            
+            <!-- CONDITIONAL: Check-In Support Field -->
+            <div class="form-group conditional-group" id="cond-checkin" style="display: none; background-color: var(--color-quiet-sand); padding: var(--space-lg); margin-bottom: var(--space-lg); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-deep-teal); border-radius: 2px;">
+              <fieldset class="form-fieldset">
+                <legend class="voice-1 form-label" style="margin-bottom: var(--space-sm);">
+                  What happened when you used the Check-In? <span class="required-mark">*</span>
+                </legend>
+                
+                <div class="radio-option">
+                  <input type="radio" id="checkin-issue-1" name="checkin_issue" value="I did not receive my result">
+                  <label for="checkin-issue-1" class="voice-2">I did not receive my result</label>
+                </div>
+                
+                <div class="radio-option">
+                  <input type="radio" id="checkin-issue-2" name="checkin_issue" value="A link did not work">
+                  <label for="checkin-issue-2" class="voice-2">A link did not work</label>
+                </div>
+                
+                <div class="radio-option">
+                  <input type="radio" id="checkin-issue-3" name="checkin_issue" value="I believe my result may have been processed incorrectly">
+                  <label for="checkin-issue-3" class="voice-2">I believe my result may have been processed incorrectly</label>
+                </div>
+                
+                <div class="radio-option">
+                  <input type="radio" id="checkin-issue-4" name="checkin_issue" value="I have a privacy or data question">
+                  <label for="checkin-issue-4" class="voice-2">I have a privacy or data question</label>
+                </div>
+                
+                <div class="radio-option">
+                  <input type="radio" id="checkin-issue-5" name="checkin_issue" value="Something else">
+                  <label for="checkin-issue-5" class="voice-2">Something else</label>
+                </div>
+                
+                <div class="form-error voice-3" id="error-checkin-issue">Please select what happened.</div>
+              </fieldset>
+              
+              <p class="voice-2 form-help" style="margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid var(--color-quiet-rule);">
+                Use the email address submitted with the Check-In. Do not paste your full answers or sensitive business information here.
               </p>
             </div>
-          </div>
-          
-          <!-- Submit -->
-          <div class="form-actions" style="display: flex; flex-direction: column; gap: var(--space-sm);">
-            <button type="submit" id="submit-btn" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); border: none; cursor: pointer; text-align: left; align-self: flex-start;">
-              Send inquiry
-            </button>
-            <p class="voice-3" id="submit-status" style="font-size: 0.875rem; color: var(--color-muted-slate); margin: 0; min-height: 1.5em;"></p>
-          </div>
-          
-          <!-- Hidden Honeypot Spam-Trap Field (must stay invisible) -->
-          <div style="display: none;" aria-hidden="true">
-            <label for="website_url">Website URL (leave blank)</label>
-            <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
-          </div>
-          
-        </form>
+            
+            <!-- Briefly describe your inquiry -->
+            <div class="form-group" style="margin-top: var(--space-md);">
+              <label for="description" class="voice-1 form-label">Briefly describe your inquiry <span class="required-mark">*</span></label>
+              <p class="voice-2 form-help" id="description-help" style="line-height: 1.55;">
+                For Organization inquiry: describe the support you offer, who it serves, what is proving difficult and the decision you need to make. For other inquiry types: briefly describe your question, situation or proposed connection. Do not include sensitive or confidential information.
+              </p>
+              <textarea id="description" name="description" class="form-control voice-2" rows="5" required></textarea>
+              <div class="form-error voice-3" id="error-description">Please describe your inquiry.</div>
+            </div>
+            
+            <!-- Privacy Section -->
+            <div style="background-color: var(--color-porcelain); padding: var(--space-xl); border: 1px solid var(--color-strong-boundary); margin: var(--space-xl) 0; border-radius: 2px;">
+              <h2 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin: 0 0 var(--space-sm) 0;">
+                Share only what is needed for an initial inquiry.
+              </h2>
+              <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-md); line-height: 1.6;">
+                Please do not submit financial statements, bank or payment information, passwords, government identification numbers, health information, detailed participant records, confidential business documents or other sensitive personal information through this form.
+              </p>
+              <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-md); line-height: 1.6;">
+                If additional information would be useful, Ethnoir can discuss an appropriate way to provide it later.
+              </p>
+              <div style="padding-top: var(--space-md); border-top: 1px solid var(--color-quiet-rule);">
+                <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin: 0; line-height: 1.5;">
+                  Ethnoir uses your information to review and respond to this inquiry. Read the <a href="/privacy" style="color: var(--color-deep-teal); text-decoration: underline;">Privacy Notice</a>. No marketing subscription is created by this form.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Submit Actions -->
+            <div class="form-actions" style="display: flex; flex-direction: column; gap: var(--space-sm);">
+              <button type="submit" id="submit-btn" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); border: none; cursor: pointer; text-align: left; align-self: flex-start; padding: var(--space-sm) var(--space-xl); font-size: 1rem; border-radius: 2px;">
+                Send inquiry
+              </button>
+              <p class="voice-3" id="submit-status" style="font-size: 0.875rem; color: var(--color-muted-slate); margin: 0; min-height: 1.5em;"></p>
+            </div>
+            
+            <!-- Hidden Honeypot Spam-Trap Field (must stay invisible) -->
+            <div style="display: none;" aria-hidden="true">
+              <label for="website_url">Website URL (leave blank)</label>
+              <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+            </div>
+            
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -266,17 +302,21 @@ import Layout from '../layouts/Layout.astro';
   <!-- SECTION F: AFTER SUBMISSION -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">What happens next?</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-md);">
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          What happens next?
+        </h2>
       </div>
       
-      <div class="col-12 md-col-7 md-col-8-offset">
-        <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-md); color: var(--color-deep-body-ink); line-height: 1.6;">
-          Ethnoir will review what you send. If the inquiry appears relevant, Ethnoir may contact you to clarify the question or discuss a possible next step.
-        </p>
-        <p class="voice-2" style="font-size: 1.125rem; margin: 0; color: var(--color-muted-slate); line-height: 1.6;">
-          Some inquiries may be outside Ethnoir’s current scope or capacity. Sending an inquiry does not create a client relationship or guarantee a response, meeting or engagement.
-        </p>
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl)); max-width: 760px;">
+          <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-md); color: var(--color-deep-body-ink); line-height: 1.65;">
+            Ethnoir will review what you send. If the inquiry appears relevant, Ethnoir may contact you to clarify the question or discuss a possible next step.
+          </p>
+          <p class="voice-2" style="font-size: 1.125rem; margin: 0; color: var(--color-muted-slate); line-height: 1.65;">
+            Some inquiries may be outside Ethnoir’s current scope or capacity. Sending an inquiry does not create a client relationship or guarantee a response, meeting or engagement.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -284,17 +324,21 @@ import Layout from '../layouts/Layout.astro';
   <!-- SECTION G: FALLBACK LINE -->
   <section class="bg-quiet-sand chapter" style="padding-top: var(--space-xl); padding-bottom: var(--space-xl); border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-sm);">
-        <h2 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); line-height: 1.1;">Unable to use the form?</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-sm);">
+        <h2 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          Unable to use the form?
+        </h2>
       </div>
       
-      <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-sm); color: var(--color-tidal-ink); line-height: 1.6;">
-          Contact Ethnoir at <a href="mailto:omichael@ethnoirconsulting.com" style="color: var(--color-deep-teal); text-decoration: underline;">omichael@ethnoirconsulting.com</a>.
-        </p>
-        <p class="voice-2" style="font-size: 1rem; margin: 0; color: var(--color-deep-body-ink); line-height: 1.6;">
-          For Check-In support, include the email address you used for the Check-In and briefly describe what went wrong.
-        </p>
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl));">
+          <p class="voice-2" style="font-size: 1.125rem; margin-bottom: var(--space-xs); color: var(--color-tidal-ink); line-height: 1.6;">
+            Contact Ethnoir at <a href="mailto:omichael@ethnoirconsulting.com" style="color: var(--color-deep-teal); text-decoration: underline; font-weight: 500;">omichael@ethnoirconsulting.com</a>.
+          </p>
+          <p class="voice-2" style="font-size: 1rem; margin: 0; color: var(--color-deep-body-ink); line-height: 1.6;">
+            For Check-In support, include the email address you used for the Check-In and briefly describe what went wrong.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -302,10 +346,8 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .col-12 { grid-column: span 12; }
-  
   .inquiry-type-item {
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     border-bottom: 1px solid var(--color-quiet-rule);
     padding-bottom: var(--space-md);
   }
@@ -313,26 +355,13 @@ import Layout from '../layouts/Layout.astro';
     font-size: 1.25rem;
     color: var(--color-tidal-ink);
     margin-bottom: 4px;
+    line-height: 1.25;
   }
   .inquiry-type-item p {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--color-deep-body-ink);
     margin: 0;
-    line-height: 1.5;
-  }
-  
-  .editorial-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid var(--color-quiet-rule);
-  }
-  .editorial-list li {
-    padding: var(--space-sm) 0;
-    border-bottom: 1px solid var(--color-quiet-rule);
-    font-size: 1.125rem;
-    color: var(--color-tidal-ink);
-    line-height: 1.5;
+    line-height: 1.55;
   }
 
   /* Form Styles */
@@ -365,7 +394,7 @@ import Layout from '../layouts/Layout.astro';
     border: 1px solid var(--color-strong-boundary);
     font-size: 1rem;
     color: var(--color-tidal-ink);
-    border-radius: 0;
+    border-radius: 2px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
   
@@ -392,13 +421,46 @@ import Layout from '../layouts/Layout.astro';
     padding: 0;
     margin: 0;
   }
+
+  /* Radio Cards */
+  .radio-card {
+    display: flex;
+    align-items: flex-start;
+    padding: var(--space-md);
+    background-color: var(--color-porcelain);
+    border: 1px solid var(--color-quiet-rule);
+    border-radius: 2px;
+    margin-bottom: var(--space-sm);
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+  .radio-card:hover {
+    border-color: var(--color-deep-teal);
+  }
+  .radio-card input[type="radio"] {
+    margin-top: 4px;
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-deep-teal);
+    flex-shrink: 0;
+  }
+  .radio-content {
+    flex-grow: 1;
+  }
+  .radio-title {
+    font-weight: 600;
+    color: var(--color-tidal-ink);
+    display: block;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
   
   .radio-option {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
-  
   .radio-option input[type="radio"] {
     margin-top: 4px;
     margin-right: 12px;
@@ -407,22 +469,13 @@ import Layout from '../layouts/Layout.astro';
     accent-color: var(--color-deep-teal);
     flex-shrink: 0;
   }
-  
   .radio-option label {
     font-size: 1rem;
     color: var(--color-tidal-ink);
     line-height: 1.4;
     cursor: pointer;
   }
-  
-  @media (min-width: 768px) {
-    .md-col-9 { grid-column: span 9; }
-    .md-col-8 { grid-column: span 8; }
-    .md-col-7 { grid-column: span 7; }
-    .md-col-4 { grid-column: span 4; }
-    .md-col-8-offset { grid-column: 6 / span 7; }
-  }
-  
+
   @media (max-width: 767px) {
     .sticky { position: static !important; }
   }
@@ -492,7 +545,7 @@ import Layout from '../layouts/Layout.astro';
       });
     });
 
-    // Handle URL query parameter pre-selection (e.g. /contact?type=institutional or /contact?type=organization or /contact?type=checkin-support)
+    // Handle URL query parameter pre-selection
     const urlParams = new URLSearchParams(window.location.search);
     const typeParam = urlParams.get('type');
     if (typeParam) {

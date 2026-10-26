@@ -6,48 +6,54 @@ import Layout from '../layouts/Layout.astro';
   title="About Ethnoir | Founder-led work on entrepreneurship support"
   description="Ethnoir’s purpose, approach and current work, and its Founder, Olajumoke Michael."
 >
-  <!-- SECTION 1: OPENING / PURPOSE -->
-  <section class="bg-parchment chapter" style="padding-top: var(--space-xl); padding-bottom: var(--space-2xl); border-bottom: 1px solid var(--color-strong-boundary);">
-    <div class="container grid-12">
-      <div class="col-12 md-col-11" style="margin-bottom: var(--space-xl);">
-        <h1 class="voice-1" style="font-size: clamp(2.5rem, 5.5vw, 4rem); margin: 0; line-height: 1.08; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
+  <!-- SECTION 1: OPENING / PURPOSE MASTHEAD -->
+  <section class="bg-parchment chapter" style="padding-top: clamp(3rem, 6vw, var(--space-2xl)); padding-bottom: clamp(3rem, 6vw, var(--space-2xl)); border-bottom: 1px solid var(--color-strong-boundary);">
+    <div class="container">
+      
+      <!-- Dominant Thesis Headline -->
+      <div style="margin-bottom: clamp(2rem, 4vw, var(--space-2xl)); max-width: 1040px;">
+        <h1 class="voice-1" style="font-size: clamp(2.5rem, 5.5vw, 4.25rem); margin: 0; line-height: 1.08; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
           Ethnoir helps people starting or running a business decide using what is actually happening.
         </h1>
       </div>
       
-      <div class="col-12 grid-12" style="border-top: 1px solid var(--color-strong-boundary); padding-top: var(--space-lg);">
-        <div class="col-12 md-col-5 padding-right-md" style="margin-bottom: var(--space-md);">
-          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--color-deep-teal); margin: 0;">
+      <!-- Asymmetric Dual Foundation Columns -->
+      <div class="grid-12" style="border-top: 1px solid var(--color-strong-boundary); padding-top: var(--space-lg); gap: var(--space-xl);">
+        <div class="col-12 md-col-6 border-right-md" style="padding-right: clamp(0rem, 3vw, var(--space-lg));">
+          <p class="voice-2" style="font-size: clamp(1.1875rem, 2vw, 1.35rem); line-height: 1.55; color: var(--color-deep-teal); margin: 0; font-weight: 500;">
             Ethnoir exists to strengthen people’s ability to navigate their ventures with informed judgment. In practice, that means helping founders examine their own circumstances and helping organizations connect participant needs with decisions about the support they offer.
           </p>
         </div>
-        <div class="col-12 md-col-6 padding-left-md md-col-7-offset" style="border-left: 1px solid var(--color-quiet-rule);">
-          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--color-deep-body); margin: 0;">
+        <div class="col-12 md-col-6" style="padding-left: clamp(0rem, 2vw, var(--space-md));">
+          <p class="voice-2" style="font-size: clamp(1.125rem, 1.8vw, 1.25rem); line-height: 1.6; color: var(--color-deep-body); margin: 0;">
             Building or changing a business rarely follows a known path. People decide with incomplete information, competing demands and circumstances that keep changing.
           </p>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- SECTION 2: WHAT MATTERS DEPENDS ON THE BUSINESS -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
-    <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-tidal-ink); line-height: 1.15;">
-          What matters depends on the business
-        </h2>
-      </div>
-      <div class="col-12 md-col-7 md-col-8-offset">
-        <div style="max-width: 680px;">
-          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-md);">
+    <div class="container">
+      <div class="grid-12">
+        <div class="col-12 md-col-5" style="margin-bottom: var(--space-lg);">
+          <h2 class="voice-1" style="font-size: clamp(2.25rem, 4vw, 3rem); color: var(--color-tidal-ink); line-height: 1.15; letter-spacing: -0.02em;">
+            What matters depends on the business
+          </h2>
+        </div>
+        
+        <div class="col-12 md-col-7">
+          <p class="voice-2" style="font-size: clamp(1.1875rem, 2vw, 1.3rem); line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-md);">
             A growing company, a deliberately small business, a new idea and a business that is changing direction or closing do not need the same things. An indicator that matters a great deal in one case may matter little in another.
           </p>
-          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-md);">
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-lg);">
             Sometimes one factor decides the matter, and sometimes a standard approach is right. The test is whether the conclusion fits the evidence, the purpose and the circumstances.
           </p>
-          <div style="border-left: 2px solid var(--color-tidal-ink); padding-left: var(--space-md); margin-top: var(--space-md);">
-            <p class="voice-2" style="font-size: 1.1875rem; line-height: 1.6; color: var(--color-tidal-ink); font-weight: 500; margin: 0;">
+          
+          <div style="background-color: var(--color-parchment); border-left: 3px solid var(--color-tidal-ink); padding: clamp(1.25rem, 2vw, 1.75rem); border: 1px solid var(--color-quiet-rule); border-left-width: 3px; border-left-color: var(--color-tidal-ink);">
+            <p class="voice-2" style="font-size: clamp(1.125rem, 1.8vw, 1.2rem); line-height: 1.55; color: var(--color-tidal-ink); font-weight: 500; margin: 0;">
               Ethnoir does not assume every business should seek funding, grow quickly or continue. Capital can be the right answer, but it is not the automatic starting point.
             </p>
           </div>
@@ -56,112 +62,127 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- SECTION 3: TWO GROUPS ETHNOIR WORKS WITH -->
+  <!-- SECTION 3: TWO GROUPS ETHNOIR WORKS WITH / ARCHITECTURAL LEDGER -->
   <section class="bg-parchment chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
-    <div class="container grid-12">
-      <div class="col-12" style="margin-bottom: var(--space-xl);">
+    <div class="container">
+      <div style="margin-bottom: var(--space-xl);">
         <h2 class="voice-1" style="font-size: clamp(2.25rem, 4vw, 3rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
           Two groups Ethnoir works with
         </h2>
       </div>
 
-      <!-- Group 1: Founders -->
-      <div class="col-12 md-col-6 thin-rule-y" style="padding-right: var(--space-xl); margin-bottom: var(--space-xl);">
-        <h3 class="voice-1" style="font-size: 1.75rem; color: var(--color-tidal-ink); line-height: 1.2; margin-bottom: var(--space-sm);">
-          Founders and business owners
-        </h3>
-        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-deep-body); margin: 0;">
-          making sense of what is happening in the business and what may deserve attention next.
-        </p>
-      </div>
+      <div class="grid-12" style="border-top: 1px solid var(--color-strong-boundary); background-color: var(--color-porcelain); border-bottom: 1px solid var(--color-strong-boundary);">
+        
+        <!-- Group 1: Founders -->
+        <div class="col-12 md-col-6 border-right-md" style="padding: clamp(2rem, 3.5vw, 3rem); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 class="voice-1" style="font-size: clamp(1.75rem, 2.5vw, 2.15rem); color: var(--color-tidal-ink); line-height: 1.2; margin-bottom: var(--space-md);">
+              Founders and business owners
+            </h3>
+            <p class="voice-2" style="font-size: 1.1875rem; line-height: 1.6; color: var(--color-deep-body); margin: 0;">
+              making sense of what is happening in the business and what may deserve attention next.
+            </p>
+          </div>
+        </div>
 
-      <!-- Group 2: Organizations -->
-      <div class="col-12 md-col-6" style="padding-left: var(--space-md); margin-bottom: var(--space-xl);">
-        <h3 class="voice-1" style="font-size: 1.75rem; color: var(--color-tidal-ink); line-height: 1.2; margin-bottom: var(--space-sm);">
-          Organizations that support entrepreneurs
-        </h3>
-        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-lg);">
-          examining whether support fits participants’ circumstances and using the available evidence to shape its design, delivery and measurement.
-        </p>
-        <a href="/for-organizations" class="link-secondary" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 500; display: inline-block;">
-          For Organizations &rarr;
-        </a>
+        <!-- Group 2: Organizations -->
+        <div class="col-12 md-col-6" style="padding: clamp(2rem, 3.5vw, 3rem); display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="margin-bottom: var(--space-xl);">
+            <h3 class="voice-1" style="font-size: clamp(1.75rem, 2.5vw, 2.15rem); color: var(--color-tidal-ink); line-height: 1.2; margin-bottom: var(--space-md);">
+              Organizations that support entrepreneurs
+            </h3>
+            <p class="voice-2" style="font-size: 1.1875rem; line-height: 1.6; color: var(--color-deep-body); margin: 0;">
+              examining whether support fits participants’ circumstances and using the available evidence to shape its design, delivery and measurement.
+            </p>
+          </div>
+          <div>
+            <a href="/for-organizations" class="link-secondary" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+              <span>For Organizations</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4: HOW ETHNOIR WORKS -->
+  <!-- SECTION 4: PRACTICE & LEADERSHIP CONTINUUM (HOW WE WORK & ETHNOIR TODAY) -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
-    <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-tidal-ink); line-height: 1.15;">
-          How Ethnoir works
-        </h2>
-      </div>
-      <div class="col-12 md-col-7 md-col-8-offset">
-        <div style="max-width: 680px;">
-          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.6; color: var(--color-deep-body); margin: 0;">
+    <div class="container">
+      
+      <!-- Sub-part 1: How Ethnoir works -->
+      <div class="grid-12" style="margin-bottom: var(--space-2xl);">
+        <div class="col-12 md-col-5" style="margin-bottom: var(--space-md);">
+          <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-tidal-ink); line-height: 1.15;">
+            How Ethnoir works
+          </h2>
+        </div>
+        <div class="col-12 md-col-7">
+          <p class="voice-2" style="font-size: clamp(1.1875rem, 2vw, 1.3rem); line-height: 1.65; color: var(--color-deep-body); margin: 0;">
             We make information usable, not just available. We consider the goals and circumstances of the people we serve, and we do not recommend support just because it is available or familiar. Our conclusions stay tied to the evidence: when it supports a clear conclusion we say so plainly, and when real uncertainty remains we do not hide it.
           </p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- SECTION 5: ETHNOIR TODAY -->
-  <section class="bg-quiet-sand chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
-    <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-tidal-ink); line-height: 1.15;">
-          Ethnoir today
-        </h2>
-      </div>
-      <div class="col-12 md-col-7 md-col-8-offset">
-        <div style="max-width: 680px;">
-          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-lg);">
+      <!-- Sub-part 2: Ethnoir today -->
+      <div class="grid-12" style="border-top: 1px solid var(--color-quiet-rule); padding-top: var(--space-xl); align-items: center;">
+        <div class="col-12 md-col-5" style="margin-bottom: var(--space-md);">
+          <h2 class="voice-1" style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-tidal-ink); line-height: 1.15;">
+            Ethnoir today
+          </h2>
+        </div>
+        <div class="col-12 md-col-7">
+          <p class="voice-2" style="font-size: clamp(1.125rem, 1.8vw, 1.25rem); line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-lg);">
             Ethnoir is led by its Founder, Olajumoke Michael. Its work connects an understanding of founder circumstances with practical support design, delivery and learning. The Venture Readiness Lab shows this approach in a six-week founder-facing pilot.
           </p>
-          <a href="/our-work" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-block;">
-            View Our Work &rarr;
-          </a>
+          <div>
+            <a href="/our-work" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+              <span>View Our Work</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- SECTION 6: ABOUT OLAJUMOKE MICHAEL -->
-  <section class="bg-porcelain chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
-    <div class="container grid-12">
-      <!-- Section Header Across 12 Columns -->
-      <div class="col-12" style="margin-bottom: var(--space-xl);">
+  <!-- SECTION 5: ABOUT OLAJUMOKE MICHAEL / GALLERY DOSSIER -->
+  <section class="bg-parchment chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div style="margin-bottom: var(--space-xl);">
         <h2 class="voice-1" style="font-size: clamp(2.25rem, 4vw, 3rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
           About Olajumoke Michael
         </h2>
       </div>
 
-      <!-- Portrait Column (4:5) -->
-      <div class="col-12 md-col-5 padding-right-md" style="margin-bottom: var(--space-xl);">
-        <div style="background-color: var(--color-parchment); padding: var(--space-xs); border: 1px solid var(--color-quiet-rule);">
-          <picture>
-            <source srcset="/images/olajumoke-michael.webp" type="image/webp" />
-            <img
-              src="/images/olajumoke-michael.jpg"
-              alt="Olajumoke Michael, Founder of Ethnoir"
-              width="722"
-              height="1080"
-              loading="lazy"
-              decoding="async"
-              style="width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center top; display: block;"
-              onerror="this.style.display='none';"
-            />
-          </picture>
+      <div class="grid-12" style="align-items: start; gap: var(--space-xl);">
+        
+        <!-- Portrait Column (4:5) -->
+        <div class="col-12 md-col-5">
+          <div style="background-color: var(--color-porcelain); padding: var(--space-xs); border: 1px solid var(--color-quiet-rule); box-shadow: 0 4px 24px rgba(18, 49, 58, 0.06); max-width: 420px;">
+            <picture>
+              <source srcset="/images/olajumoke-michael.webp" type="image/webp" />
+              <img
+                src="/images/olajumoke-michael.jpg"
+                alt="Olajumoke Michael, Founder of Ethnoir"
+                width="722"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+                style="width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center top; display: block;"
+                onerror="this.style.display='none';"
+              />
+            </picture>
+          </div>
         </div>
-      </div>
 
-      <!-- Bio & Credentials Column -->
-      <div class="col-12 md-col-7 padding-left-md" style="border-left: 1px solid var(--color-quiet-rule);">
-        <div style="max-width: 620px;">
-          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-md);">
+        <!-- Bio & Credentials Column -->
+        <div class="col-12 md-col-7">
+          <p class="voice-2" style="font-size: clamp(1.1875rem, 2vw, 1.3rem); line-height: 1.6; color: var(--color-deep-body); margin-bottom: var(--space-md);">
             Olajumoke founded Ethnoir in 2025. Ethnoir is based in Winston-Salem, North Carolina. She brings cross-sector experience in program strategy, operations, implementation and stakeholder engagement across entrepreneurship support, nonprofit, higher-education, government and economic-development settings.
           </p>
           
@@ -169,139 +190,94 @@ import Layout from '../layouts/Layout.astro';
             Earlier roles include U.S. Program Manager for Bpeace’s Breaking the $1M Barrier program and Former Program Director of the Winston-Salem Women’s Business Center. At Bpeace, she created guidance for coaches and facilitators, designed and facilitated peer-learning sessions, and helped coordinate onboarding and Showcase preparation. At the Women’s Business Center, she led programming and strengthened intake, CRM and reporting processes.
           </p>
 
-          <div style="background: var(--color-parchment); padding: var(--space-md); border-left: 2px solid var(--color-quiet-rule); margin-bottom: var(--space-xl);">
-            <p class="voice-2" style="font-size: 1rem; line-height: 1.5; color: var(--color-deep-body); margin: 0;">
+          <div style="background: var(--color-porcelain); padding: clamp(1rem, 2vw, 1.25rem); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-deep-teal); margin-bottom: var(--space-xl);">
+            <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.55; color: var(--color-deep-body); margin: 0;">
               MSc Environmental Management, University of South Wales. BSc Microbiology, Olabisi Onabanjo University.
             </p>
           </div>
 
-          <a
-            href="https://olajumokemichael.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link-secondary"
-            style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 500; display: inline-flex; align-items: center; gap: 6px;"
-          >
-            Read more about her professional experience &rarr;
-          </a>
+          <div>
+            <a
+              href="https://olajumokemichael.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-secondary"
+              style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 600; display: inline-flex; align-items: center; gap: 6px;"
+            >
+              <span>Read more about her professional experience</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- SECTION 7: NEXT PATHWAYS -->
+  <!-- SECTION 6: NEXT PATHWAYS / ARCHITECTURAL DIRECTORY -->
   <section class="bg-tidal-ink chapter chapter-large-spacing">
     <div class="container">
-      <div style="margin-bottom: var(--space-xl); text-align: center;">
+      <div style="margin-bottom: var(--space-2xl); text-align: center;">
         <h2 class="voice-1" style="font-size: clamp(2rem, 4vw, 3rem); color: var(--color-porcelain); margin: 0;">
           Next pathways
         </h2>
       </div>
 
-      <div class="grid-12">
+      <div class="grid-12" style="border-top: 1px solid rgba(255, 255, 255, 0.2); border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+        
         <!-- Pathway 1: Organizations -->
-        <div class="col-12 md-col-4 pathway-card">
+        <div class="col-12 md-col-4 border-right-md" style="padding: clamp(1.75rem, 3vw, 2.5rem); display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <span class="voice-3" style="color: var(--color-quiet-sand); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: var(--space-xs);">
+            <span class="voice-3" style="color: var(--color-quiet-sand); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: var(--space-xs);">
               Organizations
             </span>
-            <p class="voice-2 pathway-text">
+            <p class="voice-2" style="font-size: 1.125rem; color: var(--color-parchment); margin-bottom: var(--space-xl); line-height: 1.55;">
               Examining how participants’ conditions are understood and how support is designed, delivered or directed.
             </p>
           </div>
-          <a href="/for-organizations" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none; display: inline-block;">
-            For Organizations
-          </a>
+          <div>
+            <a href="/for-organizations" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none; display: inline-block;">
+              For Organizations
+            </a>
+          </div>
         </div>
 
         <!-- Pathway 2: Founders and business owners -->
-        <div class="col-12 md-col-4 pathway-card">
+        <div class="col-12 md-col-4 border-right-md" style="padding: clamp(1.75rem, 3vw, 2.5rem); display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <span class="voice-3" style="color: var(--color-quiet-sand); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: var(--space-xs);">
+            <span class="voice-3" style="color: var(--color-quiet-sand); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: var(--space-xs);">
               Founders and business owners
             </span>
-            <p class="voice-2 pathway-text">
+            <p class="voice-2" style="font-size: 1.125rem; color: var(--color-parchment); margin-bottom: var(--space-xl); line-height: 1.55;">
               Making sense of what is happening in the business and what may deserve attention next.
             </p>
           </div>
-          <a href="/venture-readiness-check-in" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none; display: inline-block;">
-            Explore the Check-In
-          </a>
+          <div>
+            <a href="/venture-readiness-check-in" class="btn-primary" style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none; display: inline-block;">
+              Explore the Check-In
+            </a>
+          </div>
         </div>
 
         <!-- Pathway 3: The evidence -->
-        <div class="col-12 md-col-4 pathway-card" style="border-right: none;">
+        <div class="col-12 md-col-4" style="padding: clamp(1.75rem, 3vw, 2.5rem); display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <span class="voice-3" style="color: var(--color-quiet-sand); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: var(--space-xs);">
+            <span class="voice-3" style="color: var(--color-quiet-sand); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: var(--space-xs);">
               The evidence
             </span>
-            <p class="voice-2 pathway-text">
+            <p class="voice-2" style="font-size: 1.125rem; color: var(--color-parchment); margin-bottom: var(--space-xl); line-height: 1.55;">
               Direct evidence and practical lessons from the Venture Readiness Lab pilot.
             </p>
           </div>
-          <a href="/our-work" class="link-secondary" style="color: var(--color-parchment); font-size: 1rem; text-decoration: underline; text-underline-offset: 4px; display: inline-block;">
-            View Our Work &rarr;
-          </a>
+          <div>
+            <a href="/our-work" class="link-secondary" style="color: var(--color-parchment); font-size: 1rem; text-decoration: underline; text-underline-offset: 4px; display: inline-block;">
+              View Our Work &rarr;
+            </a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 </Layout>
 
-<style>
-  .col-12 { grid-column: span 12; }
-  
-  /* Next Pathways specific styles */
-  .pathway-card {
-    padding: var(--space-lg);
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .pathway-text {
-    font-size: 1.125rem;
-    color: var(--color-parchment);
-    margin-bottom: var(--space-lg);
-    line-height: 1.5;
-  }
-  
-  @media (min-width: 768px) {
-    .md-col-8 { grid-column: span 8; }
-    .md-col-4 { grid-column: span 4; }
-    .md-col-7 { grid-column: span 7; }
-    .md-col-5 { grid-column: span 5; }
-    .md-col-6 { grid-column: span 6; }
-    .md-col-10 { grid-column: span 10; }
-    .md-col-11 { grid-column: span 11; }
-    .md-col-7-offset { grid-column: 6 / span 7; }
-    .md-col-8-offset { grid-column: 5 / span 8; }
-    
-    .padding-right-md { padding-right: var(--space-lg); }
-    .padding-left-md { padding-left: var(--space-lg); }
-  }
-  
-  @media (max-width: 767px) {
-    .pathway-card {
-      border-right: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      padding: var(--space-md) 0;
-    }
-    .pathway-card:last-child {
-      border-bottom: none;
-    }
-    .md-col-7-offset,
-    .md-col-7 {
-      border-left: none !important;
-      padding-left: 0 !important;
-      padding-top: var(--space-md);
-    }
-    .thin-rule-y {
-      border-right: none !important;
-      padding-right: 0 !important;
-      border-bottom: 1px solid var(--color-quiet-rule);
-      padding-bottom: var(--space-lg);
-    }
-  }
-</style>

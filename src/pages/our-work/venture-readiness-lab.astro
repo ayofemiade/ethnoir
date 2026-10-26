@@ -7,23 +7,25 @@ import Layout from '../../layouts/Layout.astro';
   description="What a six-week founder pilot taught Ethnoir about the space between identifying a business constraint and implementing a useful response."
 >
   <!-- BACK NAVIGATION -->
-  <div class="bg-parchment" style="padding-top: var(--space-lg); border-bottom: 1px solid var(--color-strong-boundary);">
+  <div class="bg-parchment" style="padding-top: var(--space-lg); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container">
-      <a href="/our-work" class="link-secondary" style="font-size: 0.875rem;">&larr; Back to Our Work</a>
+      <a href="/our-work" class="link-secondary" style="font-size: 0.875rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; color: var(--color-muted-slate);">
+        &larr; Back to Our Work
+      </a>
     </div>
   </div>
 
-  <!-- 1. OPENING -->
+  <!-- 1. OPENING MASTHEAD -->
   <section class="bg-parchment" style="padding: var(--space-2xl) 0 var(--space-xl) 0;">
     <div class="container grid-12">
-      <div class="col-12 md-col-10">
-        <h1 class="voice-1" style="font-size: clamp(3rem, 7vw, 5rem); margin: 0 0 var(--space-lg) 0; line-height: 1.05; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
+      <div class="col-12 lg-col-11">
+        <h1 class="voice-1" style="font-size: clamp(2.75rem, 6.5vw, 5rem); margin: 0 0 var(--space-lg) 0; line-height: 1.05; letter-spacing: -0.025em; color: var(--color-tidal-ink);">
           From Business Problems to Practical Structure
         </h1>
-        <p class="voice-2" style="font-size: 1.5rem; line-height: 1.4; color: var(--color-deep-teal); max-width: 800px; margin: 0 0 var(--space-md) 0;">
+        <p class="voice-2" style="font-size: clamp(1.25rem, 2.2vw, 1.55rem); line-height: 1.4; color: var(--color-deep-teal); max-width: 820px; margin: 0 0 var(--space-lg) 0;">
           What a six-week founder pilot taught Ethnoir about the space between identifying a business constraint and implementing a useful response.
         </p>
-        <p class="voice-2" style="font-size: 1.1875rem; line-height: 1.6; color: var(--color-deep-body); max-width: 800px; margin: 0;">
+        <p class="voice-2" style="font-size: 1.1875rem; line-height: 1.6; color: var(--color-deep-body); max-width: 820px; margin: 0;">
           Six founders spent six weeks working on one problem each in their own business. This case explains what Ethnoir ran, what founders produced, where the pilot fell short and what it shows should be tested next.
         </p>
       </div>
@@ -33,19 +35,19 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 2. THE QUESTION -->
   <section class="bg-porcelain chapter chapter-moderate-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4">
-        <h2 class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em;">The Question</h2>
+      <div class="col-12 md-col-4 lg-col-3">
+        <h2 class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem;">The Question</h2>
       </div>
-      <div class="col-12 md-col-8">
-        <h3 class="voice-1" style="font-size: 2rem; line-height: 1.2; margin-bottom: var(--space-md); max-width: 640px;">
-          The Venture Readiness Lab began with a practical question: what happens when a founder can see a business problem but the appropriate response is not yet clear?
-        </h3>
-        <div style="max-width: 640px;">
-          <p class="voice-2" style="margin-bottom: var(--space-md);">
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl)); max-width: 760px;">
+          <h3 class="voice-1" style="font-size: clamp(1.5rem, 2.5vw, 2.125rem); line-height: 1.25; margin: 0 0 var(--space-md) 0; color: var(--color-tidal-ink);">
+            The Venture Readiness Lab began with a practical question: what happens when a founder can see a business problem but the appropriate response is not yet clear?
+          </h3>
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
             The pilot examined the space between a visible concern and a usable response. Ethnoir wanted to learn whether a structured process could help founders interpret what might be contributing to a problem, identify a plausible structural constraint, and develop a practical response connected to their own venture conditions.
           </p>
-          <div style="border-left: 2px solid var(--color-tidal-ink); padding-left: var(--space-md); margin-top: var(--space-lg);">
-            <p class="voice-2" style="color: var(--color-muted-slate); margin: 0;">
+          <div style="background-color: var(--color-parchment); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-tidal-ink); padding: var(--space-md); margin-top: var(--space-md);">
+            <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.55; color: var(--color-muted-slate); margin: 0;">
               This was not a test of a validated diagnostic model. It was an early test of how interpretation, focused decision support and implementation work could operate together in a founder-facing intervention.
             </p>
           </div>
@@ -57,28 +59,30 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 3. AT A GLANCE (Evidence Facts) -->
   <section class="bg-quiet-sand chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-xl);">
-        <h2 class="voice-1" style="font-size: 2.5rem; margin-bottom: var(--space-sm);">At a glance</h2>
-        <p class="voice-3" style="color: var(--color-deep-teal); border: 1px solid var(--color-quiet-rule); display: inline-block; padding: 4px 12px; background: var(--color-parchment);">
-          These are implementation and output facts, not measures of impact.
-        </p>
+      <div style="text-align: center; margin-bottom: var(--space-xl); max-width: 640px; margin-left: auto; margin-right: auto;">
+        <h2 class="voice-1" style="font-size: clamp(2rem, 4vw, 2.75rem); margin: 0 0 var(--space-xs) 0; color: var(--color-tidal-ink);">At a glance</h2>
+        <div style="margin-top: var(--space-sm);">
+          <p class="voice-3" style="color: var(--color-deep-teal); border: 1px solid var(--color-quiet-rule); display: inline-block; padding: 4px 12px; background: var(--color-parchment); font-size: 0.8125rem; border-radius: 2px; margin: 0;">
+            These are implementation and output facts, not measures of impact.
+          </p>
+        </div>
       </div>
 
       <div class="stats-grid">
-        <div class="stat-block" style="background: var(--color-porcelain); padding: var(--space-lg); border: 1px solid var(--color-quiet-rule);">
-          <div class="stat-caption" style="text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted-slate); margin-bottom: var(--space-sm);">Duration</div>
-          <div class="stat-huge" style="font-size: 4rem; color: var(--color-tidal-ink);">Six</div>
-          <div class="stat-caption" style="margin-top: var(--space-sm); font-size: 1rem;">weeks &mdash; June 24 - July 31, 2026</div>
+        <div class="stat-card">
+          <div class="stat-caption-top">Duration</div>
+          <div class="stat-numeral">Six</div>
+          <div class="stat-caption-bottom">weeks &mdash; June 24 - July 31, 2026</div>
         </div>
-        <div class="stat-block" style="background: var(--color-porcelain); padding: var(--space-lg); border: 1px solid var(--color-quiet-rule);">
-          <div class="stat-caption" style="text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted-slate); margin-bottom: var(--space-sm);">Retention</div>
-          <div class="stat-huge" style="font-size: 4rem; color: var(--color-tidal-ink);">Six</div>
-          <div class="stat-caption" style="margin-top: var(--space-sm); font-size: 1rem;">active founders &mdash; all reached Week 6</div>
+        <div class="stat-card">
+          <div class="stat-caption-top">Retention</div>
+          <div class="stat-numeral">Six</div>
+          <div class="stat-caption-bottom">active founders &mdash; all reached Week 6</div>
         </div>
-        <div class="stat-block" style="background: var(--color-porcelain); padding: var(--space-lg); border: 1px solid var(--color-quiet-rule);">
-          <div class="stat-caption" style="text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted-slate); margin-bottom: var(--space-sm);">Outputs</div>
-          <div class="stat-huge" style="font-size: 4rem; color: var(--color-tidal-ink);">Five</div>
-          <div class="stat-caption" style="margin-top: var(--space-sm); font-size: 1rem;">deliverables &mdash; reviewed and confirmed by the Founder</div>
+        <div class="stat-card">
+          <div class="stat-caption-top">Outputs</div>
+          <div class="stat-numeral">Five</div>
+          <div class="stat-caption-bottom">deliverables &mdash; reviewed and confirmed by the Founder</div>
         </div>
       </div>
     </div>
@@ -87,32 +91,42 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 4. WHAT ETHNOIR TESTED & 5. WHAT HAPPENED -->
   <section class="bg-parchment chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <!-- Proposed vs Delivered Left Column -->
-      <div class="col-12 md-col-5 padding-right-md border-right-md" style="margin-bottom: var(--space-xl);">
-        <h2 class="voice-1" style="font-size: 2rem; margin-bottom: var(--space-lg);">What Ethnoir tested</h2>
-        <p class="voice-2" style="margin-bottom: var(--space-md);">
+      <!-- Proposed Left Column -->
+      <div class="col-12 md-col-6 padding-right-md border-right-md" style="margin-bottom: var(--space-xl);">
+        <div style="padding-bottom: var(--space-sm);">
+          <span class="voice-3" style="color: var(--color-muted-slate); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Protocol Design</span>
+          <h2 class="voice-1" style="font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: var(--space-md); color: var(--color-tidal-ink); line-height: 1.15;">
+            What Ethnoir tested
+          </h2>
+        </div>
+        <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
           Ethnoir proposed a six-week virtual program for founders working through structural business constraints. The intended intervention combined venture-condition assessment, a shared sequence of cohort sessions, practical work and individualized implementation support.
         </p>
-        <div style="background: var(--color-quiet-sand); padding: var(--space-md); border-left: 2px solid var(--color-muted-slate); margin-bottom: var(--space-md);">
-          <p class="voice-2" style="margin: 0; font-size: 0.9375rem; color: var(--color-deep-body-ink);">
+        <div style="background: var(--color-quiet-sand); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-muted-slate); margin-bottom: var(--space-md); border-radius: 2px;">
+          <p class="voice-2" style="margin: 0; font-size: 0.9375rem; line-height: 1.55; color: var(--color-deep-body-ink);">
             <strong>Proposed target:</strong> The proposed cohort was 10–12 founders, supported by a larger diagnostic pipeline. The Lab was intended to help participants move beyond a visible symptom, focus on a material issue, and produce a structural response that could be used in the venture.
           </p>
         </div>
-        <p class="voice-2" style="margin-bottom: 0; color: var(--color-muted-slate); font-size: 0.9375rem;">
+        <p class="voice-2" style="margin-bottom: 0; color: var(--color-muted-slate); font-size: 0.9375rem; line-height: 1.55;">
           The proposal also included targets related to readiness-zone change, structural deliverables, warm introductions, and increased clarity or confidence. Those planned measures are addressed below alongside what the available evidence could—and could not—show.
         </p>
       </div>
 
       <!-- What Happened Right Column -->
-      <div class="col-12 md-col-7 padding-left-md">
-        <h2 class="voice-1" style="font-size: 2rem; margin-bottom: var(--space-lg);">What happened</h2>
-        <p class="voice-2" style="margin-bottom: var(--space-md);">
+      <div class="col-12 md-col-6 padding-left-md">
+        <div style="padding-bottom: var(--space-sm);">
+          <span class="voice-3" style="color: var(--color-muted-slate); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Actual Execution</span>
+          <h2 class="voice-1" style="font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: var(--space-md); color: var(--color-tidal-ink); line-height: 1.15;">
+            What happened
+          </h2>
+        </div>
+        <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
           Ethnoir delivered the Lab over six weeks, with six weekly virtual cohort sessions totaling 9.5 hours and two one-hour office-hour sessions.
         </p>
-        <p class="voice-2" style="margin-bottom: var(--space-md);">
+        <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
           Six founders remained active, and all six reached the final session. Attendance totaled 32 of 36 possible participant-session attendances. The common program structure was paired with individualized interpretation and implementation work.
         </p>
-        <p class="voice-2" style="margin-bottom: 0;">
+        <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: 0;">
           The recruitment period was compressed, and the active cohort was smaller than planned. That changed what could reasonably be learned from the pilot. The Lab nevertheless gave Ethnoir a complete pilot through which to examine its assumptions about recruitment, participation, implementation and measurement.
         </p>
       </div>
@@ -122,48 +136,68 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 6. FROM CONCERN TO STRUCTURAL RESPONSE -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto var(--space-xl);">
-        <h2 class="voice-1" style="font-size: 2.5rem; margin-bottom: var(--space-md);">From concern to structural response</h2>
-        <p class="voice-2" style="font-size: 1.25rem;">The pilot surfaced an emerging working pathway:</p>
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-xl);">
+        <h2 class="voice-1" style="font-size: clamp(2.25rem, 4vw, 3rem); margin: 0 0 var(--space-xs) 0; color: var(--color-tidal-ink);">
+          From concern to structural response
+        </h2>
+        <p class="voice-2" style="font-size: 1.25rem; color: var(--color-deep-teal); margin: 0;">The pilot surfaced an emerging working pathway:</p>
       </div>
 
       <!-- Semantic Accessible Sequence -->
       <div class="sequence-container" style="margin-bottom: var(--space-xl);">
         <ol class="working-pathway-sequence">
           <li>
-            <div class="seq-step">Visible concern</div>
+            <div class="seq-step">
+              <span class="seq-num">01</span>
+              <span>Visible concern</span>
+            </div>
           </li>
           <li>
-            <div class="seq-step">Contextual interpretation</div>
+            <div class="seq-step">
+              <span class="seq-num">02</span>
+              <span>Contextual interpretation</span>
+            </div>
           </li>
           <li>
-            <div class="seq-step">Plausible structural constraint</div>
+            <div class="seq-step">
+              <span class="seq-num">03</span>
+              <span>Plausible structural constraint</span>
+            </div>
           </li>
           <li>
-            <div class="seq-step">Practical response</div>
+            <div class="seq-step">
+              <span class="seq-num">04</span>
+              <span>Practical response</span>
+            </div>
           </li>
           <li>
-            <div class="seq-step">Use or testing</div>
+            <div class="seq-step">
+              <span class="seq-num">05</span>
+              <span>Use or testing</span>
+            </div>
           </li>
           <li>
-            <div class="seq-step">Follow-up</div>
+            <div class="seq-step">
+              <span class="seq-num">06</span>
+              <span>Follow-up</span>
+            </div>
           </li>
         </ol>
       </div>
 
       <div class="grid-12" style="max-width: 960px; margin: 0 auto;">
-        <div class="col-12 md-col-7 padding-right-md">
-          <p class="voice-2" style="margin-bottom: var(--space-md);">
+        <div class="col-12 md-col-7 padding-right-md" style="margin-bottom: var(--space-md);">
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
             A founder might begin with inconsistent client flow, operational strain, inventory uncertainty or limited financial visibility. Ethnoir then helped organize relevant information, separate what was known from assumptions or gaps, and develop a cautious interpretation of what might be contributing to the concern.
           </p>
-          <p class="voice-2">
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin: 0;">
             That interpretation could point toward a plausible structural constraint and a practical response—a process, document, tracker, strategy or other working structure. The response could then be introduced into the venture, tested where the pilot allowed, and followed over time.
           </p>
         </div>
         <div class="col-12 md-col-5 padding-left-md" style="border-left: 1px solid var(--color-quiet-rule);">
-          <div style="background: var(--color-quiet-sand); padding: var(--space-md);">
-            <h3 class="voice-3" style="color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">Limitation</h3>
-            <p class="voice-2" style="margin: 0; font-size: 0.9375rem; color: var(--color-muted-slate);">
+          <div style="background: var(--color-quiet-sand); padding: var(--space-lg); border: 1px solid var(--color-quiet-rule); border-radius: 2px;">
+            <h3 class="voice-3" style="color: var(--color-tidal-ink); margin-bottom: var(--space-sm); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em;">Limitation</h3>
+            <p class="voice-2" style="margin: 0; font-size: 0.9375rem; line-height: 1.55; color: var(--color-muted-slate);">
               This is emerging pilot learning, not a validated diagnostic model or a universal pathway. A visible concern may have several contributing conditions. A short intervention may support only a provisional interpretation, and later evidence may change it.
             </p>
           </div>
@@ -175,31 +209,35 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 7. A SHARED FRAMEWORK, DIFFERENT PRACTICAL OUTPUTS -->
   <section class="bg-parchment chapter chapter-moderate-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4">
-        <h2 class="voice-1" style="font-size: 2rem; margin-bottom: var(--space-md);">A shared framework, different practical outputs</h2>
+      <div class="col-12 md-col-4 lg-col-3">
+        <h2 class="voice-1" style="font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1.15; margin-bottom: var(--space-md); color: var(--color-tidal-ink);">
+          A shared framework, different practical outputs
+        </h2>
       </div>
-      <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.25rem; margin-bottom: var(--space-lg);">
-          Five active participants had structural business deliverables that Ethnoir’s Founder personally reviewed and confirmed:
-        </p>
-        
-        <ul class="editorial-list">
-          <li class="voice-2">Client intake and routing process</li>
-          <li class="voice-2">Standard operating procedure or other documented process</li>
-          <li class="voice-2">Inventory sourcing and order-decision process</li>
-          <li class="voice-2">Client pipeline tracker</li>
-          <li class="voice-2">Customer-acquisition strategy</li>
-        </ul>
-        
-        <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border-left: 2px solid var(--color-tidal-ink); margin-top: var(--space-lg); margin-bottom: var(--space-md);">
-          <p class="voice-2" style="margin: 0; font-size: 1rem; color: var(--color-deep-body);">
-            The Founder designed and led the program, so this was a facilitator’s review of outputs, not an external evaluation.
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl));">
+          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.45; color: var(--color-deep-teal); margin-bottom: var(--space-lg);">
+            Five active participants had structural business deliverables that Ethnoir’s Founder personally reviewed and confirmed:
+          </p>
+          
+          <ul class="editorial-list">
+            <li class="voice-2">Client intake and routing process</li>
+            <li class="voice-2">Standard operating procedure or other documented process</li>
+            <li class="voice-2">Inventory sourcing and order-decision process</li>
+            <li class="voice-2">Client pipeline tracker</li>
+            <li class="voice-2">Customer-acquisition strategy</li>
+          </ul>
+          
+          <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-tidal-ink); margin-top: var(--space-lg); margin-bottom: var(--space-md); border-radius: 2px;">
+            <p class="voice-2" style="margin: 0; font-size: 0.9375rem; line-height: 1.55; color: var(--color-deep-body);">
+              The Founder designed and led the program, so this was a facilitator’s review of outputs, not an external evaluation.
+            </p>
+          </div>
+          
+          <p class="voice-2" style="margin-top: var(--space-md); color: var(--color-deep-body-ink); font-size: 1.0625rem; line-height: 1.65; max-width: 720px;">
+            The common element was not an identical deliverable. It was the process of moving from a venture-specific concern toward a practical structural response. The pilot does not establish that individualized outputs are always preferable; it shows that one shared intervention produced several different responses connected to the conditions under examination.
           </p>
         </div>
-        
-        <p class="voice-2" style="margin-top: var(--space-lg); color: var(--color-deep-body-ink); max-width: 720px;">
-          The common element was not an identical deliverable. It was the process of moving from a venture-specific concern toward a practical structural response. The pilot does not establish that individualized outputs are always preferable; it shows that one shared intervention produced several different responses connected to the conditions under examination.
-        </p>
       </div>
     </div>
   </section>
@@ -207,19 +245,21 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 8. WHAT THE EVIDENCE SHOWED -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-xl);">
-        <h2 class="voice-1" style="font-size: 2.5rem;">What the evidence showed</h2>
+      <div style="text-align: center; margin-bottom: var(--space-xl);">
+        <h2 class="voice-1" style="font-size: clamp(2.25rem, 4vw, 3rem); color: var(--color-tidal-ink);">What the evidence showed</h2>
       </div>
       
       <div class="grid-12">
         <!-- Verified Facts -->
         <div class="col-12 md-col-6 padding-right-md border-right-md" style="margin-bottom: var(--space-xl);">
-          <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted-slate); margin-bottom: var(--space-md);">Verified implementation and output evidence</h3>
-          <p class="voice-2" style="margin-bottom: var(--space-md);">
+          <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; color: var(--color-muted-slate); margin-bottom: var(--space-md);">
+            Verified implementation and output evidence
+          </h3>
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
             The evidence confirms that the six-week program was delivered, that all six active founders reached the final session, that attendance was 32 of 36 possible participant-sessions, and that five structural deliverables were reviewed and confirmed by the Founder.
           </p>
-          <div style="background: var(--color-parchment); border-left: 2px solid var(--color-quiet-rule); padding: var(--space-sm) var(--space-md);">
-            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-muted-slate); margin: 0;">
+          <div style="background: var(--color-parchment); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-quiet-rule); padding: var(--space-md); border-radius: 2px;">
+            <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.55; color: var(--color-muted-slate); margin: 0;">
               Five participants also documented post-Lab priorities or intended actions. Those records show planning, not subsequent implementation.
             </p>
           </div>
@@ -227,8 +267,10 @@ import Layout from '../../layouts/Layout.astro';
         
         <!-- Ratings -->
         <div class="col-12 md-col-6 padding-left-md">
-          <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted-slate); margin-bottom: var(--space-md);">Participant-reported experience</h3>
-          <p class="voice-2" style="margin-bottom: var(--space-lg);">
+          <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; color: var(--color-muted-slate); margin-bottom: var(--space-md);">
+            Participant-reported experience
+          </h3>
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-lg);">
             All six active participants completed the end-of-program ratings. On a five-point scale, they reported:
           </p>
           
@@ -251,29 +293,29 @@ import Layout from '../../layouts/Layout.astro';
             <div class="rating-row">
               <span class="rating-label voice-2">Financial visibility</span>
               <span class="rating-bar-container"><span class="rating-bar" style="width: 54%; background: var(--color-quiet-rule);"></span></span>
-              <span class="rating-score voice-1">2.7/5</span>
+              <span class="rating-score voice-1" style="color: var(--color-muted-slate);">2.7/5</span>
             </div>
           </div>
           
-          <p class="voice-2" style="font-size: 0.9375rem; margin-bottom: var(--space-md);">
+          <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.55; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
             Participants also described value in focusing on one issue, documenting previously informal processes, and leaving with greater organization, accountability or clarity about next steps. Their improvement suggestions included clearer alignment and navigation of materials, more implementation time, pacing adjustments and attention to technology burden.
           </p>
           
-          <div style="background: var(--color-quiet-sand); padding: var(--space-md);">
-            <p class="voice-2" style="font-size: 0.9375rem; margin-bottom: var(--space-sm); font-weight: 500;">
+          <div style="background: var(--color-quiet-sand); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); border-radius: 2px;">
+            <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.5; margin-bottom: var(--space-sm); font-weight: 500; color: var(--color-tidal-ink);">
               These ratings and themes describe participant experience. They are not independent measures of effectiveness or venture outcomes.
             </p>
-            <p class="voice-2" style="font-size: 0.875rem; color: var(--color-muted-slate); margin: 0;">
+            <p class="voice-2" style="font-size: 0.875rem; line-height: 1.5; color: var(--color-muted-slate); margin: 0;">
               Financial visibility was the lowest-rated area. Rather than indicating improvement, the 2.7/5 rating became a substantive learning signal: future testing should examine the appropriate depth and timing of financial work and when specialist support may be necessary.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- 8. PARTICIPANT PERSPECTIVES (R8) -->
+      <!-- PARTICIPANT PERSPECTIVES -->
       <div style="max-width: 820px; margin: var(--space-2xl) auto 0; padding-top: var(--space-xl); border-top: 1px solid var(--color-strong-boundary);">
         <div style="text-align: center; margin-bottom: var(--space-xl);">
-          <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 6px;">
+          <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 6px;">
             Participant perspectives
           </span>
           <p class="voice-2" style="font-size: 1.0625rem; color: var(--color-deep-body-ink); line-height: 1.5; margin: 0 auto; max-width: 640px;">
@@ -281,9 +323,8 @@ import Layout from '../../layouts/Layout.astro';
           </p>
         </div>
 
-        <!-- Perspectives Container (Single Published Card: Carousel controls hidden per R8 publication instruction) -->
         <div class="perspectives-stage">
-          <div class="perspective-card" style="background: var(--color-parchment); border: 1px solid var(--color-quiet-rule); padding: var(--space-xl);">
+          <div class="perspective-card" style="background: var(--color-parchment); border: 1px solid var(--color-quiet-rule); padding: clamp(var(--space-md), 4vw, var(--space-xl)); border-radius: 2px;">
             <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-xs); margin-bottom: var(--space-md); border-bottom: 1px solid var(--color-quiet-rule); padding-bottom: var(--space-xs);">
               <span class="voice-3" style="font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-deep-teal);">
                 Documenting a repeatable process
@@ -293,7 +334,7 @@ import Layout from '../../layouts/Layout.astro';
               </span>
             </div>
 
-            <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.55; margin-bottom: var(--space-md);">
+            <p class="voice-2" style="font-size: 1.0625rem; color: var(--color-deep-body-ink); line-height: 1.6; margin-bottom: var(--space-md);">
               Deana’s Lab work focused on documenting a standard operating procedure (SOP): step-by-step instructions for a recurring business task.
             </p>
 
@@ -301,7 +342,7 @@ import Layout from '../../layouts/Layout.astro';
               <p class="voice-1" style="font-size: clamp(1.25rem, 2.5vw, 1.625rem); line-height: 1.35; color: var(--color-tidal-ink); margin-bottom: var(--space-md);">
                 &ldquo;This accountability has really helped me prepare. &hellip; the accountability from participating in this program is the reason I have training now.&rdquo;
               </p>
-              <footer class="voice-3" style="color: var(--color-tidal-ink); font-weight: 500;">
+              <footer class="voice-3" style="color: var(--color-tidal-ink); font-weight: 500; font-size: 0.9375rem;">
                 Deana Marshall, Marshall Arts Media Group
               </footer>
             </blockquote>
@@ -314,46 +355,56 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 9. WHERE THE PILOT FELL SHORT -->
   <section class="bg-quiet-sand chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4">
-        <h2 class="voice-1" style="font-size: 2.25rem; margin-bottom: var(--space-md); line-height: 1.1;">Where the pilot fell short—and what that changed</h2>
+      <div class="col-12 md-col-4 lg-col-3">
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); margin-bottom: var(--space-md); line-height: 1.15; color: var(--color-tidal-ink);">
+          Where the pilot fell short—and what that changed
+        </h2>
       </div>
-      <div class="col-12 md-col-7-offset">
-        <!-- Sub 1 -->
-        <div style="margin-bottom: var(--space-xl);">
-          <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">Recruitment and distribution</h3>
-          <p class="voice-2" style="margin-bottom: var(--space-sm);">
-            The pilot enrolled six active founders rather than the proposed 10–12. The proposal also contained conflicting diagnostic-completion targets—30 or more in one place and 40 or more in another. Actual diagnostic completions during the relevant period were 13.
-          </p>
-          <div style="border-left: 2px solid var(--color-strong-boundary); padding-left: var(--space-md);">
-            <p class="voice-2" style="color: var(--color-deep-body-ink); margin: 0;">
-              This shortfall narrowed the cohort and highlighted the need for a clearer recruitment runway, distribution plan and conversion path between diagnostic interest, application and participation.
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl)); display: flex; flex-direction: column; gap: var(--space-xl);">
+          <!-- Sub 1 -->
+          <div>
+            <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-xs);">
+              Recruitment and distribution
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-sm);">
+              The pilot enrolled six active founders rather than the proposed 10–12. The proposal also contained conflicting diagnostic-completion targets—30 or more in one place and 40 or more in another. Actual diagnostic completions during the relevant period were 13.
             </p>
+            <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-strong-boundary); padding: var(--space-md); border-radius: 2px;">
+              <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.55; color: var(--color-deep-body-ink); margin: 0;">
+                This shortfall narrowed the cohort and highlighted the need for a clearer recruitment runway, distribution plan and conversion path between diagnostic interest, application and participation.
+              </p>
+            </div>
           </div>
-        </div>
-        
-        <!-- Sub 2 -->
-        <div style="margin-bottom: var(--space-xl);">
-          <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">Referral infrastructure</h3>
-          <p class="voice-2" style="margin-bottom: var(--space-sm);">
-            The proposal targeted three warm introductions with follow-up. That target was not achieved.
-          </p>
-          <div style="border-left: 2px solid var(--color-strong-boundary); padding-left: var(--space-md);">
-            <p class="voice-2" style="color: var(--color-deep-body-ink); margin: 0;">
-              The pilot could surface needs that might warrant specialist or external support, but recognizing a need was not the same as establishing a timely and reliable referral pathway. Future work would need clearer referral roles, processes and follow-up evidence.
+          
+          <!-- Sub 2 -->
+          <div>
+            <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-xs);">
+              Referral infrastructure
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-sm);">
+              The proposal targeted three warm introductions with follow-up. That target was not achieved.
             </p>
+            <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-strong-boundary); padding: var(--space-md); border-radius: 2px;">
+              <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.55; color: var(--color-deep-body-ink); margin: 0;">
+                The pilot could surface needs that might warrant specialist or external support, but recognizing a need was not the same as establishing a timely and reliable referral pathway. Future work would need clearer referral roles, processes and follow-up evidence.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- Sub 3 -->
-        <div>
-          <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">Measurement design</h3>
-          <p class="voice-2" style="margin-bottom: var(--space-sm);">
-            The proposal targeted readiness-zone improvement for at least 80% of participants and increased clarity or confidence for at least 90%. Neither could be calculated as designed from the available baseline and closing measures. It also targeted structural deliverables for at least 60%; Ethnoir reviewed and confirmed deliverables for five of six active participants, but this was output evidence rather than evidence of effectiveness.
-          </p>
-          <div style="border-left: 2px solid var(--color-strong-boundary); padding-left: var(--space-md);">
-            <p class="voice-2" style="color: var(--color-deep-body-ink); margin: 0;">
-              The result was not merely missing data. It showed that measurement questions, instruments and timing need to remain aligned from baseline through follow-up. Delivery, attendance, asset creation and participant feedback could not substitute for the proposed change evidence.
+          <!-- Sub 3 -->
+          <div>
+            <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-xs);">
+              Measurement design
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-sm);">
+              The proposal targeted readiness-zone improvement for at least 80% of participants and increased clarity or confidence for at least 90%. Neither could be calculated as designed from the available baseline and closing measures. It also targeted structural deliverables for at least 60%; Ethnoir reviewed and confirmed deliverables for five of six active participants, but this was output evidence rather than evidence of effectiveness.
             </p>
+            <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-strong-boundary); padding: var(--space-md); border-radius: 2px;">
+              <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.55; color: var(--color-deep-body-ink); margin: 0;">
+                The result was not merely missing data. It showed that measurement questions, instruments and timing need to remain aligned from baseline through follow-up. Delivery, attendance, asset creation and participant feedback could not substitute for the proposed change evidence.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -363,42 +414,58 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 10. WHAT ETHNOIR LEARNED -->
   <section class="bg-parchment chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-xl);">
-        <h2 class="voice-1" style="font-size: 2.5rem;">What Ethnoir learned</h2>
+      <div style="text-align: center; margin-bottom: var(--space-xl);">
+        <h2 class="voice-1" style="font-size: clamp(2.25rem, 4vw, 3rem); color: var(--color-tidal-ink);">What Ethnoir learned</h2>
       </div>
 
       <div class="grid-12">
         <div class="col-12 md-col-6 padding-right-md" style="margin-bottom: var(--space-xl);">
-          <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">Interpretation is part of the work</h3>
-          <p class="voice-2">
-            A visible business problem did not always point neatly to one explanation or standardized response. The intervention needed space to consider relevant circumstances, evidence, assumptions and gaps before treating a possible constraint as decisive.
-          </p>
+          <div style="border-top: 2px solid var(--color-tidal-ink); padding-top: var(--space-md);">
+            <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-xs); color: var(--color-tidal-ink);">
+              Interpretation is part of the work
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin: 0;">
+              A visible business problem did not always point neatly to one explanation or standardized response. The intervention needed space to consider relevant circumstances, evidence, assumptions and gaps before treating a possible constraint as decisive.
+            </p>
+          </div>
         </div>
         
         <div class="col-12 md-col-6 padding-left-md" style="margin-bottom: var(--space-xl);">
-          <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">Implementation is a separate stage</h3>
-          <p class="voice-2">
-            Identifying a plausible constraint did not mean that a founder had implemented a response. Practical work required time to build, understand, test, revise and integrate. Producing an asset was only an early point in that process.
-          </p>
+          <div style="border-top: 2px solid var(--color-tidal-ink); padding-top: var(--space-md);">
+            <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-xs); color: var(--color-tidal-ink);">
+              Implementation is a separate stage
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin: 0;">
+              Identifying a plausible constraint did not mean that a founder had implemented a response. Practical work required time to build, understand, test, revise and integrate. Producing an asset was only an early point in that process.
+            </p>
+          </div>
         </div>
 
         <div class="col-12 md-col-6 padding-right-md" style="margin-bottom: var(--space-xl);">
-          <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">Intervention design must account for founder capacity</h3>
-          <p class="voice-2">
-            Time, mental capacity, competing responsibilities, specialist knowledge and technology cost or complexity affected what could be used. In some cases, the leanest credible version of a process or tool offered a more viable first step than full automation or optimization. This does not mean that lower effort is always better; it means that the demands of the intervention matter to whether its intended use is realistic.
-          </p>
+          <div style="border-top: 2px solid var(--color-tidal-ink); padding-top: var(--space-md);">
+            <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-xs); color: var(--color-tidal-ink);">
+              Intervention design must account for founder capacity
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin: 0;">
+              Time, mental capacity, competing responsibilities, specialist knowledge and technology cost or complexity affected what could be used. In some cases, the leanest credible version of a process or tool offered a more viable first step than full automation or optimization. This does not mean that lower effort is always better; it means that the demands of the intervention matter to whether its intended use is realistic.
+            </p>
+          </div>
         </div>
 
         <div class="col-12 md-col-6 padding-left-md" style="margin-bottom: var(--space-xl);">
-          <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">Measurement must follow the implementation horizon</h3>
-          <p class="voice-2">
-            A six-week pilot could observe delivery, participation, output creation and some early use. Regular use and downstream effects require later follow-up. Measurement should reflect the time needed for a response to become part of venture practice.
-          </p>
+          <div style="border-top: 2px solid var(--color-tidal-ink); padding-top: var(--space-md);">
+            <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-xs); color: var(--color-tidal-ink);">
+              Measurement must follow the implementation horizon
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin: 0;">
+              A six-week pilot could observe delivery, participation, output creation and some early use. Regular use and downstream effects require later follow-up. Measurement should reflect the time needed for a response to become part of venture practice.
+            </p>
+          </div>
         </div>
       </div>
 
       <div style="max-width: 800px; margin: 0 auto; text-align: center; border-top: 1px solid var(--color-quiet-rule); padding-top: var(--space-lg);">
-        <p class="voice-2" style="color: var(--color-deep-body-ink);">
+        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-deep-body-ink); margin: 0;">
           Two areas warrant particular attention in another test. Financial visibility may require different depth, sequencing or specialist support. Referral needs require an actual pathway, not simply recognition that outside expertise may be useful.
         </p>
       </div>
@@ -408,31 +475,37 @@ import Layout from '../../layouts/Layout.astro';
   <!-- 11. CREATION IS NOT IMPACT -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4">
-        <h2 class="voice-1" style="font-size: 2.25rem; margin-bottom: var(--space-md);">Creation is not impact</h2>
+      <div class="col-12 md-col-4 lg-col-3">
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); line-height: 1.15; margin-bottom: var(--space-md); color: var(--color-tidal-ink);">
+          Creation is not impact
+        </h2>
       </div>
-      <div class="col-12 md-col-7-offset">
-        <p class="voice-2" style="margin-bottom: var(--space-md);">The pilot clarified an evidence sequence:</p>
-        
-        <!-- Evidence Sequence Diagram -->
-        <div class="sequence-container" style="margin-bottom: var(--space-lg); background: var(--color-quiet-sand); padding: var(--space-md); border-radius: 4px;">
-          <ol class="working-pathway-sequence compact">
-            <li><div class="seq-step">Asset creation</div></li>
-            <li><div class="seq-step">Usability</div></li>
-            <li><div class="seq-step">Testing</div></li>
-            <li><div class="seq-step">Regular use</div></li>
-            <li><div class="seq-step">Downstream effect</div></li>
-          </ol>
-        </div>
-
-        <p class="voice-2" style="margin-bottom: var(--space-md);">
-          An asset may exist without being understandable or workable. A usable asset may not yet have been tested. Initial testing does not show regular use, and regular use does not by itself establish an effect on capability, decision quality or venture performance.
-        </p>
-        
-        <div style="border-left: 2px solid var(--color-tidal-ink); padding-left: var(--space-md);">
-          <p class="voice-2" style="margin: 0; color: var(--color-deep-body-ink); font-weight: 500;">
-            The Lab’s strongest evidence sits toward the beginning of this sequence: delivery, participation, reviewed outputs and participant-reported experience. There is limited evidence of initial use or testing. There is not enough evidence to claim regular use or downstream effect.
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl));">
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.55; color: var(--color-deep-teal); margin-bottom: var(--space-md);">
+            The pilot clarified an evidence sequence:
           </p>
+          
+          <!-- Evidence Sequence Diagram -->
+          <div class="sequence-container" style="margin-bottom: var(--space-lg); background: var(--color-quiet-sand); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); border-radius: 2px;">
+            <ol class="working-pathway-sequence compact">
+              <li><div class="seq-step"><span class="seq-num">1</span><span>Asset creation</span></div></li>
+              <li><div class="seq-step"><span class="seq-num">2</span><span>Usability</span></div></li>
+              <li><div class="seq-step"><span class="seq-num">3</span><span>Testing</span></div></li>
+              <li><div class="seq-step"><span class="seq-num">4</span><span>Regular use</span></div></li>
+              <li><div class="seq-step"><span class="seq-num">5</span><span>Downstream effect</span></div></li>
+            </ol>
+          </div>
+
+          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
+            An asset may exist without being understandable or workable. A usable asset may not yet have been tested. Initial testing does not show regular use, and regular use does not by itself establish an effect on capability, decision quality or venture performance.
+          </p>
+          
+          <div style="background-color: var(--color-parchment); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-tidal-ink); padding: var(--space-md); border-radius: 2px;">
+            <p class="voice-2" style="margin: 0; font-size: 0.9375rem; line-height: 1.55; color: var(--color-deep-body-ink); font-weight: 500;">
+              The Lab’s strongest evidence sits toward the beginning of this sequence: delivery, participation, reviewed outputs and participant-reported experience. There is limited evidence of initial use or testing. There is not enough evidence to claim regular use or downstream effect.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -443,83 +516,109 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container grid-12">
       <!-- Retain -->
       <div class="col-12 md-col-4 padding-right-md border-right-md" style="margin-bottom: var(--space-xl);">
-        <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-sm); color: var(--color-tidal-ink);">Retain</h3>
-        <ul class="editorial-bullets voice-2">
-          <li>A common program structure with room for venture-specific interpretation.</li>
-          <li>Focused work on a material concern rather than an attempt to address everything.</li>
-          <li>Practical responses connected to the issue being examined.</li>
-          <li>Dedicated time for work on participants’ own ventures.</li>
-        </ul>
+        <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-lg); height: 100%; border-radius: 2px;">
+          <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-md); color: var(--color-deep-teal); font-size: 0.875rem; font-weight: 700; border-bottom: 2px solid var(--color-deep-teal); padding-bottom: 6px;">
+            Retain
+          </h3>
+          <ul class="editorial-bullets voice-2">
+            <li>A common program structure with room for venture-specific interpretation.</li>
+            <li>Focused work on a material concern rather than an attempt to address everything.</li>
+            <li>Practical responses connected to the issue being examined.</li>
+            <li>Dedicated time for work on participants’ own ventures.</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Modify -->
       <div class="col-12 md-col-4 padding-right-md padding-left-md border-right-md" style="margin-bottom: var(--space-xl);">
-        <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-sm); color: var(--color-tidal-ink);">Modify</h3>
-        <ul class="editorial-bullets voice-2">
-          <li>Allow a longer and clearer recruitment runway.</li>
-          <li>Align session content, participant materials and implementation work more closely.</li>
-          <li>Give implementation time a more deliberate place in the program.</li>
-          <li>Design baseline, closing and follow-up measures as one coherent evidence pathway.</li>
-          <li>Define referral roles and expectations before promising introductions.</li>
-        </ul>
+        <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-lg); height: 100%; border-radius: 2px;">
+          <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-md); color: var(--color-muted-slate); font-size: 0.875rem; font-weight: 700; border-bottom: 2px solid var(--color-muted-slate); padding-bottom: 6px;">
+            Modify
+          </h3>
+          <ul class="editorial-bullets voice-2">
+            <li>Allow a longer and clearer recruitment runway.</li>
+            <li>Align session content, participant materials and implementation work more closely.</li>
+            <li>Give implementation time a more deliberate place in the program.</li>
+            <li>Design baseline, closing and follow-up measures as one coherent evidence pathway.</li>
+            <li>Define referral roles and expectations before promising introductions.</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Test -->
       <div class="col-12 md-col-4 padding-left-md">
-        <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-sm); color: var(--color-tidal-ink);">Test</h3>
-        <ul class="editorial-bullets voice-2">
-          <li>Whether segmentation could help place founders into support suited to relevant conditions.</li>
-          <li>Which kinds of implementation support are useful at different points.</li>
-          <li>How financial-visibility work should be scoped and connected to specialist expertise.</li>
-          <li>Whether outputs remain usable and become integrated after the intervention.</li>
-          <li>How follow-up can distinguish intention, testing, regular use and downstream change.</li>
-        </ul>
-        <p class="voice-2" style="font-size: 0.875rem; color: var(--color-muted-slate); margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-quiet-rule);">
-          Institutional segmentation is a future question arising from the pilot. It was not tested or demonstrated by the Lab.
-        </p>
+        <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-lg); height: 100%; border-radius: 2px;">
+          <h3 class="voice-3" style="text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-md); color: var(--color-tidal-ink); font-size: 0.875rem; font-weight: 700; border-bottom: 2px solid var(--color-tidal-ink); padding-bottom: 6px;">
+            Test
+          </h3>
+          <ul class="editorial-bullets voice-2">
+            <li>Whether segmentation could help place founders into support suited to relevant conditions.</li>
+            <li>Which kinds of implementation support are useful at different points.</li>
+            <li>How financial-visibility work should be scoped and connected to specialist expertise.</li>
+            <li>Whether outputs remain usable and become integrated after the intervention.</li>
+            <li>How follow-up can distinguish intention, testing, regular use and downstream change.</li>
+          </ul>
+          <p class="voice-2" style="font-size: 0.8125rem; line-height: 1.5; color: var(--color-muted-slate); margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-quiet-rule);">
+            Institutional segmentation is a future question arising from the pilot. It was not tested or demonstrated by the Lab.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 13. DO NOT SCALE YET -->
-  <section class="bg-tidal-ink chapter chapter-large-spacing">
-    <div class="container text-center" style="max-width: 800px;">
-      <h2 class="voice-1" style="font-size: clamp(2.5rem, 5vw, 4rem); color: var(--color-porcelain); margin-bottom: var(--space-md);">
+  <section class="bg-tidal-ink chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
+    <div class="container text-center" style="max-width: 820px; margin: 0 auto;">
+      <h2 class="voice-1" style="font-size: clamp(2.5rem, 5vw, 4rem); color: var(--color-porcelain); margin-bottom: var(--space-md); letter-spacing: -0.02em;">
         Do not scale yet
       </h2>
-      <p class="voice-2" style="font-size: 1.5rem; line-height: 1.4; color: var(--color-parchment);">
+      <p class="voice-2" style="font-size: clamp(1.2rem, 2.2vw, 1.5rem); line-height: 1.45; color: var(--color-parchment); margin: 0; font-weight: 400;">
         The evidence does not support scaling a validated diagnostic, a fixed readiness pathway, a proven referral model or a standardized program presented as effective across founder populations. Those propositions require further testing and stronger measurement.
       </p>
     </div>
   </section>
 
   <!-- 14. QUESTIONS FOR ORGANIZATIONS -->
-  <section class="bg-quiet-sand chapter chapter-large-spacing">
+  <section class="bg-quiet-sand chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4">
-        <h2 class="voice-1" style="font-size: 2rem; margin-bottom: var(--space-md);">Questions for entrepreneurship-support organizations</h2>
+      <div class="col-12 md-col-4 lg-col-3">
+        <h2 class="voice-1" style="font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1.15; margin-bottom: var(--space-md); color: var(--color-tidal-ink);">
+          Questions for entrepreneurship-support organizations
+        </h2>
       </div>
-      <div class="col-12 md-col-7-offset">
-        <p class="voice-2" style="margin-bottom: var(--space-lg);">
-          The pilot raises questions that may matter to organizations shaping entrepreneurship support:
-        </p>
-        
-        <div class="thin-rule-x" style="padding: var(--space-md) 0;">
-          <p class="voice-2" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin: 0;">How might founders be segmented or placed into support based on relevant conditions rather than broad categories alone?</p>
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl));">
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.55; color: var(--color-deep-teal); margin-bottom: var(--space-lg);">
+            The pilot raises questions that may matter to organizations shaping entrepreneurship support:
+          </p>
+          
+          <div style="display: flex; flex-direction: column;">
+            <div style="border-top: 1px solid var(--color-strong-boundary); padding: var(--space-md) 0;">
+              <p class="voice-2" style="font-size: 1.25rem; line-height: 1.4; color: var(--color-tidal-ink); margin: 0;">
+                How might founders be segmented or placed into support based on relevant conditions rather than broad categories alone?
+              </p>
+            </div>
+            <div style="border-top: 1px solid var(--color-quiet-rule); padding: var(--space-md) 0;">
+              <p class="voice-2" style="font-size: 1.25rem; line-height: 1.4; color: var(--color-tidal-ink); margin: 0;">
+                How might referral pathways connect identified needs with timely, appropriate resources?
+              </p>
+            </div>
+            <div style="border-top: 1px solid var(--color-quiet-rule); padding: var(--space-md) 0;">
+              <p class="voice-2" style="font-size: 1.25rem; line-height: 1.4; color: var(--color-tidal-ink); margin: 0;">
+                How might targeted capability support account for both what a founder needs and what they can reasonably use?
+              </p>
+            </div>
+            <div style="border-top: 1px solid var(--color-quiet-rule); border-bottom: 1px solid var(--color-strong-boundary); padding: var(--space-md) 0; margin-bottom: var(--space-lg);">
+              <p class="voice-2" style="font-size: 1.25rem; line-height: 1.4; color: var(--color-tidal-ink); margin: 0;">
+                How might follow-up measurement distinguish planned action from use, sustained practice and downstream change?
+              </p>
+            </div>
+          </div>
+          
+          <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.55; color: var(--color-muted-slate); margin: 0;">
+            These are questions for further inquiry. The Lab did not test institutional deployment, partner routing, resource-allocation decisions or institutional outcomes.
+          </p>
         </div>
-        <div class="thin-rule-x" style="padding: var(--space-md) 0;">
-          <p class="voice-2" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin: 0;">How might referral pathways connect identified needs with timely, appropriate resources?</p>
-        </div>
-        <div class="thin-rule-x" style="padding: var(--space-md) 0;">
-          <p class="voice-2" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin: 0;">How might targeted capability support account for both what a founder needs and what they can reasonably use?</p>
-        </div>
-        <div class="thin-rule-x" style="padding: var(--space-md) 0; border-bottom: 1px solid var(--color-strong-boundary); margin-bottom: var(--space-lg);">
-          <p class="voice-2" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin: 0;">How might follow-up measurement distinguish planned action from use, sustained practice and downstream change?</p>
-        </div>
-        
-        <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-muted-slate);">
-          These are questions for further inquiry. The Lab did not test institutional deployment, partner routing, resource-allocation decisions or institutional outcomes.
-        </p>
       </div>
     </div>
   </section>
@@ -529,15 +628,17 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container grid-12">
       <!-- Evidence Boundary -->
       <div class="col-12 md-col-6 padding-right-md border-right-md" style="margin-bottom: var(--space-xl);">
-        <span class="voice-3" style="text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted-slate); margin-bottom: var(--space-sm); display: block;">Evidence boundary</span>
-        <p class="voice-2" style="margin-bottom: var(--space-sm);">
+        <span class="voice-3" style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; color: var(--color-muted-slate); margin-bottom: var(--space-sm); display: block;">
+          Evidence boundary
+        </span>
+        <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.6; color: var(--color-deep-body-ink); margin-bottom: var(--space-sm);">
           The evidence supports statements about delivery, retention through the final session, attendance, outputs reviewed by the Founder, participant-reported experience, implementation learning and questions for another test.
         </p>
-        <p class="voice-2" style="margin-bottom: var(--space-md); color: var(--color-tidal-ink); font-weight: 500;">
+        <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.6; color: var(--color-tidal-ink); font-weight: 500; margin-bottom: var(--space-md);">
           It does not establish program effectiveness, causality, sustained participant capability, improved decision quality, revenue or other financial improvement, capital outcomes, reduced founder dependence, diagnostic validity, scalability, institutional outcomes or impact.
         </p>
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md); padding-top: var(--space-xs);">
-          <p class="voice-3" style="font-size: 0.875rem; color: var(--color-muted-slate); margin: 0;">
+        <div style="border: 1px solid var(--color-quiet-rule); background-color: var(--color-porcelain); padding: var(--space-md); border-radius: 2px; display: inline-flex; flex-direction: column; gap: var(--space-xs);">
+          <p class="voice-3" style="font-size: 0.8125rem; color: var(--color-muted-slate); margin: 0;">
             This activity received support from NC IDEA.
           </p>
           <img
@@ -545,7 +646,7 @@ import Layout from '../../layouts/Layout.astro';
             alt="NC IDEA"
             width="90"
             height="24"
-            style="height: 20px; width: auto; opacity: 0.85;"
+            style="height: 20px; width: auto; opacity: 0.9; display: block;"
             loading="lazy"
             decoding="async"
           />
@@ -554,22 +655,24 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- Related Paths -->
       <div class="col-12 md-col-6 padding-left-md">
-        <span class="voice-3" style="text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted-slate); margin-bottom: var(--space-md); display: block;">Related paths</span>
+        <span class="voice-3" style="text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; color: var(--color-muted-slate); margin-bottom: var(--space-md); display: block;">
+          Related paths
+        </span>
         
-        <div style="margin-bottom: var(--space-lg);">
-          <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: 4px;">
+        <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-md); border-radius: 2px; margin-bottom: var(--space-md);">
+          <h3 class="voice-1" style="font-size: 1.375rem; margin-bottom: 4px; line-height: 1.2;">
             <a href="/for-organizations" style="color: var(--color-tidal-ink); text-decoration: none;">For Organizations &rarr;</a>
           </h3>
-          <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-muted-slate); margin: 0;">
+          <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.5; color: var(--color-muted-slate); margin: 0;">
             Explore how Ethnoir approaches questions arising from how entrepreneurship support is understood, designed, delivered and directed.
           </p>
         </div>
 
-        <div>
-          <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: 4px;">
+        <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-md); border-radius: 2px;">
+          <h3 class="voice-1" style="font-size: 1.375rem; margin-bottom: 4px; line-height: 1.2;">
             <a href="/venture-readiness-check-in" style="color: var(--color-tidal-ink); text-decoration: none;">Venture Readiness Check-In &rarr;</a>
           </h3>
-          <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-muted-slate); margin: 0;">
+          <p class="voice-2" style="font-size: 0.9375rem; line-height: 1.5; color: var(--color-muted-slate); margin: 0;">
             A founder-facing resource for considering current conditions and what may deserve attention next.
           </p>
         </div>
@@ -579,11 +682,51 @@ import Layout from '../../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .col-12 { grid-column: span 12; }
-  .text-center { text-align: center; }
-  
+  /* Responsive Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  @media (min-width: 768px) {
+    .stats-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+
+  .stat-card {
+    background: var(--color-porcelain);
+    padding: var(--space-xl) var(--space-lg);
+    border: 1px solid var(--color-quiet-rule);
+    border-top: 3px solid var(--color-deep-teal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2px;
+  }
+  .stat-caption-top {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-muted-slate);
+    font-size: 0.8125rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+  }
+  .stat-caption-bottom {
+    margin-top: var(--space-sm);
+    font-size: 0.9375rem;
+    color: var(--color-deep-body-ink);
+    line-height: 1.4;
+  }
+
   /* Sequence Pathway CSS */
-  .sequence-container { overflow-x: auto; padding-bottom: 8px; }
+  .sequence-container {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
   .working-pathway-sequence {
     display: flex;
     flex-wrap: nowrap;
@@ -597,21 +740,33 @@ import Layout from '../../layouts/Layout.astro';
     display: flex;
     align-items: center;
     position: relative;
+    flex-shrink: 0;
   }
   .working-pathway-sequence li:not(:last-child)::after {
     content: "→";
     margin-left: 8px;
     color: var(--color-quiet-rule);
     font-family: var(--font-heading);
+    font-weight: 300;
   }
   .seq-step {
     background: var(--color-porcelain);
     border: 1px solid var(--color-quiet-rule);
-    padding: 8px 16px;
+    padding: 10px 18px;
     font-family: var(--font-body);
     font-size: 0.875rem;
     color: var(--color-tidal-ink);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 2px;
+  }
+  .seq-num {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-deep-teal);
+    letter-spacing: 0.04em;
   }
   
   .working-pathway-sequence.compact {
@@ -643,8 +798,10 @@ import Layout from '../../layouts/Layout.astro';
     margin: 0;
   }
   .editorial-bullets li {
-    margin-bottom: 8px;
-    padding-left: 8px;
+    margin-bottom: 10px;
+    padding-left: 4px;
+    font-size: 1rem;
+    line-height: 1.5;
     color: var(--color-deep-body-ink);
   }
 
@@ -652,7 +809,7 @@ import Layout from '../../layouts/Layout.astro';
   .ratings-block {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
   }
   .rating-row {
     display: flex;
@@ -664,6 +821,7 @@ import Layout from '../../layouts/Layout.astro';
     flex-shrink: 0;
     font-size: 0.9375rem;
     color: var(--color-tidal-ink);
+    font-weight: 500;
   }
   .rating-bar-container {
     flex-grow: 1;
@@ -686,14 +844,6 @@ import Layout from '../../layouts/Layout.astro';
   }
   
   @media (min-width: 768px) {
-    .md-col-8 { grid-column: span 8; }
-    .md-col-4 { grid-column: span 4; }
-    .md-col-7 { grid-column: span 7; }
-    .md-col-7-offset { grid-column: 6 / span 7; }
-    .md-col-6 { grid-column: span 6; }
-    .md-col-5 { grid-column: span 5; }
-    .md-col-10 { grid-column: span 10; }
-    .md-col-11 { grid-column: span 11; }
     .border-right-md { border-right: 1px solid var(--color-quiet-rule); }
     .padding-right-md { padding-right: var(--space-lg); }
     .padding-left-md { padding-left: var(--space-lg); }
@@ -707,6 +857,13 @@ import Layout from '../../layouts/Layout.astro';
     .working-pathway-sequence {
       flex-direction: column;
       align-items: flex-start;
+      gap: 6px;
+    }
+    .working-pathway-sequence li {
+      width: 100%;
+    }
+    .seq-step {
+      width: 100%;
     }
     .working-pathway-sequence li:not(:last-child)::after {
       content: "↓";

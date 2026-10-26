@@ -6,52 +6,42 @@ import Layout from '../layouts/Layout.astro';
   title="Our Work | Ethnoir"
   description="What Ethnoir has delivered, what the evidence supports and what it learned from its six-week Venture Readiness Lab pilot."
 >
-  <!-- SECTION 1: OPENING -->
-  <section class="bg-parchment" style="padding: var(--space-xl) 0 var(--space-2xl) 0;">
+  <!-- SECTION 1: OPENING MASTHEAD -->
+  <section class="bg-parchment" style="padding: var(--space-2xl) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
       <!-- Masterhead Headline -->
-      <div class="col-12 md-col-11" style="padding-top: var(--space-lg); padding-bottom: var(--space-xl);">
-        <h1 class="voice-1" style="font-size: clamp(3rem, 7vw, 5.5rem); margin: 0; line-height: 1.05; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
+      <div class="col-12 lg-col-11" style="padding-bottom: var(--space-lg);">
+        <h1 class="voice-1" style="font-size: clamp(2.75rem, 6.5vw, 5.25rem); margin: 0; line-height: 1.05; letter-spacing: -0.025em; color: var(--color-tidal-ink);">
           What Ethnoir has delivered, and what it learned.
         </h1>
       </div>
       
-      <!-- Offset Intro Block -->
-      <div class="col-12 grid-12" style="border-top: 1px solid var(--color-strong-boundary); padding-top: var(--space-lg);">
-        <div class="col-12 md-col-8">
-          <p class="voice-2" style="font-size: 1.5rem; line-height: 1.4; color: var(--color-tidal-ink); margin-bottom: 0; max-width: 720px;">
-            Ethnoir’s completed work is shown with what was delivered, what the evidence supports and what is still unresolved.
-          </p>
+      <!-- Architectural Divider & Intro Block -->
+      <div class="col-12" style="border-top: 1px solid var(--color-strong-boundary); padding-top: var(--space-lg);">
+        <div class="grid-12" style="margin: 0;">
+          <div class="col-12 md-col-9 lg-col-8">
+            <p class="voice-2" style="font-size: clamp(1.25rem, 2.2vw, 1.55rem); line-height: 1.45; color: var(--color-tidal-ink); margin: 0;">
+              Ethnoir’s completed work is shown with what was delivered, what the evidence supports and what is still unresolved.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SECTION 2: PRINCIPAL COMPLETED CASE -->
-  <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
+  <section class="bg-porcelain chapter chapter-large-spacing">
     <div class="container grid-12">
-      <div class="col-12 md-col-4">
-        <span class="voice-3" style="color: var(--color-muted-slate);">Completed pilot</span>
-      </div>
-      
-      <div class="col-12 md-col-8">
-        <h2 class="voice-1" style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: var(--space-sm); color: var(--color-tidal-ink);">
-          From Business Problems to Practical Structure
-        </h2>
-        
-        <p class="voice-2" style="font-size: 1.5rem; line-height: 1.4; color: var(--color-deep-teal); margin-bottom: var(--space-xl); max-width: 720px;">
-          What a six-week founder pilot taught Ethnoir about the gap between spotting a business problem and putting a useful fix in place.
-        </p>
-        
-        <div style="border-left: 1px solid var(--color-quiet-rule); padding-left: var(--space-lg); max-width: 640px; margin-bottom: var(--space-xl);">
-          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-tidal-ink); margin-bottom: var(--space-md);">
-            The Venture Readiness Lab was a six-week virtual pilot for six active founders. Ethnoir combined a shared program structure with individual work on each founder’s own business problem.
-          </p>
-          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-tidal-ink); margin-bottom: var(--space-md);">
-            All six reached the final session, and five had structural deliverables that Ethnoir’s Founder reviewed and confirmed. The pilot is practical evidence about moving from a visible problem to a working fix, and about what must be tested before any broader claim or scale.
-          </p>
-          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md); padding-top: var(--space-xs);">
-            <p class="voice-3" style="font-size: 0.875rem; color: var(--color-muted-slate); margin: 0;">
+      <!-- Left Column: Pilot Status Ledger & Endorsement -->
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-xl);">
+        <div style="position: sticky; top: calc(var(--space-xl) + 60px); display: flex; flex-direction: column; gap: var(--space-lg);">
+          <div>
+            <span class="voice-3" style="color: var(--color-muted-slate); font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase;">Completed pilot</span>
+          </div>
+          
+          <!-- Institutional Support Badge -->
+          <div style="border: 1px solid var(--color-quiet-rule); background-color: var(--color-parchment); padding: var(--space-md); border-radius: 2px;">
+            <p class="voice-3" style="font-size: 0.8125rem; line-height: 1.45; color: var(--color-muted-slate); margin: 0 0 var(--space-sm) 0;">
               This activity received support from NC IDEA.
             </p>
             <img
@@ -59,14 +49,41 @@ import Layout from '../layouts/Layout.astro';
               alt="NC IDEA"
               width="90"
               height="24"
-              style="height: 20px; width: auto; opacity: 0.85;"
+              style="height: 20px; width: auto; opacity: 0.9; display: block;"
               loading="lazy"
               decoding="async"
             />
           </div>
         </div>
-        
-        <a href="/our-work/venture-readiness-lab" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain);">Read the full case study &rarr;</a>
+      </div>
+      
+      <!-- Right Column: Case Showcase -->
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 4vw, var(--space-2xl));">
+          <h2 class="voice-1" style="font-size: clamp(2.25rem, 4.5vw, 3.75rem); line-height: 1.1; margin: 0 0 var(--space-sm) 0; color: var(--color-tidal-ink); letter-spacing: -0.02em;">
+            From Business Problems to Practical Structure
+          </h2>
+          
+          <p class="voice-2" style="font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.45; color: var(--color-deep-teal); margin-bottom: var(--space-xl); max-width: 680px;">
+            What a six-week founder pilot taught Ethnoir about the gap between spotting a business problem and putting a useful fix in place.
+          </p>
+          
+          <!-- Narrative Frame -->
+          <div style="background-color: var(--color-parchment); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-deep-teal); padding: clamp(var(--space-md), 3vw, var(--space-xl)); margin-bottom: var(--space-xl); max-width: 720px;">
+            <p class="voice-2" style="font-size: 1.125rem; line-height: 1.65; color: var(--color-tidal-ink); margin-bottom: var(--space-md);">
+              The Venture Readiness Lab was a six-week virtual pilot for six active founders. Ethnoir combined a shared program structure with individual work on each founder’s own business problem.
+            </p>
+            <p class="voice-2" style="font-size: 1.125rem; line-height: 1.65; color: var(--color-tidal-ink); margin-bottom: 0;">
+              All six reached the final session, and five had structural deliverables that Ethnoir’s Founder reviewed and confirmed. The pilot is practical evidence about moving from a visible problem to a working fix, and about what must be tested before any broader claim or scale.
+            </p>
+          </div>
+          
+          <div>
+            <a href="/our-work/venture-readiness-lab" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); padding: var(--space-sm) var(--space-xl); font-size: 1rem; display: inline-flex; align-items: center; gap: var(--space-xs); text-decoration: none; border-radius: 2px;">
+              Read the full case study &rarr;
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -76,21 +93,32 @@ import Layout from '../layouts/Layout.astro';
     <div class="container grid-12">
       <div class="col-12">
         <div class="grid-12" style="border-top: 1px solid var(--color-strong-boundary);">
-          <div class="col-12 md-col-6 padding-right-md border-right-md" style="padding-top: var(--space-md); padding-bottom: var(--space-lg);">
-            <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">
-              <a href="/for-organizations" style="color: var(--color-tidal-ink); text-decoration: none;">For Organizations &rarr;</a>
-            </h3>
-            <p class="voice-2" style="font-size: 1rem; color: var(--color-muted-slate);">
-              Examine the connection between participant needs and the support offered, and explore practical decisions about design, delivery and measurement.
-            </p>
+          <!-- Pathway 1: For Organizations -->
+          <div class="col-12 md-col-6 border-right-md" style="padding-top: var(--space-lg); padding-bottom: var(--space-xl); padding-right: clamp(var(--space-md), 3vw, var(--space-xl));">
+            <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-lg); height: 100%; display: flex; flex-direction: column; justify-content: space-between; border-radius: 2px;">
+              <div>
+                <h3 class="voice-1" style="font-size: 1.625rem; margin-bottom: var(--space-sm); line-height: 1.2;">
+                  <a href="/for-organizations" style="color: var(--color-tidal-ink); text-decoration: none;">For Organizations &rarr;</a>
+                </h3>
+                <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.55; color: var(--color-muted-slate); margin: 0;">
+                  Examine the connection between participant needs and the support offered, and explore practical decisions about design, delivery and measurement.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 md-col-6 padding-left-md" style="padding-top: var(--space-md); padding-bottom: var(--space-lg);">
-            <h3 class="voice-1" style="font-size: 1.5rem; margin-bottom: var(--space-sm);">
-              <a href="/venture-readiness-check-in" style="color: var(--color-tidal-ink); text-decoration: none;">Venture Readiness Check-In &rarr;</a>
-            </h3>
-            <p class="voice-2" style="font-size: 1rem; color: var(--color-muted-slate);">
-              A short resource for deciding what to look at next in your business.
-            </p>
+
+          <!-- Pathway 2: Venture Readiness Check-In -->
+          <div class="col-12 md-col-6" style="padding-top: var(--space-lg); padding-bottom: var(--space-xl); padding-left: clamp(0px, 3vw, var(--space-xl));">
+            <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-lg); height: 100%; display: flex; flex-direction: column; justify-content: space-between; border-radius: 2px;">
+              <div>
+                <h3 class="voice-1" style="font-size: 1.625rem; margin-bottom: var(--space-sm); line-height: 1.2;">
+                  <a href="/venture-readiness-check-in" style="color: var(--color-tidal-ink); text-decoration: none;">Venture Readiness Check-In &rarr;</a>
+                </h3>
+                <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.55; color: var(--color-muted-slate); margin: 0;">
+                  A short resource for deciding what to look at next in your business.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -99,16 +127,7 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .col-12 { grid-column: span 12; }
-  
   @media (min-width: 768px) {
-    .md-col-8 { grid-column: span 8; }
-    .md-col-4 { grid-column: span 4; }
-    .md-col-7 { grid-column: span 7; }
-    .md-col-6 { grid-column: span 6; }
-    .md-col-11 { grid-column: span 11; }
     .border-right-md { border-right: 1px solid var(--color-quiet-rule); }
-    .padding-right-md { padding-right: var(--space-lg); }
-    .padding-left-md { padding-left: var(--space-lg); }
   }
 </style>

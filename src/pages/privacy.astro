@@ -6,26 +6,30 @@ import Layout from '../layouts/Layout.astro';
   title="Privacy Notice | Ethnoir"
   description="Ethnoir Privacy Notice. Learn how personal and venture information is collected, used, protected, and handled across our website and resources."
 >
-  <!-- OPENING / HEADER -->
-  <section class="bg-parchment" style="padding: var(--space-lg) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
+  <!-- OPENING / MASTHEAD -->
+  <section class="bg-parchment" style="padding: var(--space-2xl) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
       <div class="col-12" style="margin-bottom: var(--space-sm);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em;">Privacy & Data Use</span>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem;">Privacy & Data Use</span>
       </div>
       
-      <div class="col-12 md-col-9" style="margin-bottom: var(--space-md);">
-        <h1 class="voice-1" style="font-size: clamp(2.5rem, 5.5vw, 4rem); margin: 0; line-height: 1.1; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
+      <div class="col-12 lg-col-10" style="margin-bottom: var(--space-md);">
+        <h1 class="voice-1" style="font-size: clamp(2.75rem, 6vw, 4.5rem); margin: 0; line-height: 1.05; letter-spacing: -0.025em; color: var(--color-tidal-ink);">
           Ethnoir Privacy Notice
         </h1>
       </div>
       
-      <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--color-deep-teal); margin-bottom: var(--space-sm);">
-          Ethnoir LLC (&ldquo;Ethnoir,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) is based in North Carolina, United States. This notice explains how we handle personal information associated with ethnoirconsulting.com, inquiries sent through its contact routes, and the Venture Readiness Check-In, including its form, results, support and related operational follow-up.
-        </p>
-        <p class="voice-3" style="font-size: 0.9375rem; color: var(--color-muted-slate); margin: 0;">
-          Effective date: October 23, 2026
-        </p>
+      <div class="col-12" style="border-top: 1px solid var(--color-strong-boundary); padding-top: var(--space-lg);">
+        <div class="grid-12" style="margin: 0;">
+          <div class="col-12 md-col-9 lg-col-8">
+            <p class="voice-2" style="font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.45; color: var(--color-deep-teal); margin-bottom: var(--space-sm);">
+              Ethnoir LLC (&ldquo;Ethnoir,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) is based in North Carolina, United States. This notice explains how we handle personal information associated with ethnoirconsulting.com, inquiries sent through its contact routes, and the Venture Readiness Check-In, including its form, results, support and related operational follow-up.
+            </p>
+            <p class="voice-3" style="font-size: 0.875rem; color: var(--color-muted-slate); margin: 0; text-transform: uppercase; letter-spacing: 0.05em;">
+              Effective date: October 23, 2026
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -34,25 +38,28 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-porcelain chapter chapter-large-spacing">
     <div class="container grid-12">
       <!-- SIDEBAR SUMMARY -->
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-xl);">
-        <div class="sticky" style="top: 100px;">
-          <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 6px;">At a glance</span>
-          <h2 class="voice-1" style="font-size: 1.75rem; color: var(--color-tidal-ink); line-height: 1.2; margin-bottom: var(--space-md);">
-            The short version
-          </h2>
-          <div style="border-left: 2px solid var(--color-quiet-rule); padding-left: var(--space-md); margin-bottom: var(--space-md);">
-            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-sm);">
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-xl);">
+        <div class="sticky" style="top: 100px; display: flex; flex-direction: column; gap: var(--space-md);">
+          <div>
+            <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px; font-size: 0.8125rem;">At a glance</span>
+            <h2 class="voice-1" style="font-size: 1.75rem; color: var(--color-tidal-ink); line-height: 1.2; margin-bottom: var(--space-md);">
+              The short version
+            </h2>
+          </div>
+          
+          <div style="border-left: 2px solid var(--color-quiet-rule); padding-left: var(--space-md);">
+            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-sm); line-height: 1.55;">
               We use information you provide to respond to inquiries, process Check-In submissions, generate and deliver results, provide support and improve our resources. Our service providers also process technical and delivery records as described below.
             </p>
-            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-sm);">
+            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-sm); line-height: 1.55;">
               We do not sell or rent personal information. Sending an inquiry or requesting a Check-In result does not by itself subscribe you to marketing emails.
             </p>
-            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin: 0;">
+            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin: 0; line-height: 1.55;">
               The Venture Readiness Check-In is an educational readiness resource. It is not a funding decision, program admission decision, professional advice or a grade. Its result is based on self-reported answers and does not establish a verified root cause.
             </p>
           </div>
           
-          <div style="background-color: var(--color-parchment); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); margin-bottom: var(--space-md);">
+          <div style="background-color: var(--color-parchment); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); border-radius: 2px;">
             <span class="voice-3" style="font-size: 0.8125rem; color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Contact & Inquiries</span>
             <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-tidal-ink); margin: 0 0 6px 0; font-weight: 500;">
               Ethnoir LLC
@@ -62,12 +69,12 @@ import Layout from '../layouts/Layout.astro';
             </a>
           </div>
 
-          <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border-left: 3px solid var(--color-deep-teal);">
+          <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-deep-teal); border-radius: 2px;">
             <span class="voice-3" style="font-size: 0.8125rem; color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Venture Readiness Check-In</span>
-            <p class="voice-2" style="font-size: 0.875rem; color: var(--color-deep-body-ink); margin: 0 0 8px 0;">
+            <p class="voice-2" style="font-size: 0.875rem; color: var(--color-deep-body-ink); margin: 0 0 8px 0; line-height: 1.5;">
               Available as an educational self-reflection resource.
             </p>
-            <a href="https://tally.so/r/XxEDD4" target="_blank" rel="noopener noreferrer" class="link-secondary voice-3" style="font-size: 0.875rem; color: var(--color-tidal-ink);">
+            <a href="https://tally.so/r/XxEDD4" target="_blank" rel="noopener noreferrer" class="link-secondary voice-3" style="font-size: 0.875rem; color: var(--color-tidal-ink); text-decoration: none; font-weight: 600;">
               Access the Check-In on Tally &rarr;
             </a>
           </div>
@@ -75,15 +82,15 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- MAIN PRIVACY TEXT -->
-      <div class="col-12 md-col-8">
-        <div class="privacy-prose">
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl));" class="privacy-prose">
           
           <!-- INTRODUCTION -->
           <div class="privacy-section">
-            <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-md);">
+            <p class="voice-2" style="font-size: 1.125rem; line-height: 1.65; margin-bottom: var(--space-md); color: var(--color-deep-body-ink);">
               You can contact Ethnoir through the website inquiry form or by email at <a href="mailto:omichael@ethnoirconsulting.com" style="color: var(--color-deep-teal); text-decoration: underline;">omichael@ethnoirconsulting.com</a>. The Venture Readiness Check-In form is at <a href="https://tally.so/r/XxEDD4" target="_blank" rel="noopener noreferrer" style="color: var(--color-deep-teal); text-decoration: underline;">https://tally.so/r/XxEDD4</a> and shows whether new requests are currently being accepted. New submissions may be temporarily paused; this notice continues to describe how we handle retained submissions, results and support records, subject to the notice and commitments applicable when those records were collected. Other programs, events or research may have additional privacy information provided when you participate.
             </p>
-            <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin: 0;">
+            <p class="voice-2" style="font-size: 1.125rem; line-height: 1.65; margin: 0; color: var(--color-deep-body-ink);">
               Its result is based on self-reported answers and does not establish a verified root cause.
             </p>
           </div>
@@ -113,19 +120,19 @@ import Layout from '../layouts/Layout.astro';
               <h4 class="voice-1" style="font-size: 1.125rem; color: var(--color-tidal-ink); margin-bottom: 6px;">
                 Please do not send sensitive personal information
               </h4>
-              <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin: 0;">
+              <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); margin: 0; line-height: 1.55;">
                 Please do not send Social Security numbers, bank or payment-card details, passwords, government identification numbers, health information, detailed participant records, confidential business documents or other sensitive personal information through the inquiry form or Check-In, or in an initial email. The inquiry form does not accept file uploads.
               </p>
             </div>
 
             <h3 class="voice-1 subsection-heading" style="margin-top: var(--space-lg);">Technical and delivery records</h3>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               The website, form, automation and email services process records needed to operate and protect the services and troubleshoot delivery. These can include submission or assessment identifiers, timestamps, processing status, error records and email-delivery status.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               We keep records linking submissions to processing and email-delivery status so we can investigate missing results, manage retries and avoid duplicate processing. These records may be linked to your email address or submission identifier.
             </p>
-            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink);">
+            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); line-height: 1.6;">
               When you browse the website or submit an inquiry, web-server access records (such as IP address, browser type and request timestamps) are processed for operational security, reliability and troubleshooting. Inquiries submitted through the website form use an automated, hidden spam-trap value to protect against automated spam and are transmitted directly to our email.
             </p>
           </div>
@@ -133,7 +140,7 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 2 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">2. How we use information</h2>
-            <p class="voice-2">We use information to:</p>
+            <p class="voice-2" style="margin-bottom: var(--space-sm);">We use information to:</p>
             <ul class="editorial-bullets voice-2">
               <li>Review and respond to inquiries and consider the question, fit and possible scope of an engagement.</li>
               <li>Process Check-In answers and generate and deliver the score, readiness stage, explanation and guidance requested.</li>
@@ -143,10 +150,10 @@ import Layout from '../layouts/Layout.astro';
               <li>Prepare aggregated or de-identified learning and reporting about use of our resources.</li>
               <li>Handle privacy requests and applicable legal obligations and protect rights, safety and security.</li>
             </ul>
-            <p class="voice-2" style="margin-top: var(--space-sm);">
+            <p class="voice-2" style="margin-top: var(--space-sm); line-height: 1.65;">
               Optional updates or promotional emails are separate from requested results and inquiry correspondence. We send them only where you have separately opted in. You can unsubscribe as described below.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               We do not publish identifiable Check-In answers or results in learning, grant or program reports without your agreement. Before using aggregate information, we consider whether a small group or a combination of business details could identify someone and omit or combine information where needed. Removing a name alone does not necessarily make business information anonymous.
             </p>
           </div>
@@ -154,13 +161,13 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 3 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">3. How Check-In results are generated</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               The Check-In uses answers and programmed assessment and routing rules to generate a score, a readiness stage used within the Check-In and related explanation and guidance. These summarize self-reported answers; they are not a grade or an independently verified assessment. The result is intended to support your judgment alongside your knowledge of the business and its circumstances.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               Ethnoir does not use the Check-In result to approve or deny funding, determine program admission or evaluate creditworthiness. It is not intended for another organization to use as an eligibility or placement rule.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               If you believe your result was processed incorrectly, contact us. We can investigate the processing record and explain or correct a processing error where identified. This does not turn the resource into a professional diagnosis or guarantee that its guidance fits every situation.
             </p>
           </div>
@@ -168,7 +175,7 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 4 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">4. Providers, access and sharing</h2>
-            <p class="voice-2">The services supporting these activities are:</p>
+            <p class="voice-2" style="margin-bottom: var(--space-sm);">The services supporting these activities are:</p>
             <ul class="editorial-bullets voice-2">
               <li><strong>Website hosting:</strong> Hostinger.</li>
               <li><strong>Inquiry form, spam prevention and message delivery:</strong> website form endpoint with honeypot spam protection, forwarding inquiries directly to email. Inquiries are not stored in a separate website database. Inquiry correspondence uses Google Workspace.</li>
@@ -178,13 +185,13 @@ import Layout from '../layouts/Layout.astro';
               <li><strong>MailerLite:</strong> contact and delivery records and result emails; separately opted-in communications where offered.</li>
               <li><strong>Google Workspace:</strong> professional email, administrative correspondence and working records.</li>
             </ul>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               Ethnoir and authorized service providers or technical contractors may access information as needed to perform these functions, maintain systems or resolve issues. Providers’ own privacy information also explains their handling of data.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               We do not give an individual’s Check-In answers or result to funders, grantmakers or program partners unless the individual asks us to or agrees beforehand to the specific disclosure. Any proposed institutional use requires its own agreed purpose, access arrangements and appropriate privacy information before information is shared.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               We may disclose information where required by applicable law or reasonably necessary to respond to lawful requests or protect rights, safety or security.
             </p>
           </div>
@@ -192,13 +199,13 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 5 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">5. Cookies, analytics and email measurement</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               The Ethnoir website does not use optional analytics or advertising tags. Website and Check-In providers may use cookies or similar technology needed to deliver and protect their services.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               Transactional result emails generated through MailerLite may record delivery status and open events to troubleshoot delivery issues and ensure requested results arrive successfully.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               Campaign parameters in a link may identify a campaign or source. We do not intentionally place names, email addresses, Check-In answers or results in campaign parameters or send them to analytics or advertising services.
             </p>
           </div>
@@ -206,10 +213,10 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 6 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">6. Email choices</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               When the Check-In is accepting submissions, submitting requests your result by email. Occasional updates use a separate optional checkbox, unchecked by default. Leaving it unchecked does not prevent an eligible new result request from being delivered. Requested result, support and inquiry messages are separate from marketing subscriptions. Existing unsubscribe/suppression choices are respected; contact Ethnoir for help if a previous unsubscribe prevents automated result delivery.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               Optional marketing emails include an unsubscribe route. We keep the suppression information needed to honor that choice. Unsubscribing does not automatically delete a Check-In submission or its associated records; you may request deletion separately.
             </p>
           </div>
@@ -217,13 +224,13 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 7 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">7. Retention</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               We generally retain identifiable Check-In submissions, results and related operational records for up to 24 months after submission, for result delivery, support, learning, reporting and maintenance of appropriate records. We may delete or de-identify information sooner when it is no longer needed.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               For routine inquiries, we retain messages for up to 24 months after the last substantive contact to respond and maintain relevant correspondence. Where an agreed engagement requires separate records, we retain those records under the applicable agreement and retention arrangements.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               We may retain relevant records longer where an applicable legal obligation or dispute makes that necessary. We retain limited suppression records as needed to prevent further marketing after an unsubscribe request. Web server access logs rotate periodically and email records are maintained under the 24-month policy.
             </p>
           </div>
@@ -231,13 +238,13 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 8 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">8. Your choices and privacy requests</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               You can choose whether to submit an inquiry or use the Check-In and what optional information to provide. Some information is needed to process and deliver a result.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               You may ask to access, correct or delete information associated with your inquiry or Check-In and, where applicable, object to or restrict a use. You may withdraw consent for optional communications.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               Email <a href="mailto:omichael@ethnoirconsulting.com" style="color: var(--color-deep-teal); text-decoration: underline;">omichael@ethnoirconsulting.com</a>, identify the email address you used and describe the request. Do not send sensitive identity documents in an initial message. We may need to verify your identity using a suitable method. If we cannot fully fulfill a request, we will explain the reason and any applicable exceptions.
             </p>
           </div>
@@ -245,10 +252,10 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 9 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">9. Security and processing locations</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               We use reasonable safeguards and the access and security features of our service providers. No online transmission or storage system is completely secure.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               Ethnoir is based in the United States. Information may be processed here and in other countries where the providers or their subprocessors operate. Applicable protections and transfer arrangements depend on the services and law involved.
             </p>
           </div>
@@ -256,7 +263,7 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 10 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">10. Children</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               The website and Check-In are intended for adults and are not directed to children. If you believe a child has submitted personal information, contact us so we can review the situation and remove it as appropriate.
             </p>
           </div>
@@ -264,10 +271,10 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 11 -->
           <div class="privacy-section">
             <h2 class="voice-1 section-heading">11. Other websites and services</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               Links may lead to services operated by other organizations, including the externally hosted Check-In form. Their privacy information explains their own practices. This notice continues to describe Ethnoir’s use of information submitted through its Check-In.
             </p>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65;">
               Olajumoke Michael’s personal website and The Quiet Fire are separate sites; this notice does not automatically govern them.
             </p>
           </div>
@@ -275,10 +282,10 @@ import Layout from '../layouts/Layout.astro';
           <!-- SECTION 12 -->
           <div class="privacy-section" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
             <h2 class="voice-1 section-heading">12. Changes and contact</h2>
-            <p class="voice-2">
+            <p class="voice-2" style="line-height: 1.65; margin-bottom: var(--space-sm);">
               We may update this notice as practices change and will show the effective date. Where appropriate or required, we will provide additional information about material changes.
             </p>
-            <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); margin-top: var(--space-sm);">
+            <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); margin-top: var(--space-sm); border: 1px solid var(--color-quiet-rule); border-radius: 2px;">
               <p class="voice-1" style="font-size: 1.125rem; color: var(--color-tidal-ink); margin-bottom: 4px;">
                 Ethnoir LLC
               </p>
@@ -303,10 +310,10 @@ import Layout from '../layouts/Layout.astro';
         <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: 8px;">
           Have a question about an inquiry?
         </h3>
-        <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-md);">
+        <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin-bottom: var(--space-md); line-height: 1.55;">
           You can use our contact form to reach out directly or send an email regarding venture development, collaborations, or the Check-In.
         </p>
-        <a href="/contact" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none;">
+        <a href="/contact" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; padding: var(--space-xs) var(--space-md); border-radius: 2px; font-size: 0.9375rem;">
           Go to Contact Page &rarr;
         </a>
       </div>
@@ -315,10 +322,8 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .col-12 { grid-column: span 12; }
-  
   .privacy-prose {
-    max-width: 720px;
+    max-width: 760px;
   }
   
   .privacy-section {
@@ -355,16 +360,11 @@ import Layout from '../layouts/Layout.astro';
   
   .warning-callout {
     background-color: var(--color-quiet-sand);
+    border: 1px solid var(--color-quiet-rule);
     border-left: 3px solid var(--color-strong-boundary);
     padding: var(--space-md);
     margin: var(--space-md) 0;
-  }
-  
-  @media (min-width: 768px) {
-    .md-col-9 { grid-column: span 9; }
-    .md-col-8 { grid-column: span 8; }
-    .md-col-6 { grid-column: span 6; }
-    .md-col-4 { grid-column: span 4; }
+    border-radius: 2px;
   }
   
   @media (max-width: 767px) {

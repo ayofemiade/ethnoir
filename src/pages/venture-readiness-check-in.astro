@@ -11,50 +11,55 @@ const isCheckInActive = true;
   description="How Ethnoir’s Check-In works, what it considers and how to use its result."
 >
   <!-- SECTION 1: OPENING AND ACCESS -->
-  <section class="bg-parchment" style="padding: var(--space-lg) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
+  <section class="bg-parchment" style="padding: var(--space-2xl) 0 var(--space-xl) 0; border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
       <div class="col-12" style="margin-bottom: var(--space-sm);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em;">Venture Readiness Check-In</span>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem;">
+          Venture Readiness Check-In
+        </span>
       </div>
       
-      <div class="col-12 md-col-9" style="margin-bottom: var(--space-lg);">
-        <h1 class="voice-1" style="font-size: clamp(2.5rem, 6vw, 4.25rem); margin: 0; line-height: 1.1; letter-spacing: -0.02em; color: var(--color-tidal-ink);">
+      <div class="col-12 lg-col-10" style="margin-bottom: var(--space-lg);">
+        <h1 class="voice-1" style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; line-height: 1.05; letter-spacing: -0.025em; color: var(--color-tidal-ink);">
           When several parts of your business need attention, where do you begin?
         </h1>
       </div>
       
-      <div class="col-12 grid-12">
-        <div class="col-12 md-col-6 padding-right-md" style="margin-bottom: var(--space-lg);">
-          <p class="voice-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--color-deep-teal); margin-bottom: var(--space-md);">
+      <div class="col-12 grid-12" style="margin: 0; padding-top: var(--space-md); border-top: 1px solid var(--color-strong-boundary);">
+        <!-- Left: Thesis Statement -->
+        <div class="col-12 md-col-7 padding-right-md" style="margin-bottom: var(--space-xl);">
+          <p class="voice-2" style="font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.45; color: var(--color-deep-teal); margin-bottom: var(--space-md); max-width: 640px;">
             The Venture Readiness Check-In is a short Ethnoir resource that helps you step back, look across several areas of your business and decide what to look at next.
           </p>
-          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.5; color: var(--color-tidal-ink); margin: 0;">
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; color: var(--color-tidal-ink); margin: 0; max-width: 640px;">
             It is designed to support your own judgment, not to give every business the same answer.
           </p>
         </div>
         
-        <div class="col-12 md-col-5 md-col-7-offset" style="border-left: 2px solid var(--color-quiet-rule); padding-left: var(--space-md);">
-          <!-- Practical details strip -->
-          <div class="voice-3" style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-deep-teal); font-weight: 600; margin-bottom: var(--space-xs);">
-            A short profile and business questions &middot; Result intended by email
-          </div>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5; margin-bottom: var(--space-sm);">
-            The form shows whether new requests are currently being accepted.
-          </p>
-          
-          <div style="display: flex; flex-direction: column; gap: var(--space-sm); align-items: flex-start; margin-top: var(--space-md);">
-            <a
-              href="https://tally.so/r/XxEDD4"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primary"
-              style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-block;"
-            >
-              Go to the Check-In form &rarr;
-            </a>
-            <a href="/contact?type=checkin-support" class="link-secondary voice-3" style="font-size: 0.875rem; color: var(--color-tidal-ink);">
-              Need help with an existing submission? &rarr;
-            </a>
+        <!-- Right: Tool Access Box -->
+        <div class="col-12 md-col-5">
+          <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); border-top: 3px solid var(--color-tidal-ink); padding: var(--space-xl); border-radius: 2px;">
+            <div class="voice-3" style="font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-deep-teal); font-weight: 600; margin-bottom: var(--space-xs);">
+              A short profile and business questions &middot; Result intended by email
+            </div>
+            <p class="voice-2" style="font-size: 0.9375rem; color: var(--color-deep-body-ink); line-height: 1.5; margin-bottom: var(--space-md);">
+              The form shows whether new requests are currently being accepted.
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: var(--space-sm); align-items: flex-start; padding-top: var(--space-xs);">
+              <a
+                href="https://tally.so/r/XxEDD4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+                style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: var(--space-sm) var(--space-md); border-radius: 2px; font-size: 1rem;"
+              >
+                Go to the Check-In form &rarr;
+              </a>
+              <a href="/contact?type=checkin-support" class="link-secondary voice-3" style="font-size: 0.875rem; color: var(--color-tidal-ink); text-decoration: none; padding-top: 4px;">
+                Need help with an existing submission? &rarr;
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -64,35 +69,41 @@ const isCheckInActive = true;
   <!-- SECTION 2: WHO IT IS FOR -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-bottom: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Audience</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Who it is for</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-md);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 4px;">
+          Audience
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          Who it is for
+        </h2>
       </div>
       
-      <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.25rem; margin-bottom: var(--space-md);">
-          The Check-In may be useful if you:
-        </p>
-        
-        <ul class="editorial-list voice-2" style="margin-bottom: var(--space-lg);">
-          <li>have started testing an idea with potential customers;</li>
-          <li>run a business;</li>
-          <li>are trying to decide which part of the business needs closer attention; or</li>
-          <li>feel pulled among customer, sales, operations, money or capacity concerns.</li>
-        </ul>
-        
-        <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-teal); margin-bottom: var(--space-xl); padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-quiet-rule);">
-          You do not need to be seeking funding, planning fast growth or applying to an Ethnoir program.
-        </p>
-        
-        <!-- Too early guidance callout -->
-        <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border-left: 2px solid var(--color-deep-teal);">
-          <h3 class="voice-1" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">
-            It may be too early if your idea is still untested.
-          </h3>
-          <p class="voice-2" style="font-size: 1rem; margin: 0; color: var(--color-deep-body-ink); line-height: 1.6;">
-            If you have not yet spoken with potential customers or gathered early evidence about the problem you want to address, exploring the problem and testing your assumptions may be a more useful place to begin.
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl));">
+          <p class="voice-2" style="font-size: 1.25rem; color: var(--color-deep-teal); margin-bottom: var(--space-md); font-weight: 500;">
+            The Check-In may be useful if you:
           </p>
+          
+          <ul class="editorial-list voice-2" style="margin-bottom: var(--space-lg);">
+            <li>have started testing an idea with potential customers;</li>
+            <li>run a business;</li>
+            <li>are trying to decide which part of the business needs closer attention; or</li>
+            <li>feel pulled among customer, sales, operations, money or capacity concerns.</li>
+          </ul>
+          
+          <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-teal); margin-bottom: var(--space-xl); padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-quiet-rule);">
+            You do not need to be seeking funding, planning fast growth or applying to an Ethnoir program.
+          </p>
+          
+          <!-- Too early guidance callout -->
+          <div style="background-color: var(--color-parchment); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-deep-teal); padding: var(--space-lg); border-radius: 2px;">
+            <h3 class="voice-1" style="font-size: 1.25rem; color: var(--color-tidal-ink); margin-bottom: var(--space-xs);">
+              It may be too early if your idea is still untested.
+            </h3>
+            <p class="voice-2" style="font-size: 1rem; margin: 0; color: var(--color-deep-body-ink); line-height: 1.6;">
+              If you have not yet spoken with potential customers or gathered early evidence about the problem you want to address, exploring the problem and testing your assumptions may be a more useful place to begin.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -101,39 +112,61 @@ const isCheckInActive = true;
   <!-- SECTION 3: WHAT IT CONSIDERS -->
   <section class="bg-parchment chapter chapter-large-spacing">
     <div class="container">
-      <div style="text-align: center; margin-bottom: var(--space-xl);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">What it considers</span>
-        <h2 class="voice-1" style="font-size: 2.25rem; color: var(--color-tidal-ink); margin: 0;">Six areas that can shape what makes sense next</h2>
+      <div style="text-align: center; margin-bottom: var(--space-xl); max-width: 720px; margin-left: auto; margin-right: auto;">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 4px;">
+          What it considers
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(2rem, 4vw, 2.75rem); color: var(--color-tidal-ink); margin: 0; line-height: 1.15;">
+          Six areas that can shape what makes sense next
+        </h2>
       </div>
       
-      <div class="grid-12">
-        <div class="col-12 md-col-6 padding-right-md area-item">
-          <h3 class="voice-1">Customer and market activity</h3>
-          <p class="voice-2">What evidence do you have that people experience the problem and are interested in what you offer?</p>
+      <div class="areas-grid">
+        <div class="area-card">
+          <div class="area-header">
+            <span class="area-num">01</span>
+            <h3 class="voice-1 area-title">Customer and market activity</h3>
+          </div>
+          <p class="voice-2 area-desc">What evidence do you have that people experience the problem and are interested in what you offer?</p>
         </div>
-        <div class="col-12 md-col-6 padding-left-md area-item">
-          <h3 class="voice-1">Revenue</h3>
-          <p class="voice-2">Is the business generating revenue, and how consistent is that activity?</p>
+        <div class="area-card">
+          <div class="area-header">
+            <span class="area-num">02</span>
+            <h3 class="voice-1 area-title">Revenue</h3>
+          </div>
+          <p class="voice-2 area-desc">Is the business generating revenue, and how consistent is that activity?</p>
         </div>
-        <div class="col-12 md-col-6 padding-right-md area-item">
-          <h3 class="voice-1">Operations</h3>
-          <p class="voice-2">How is the work delivered, organized and managed?</p>
+        <div class="area-card">
+          <div class="area-header">
+            <span class="area-num">03</span>
+            <h3 class="voice-1 area-title">Operations</h3>
+          </div>
+          <p class="voice-2 area-desc">How is the work delivered, organized and managed?</p>
         </div>
-        <div class="col-12 md-col-6 padding-left-md area-item">
-          <h3 class="voice-1">Financial visibility</h3>
-          <p class="voice-2">What can you currently see and understand about the business’s finances?</p>
+        <div class="area-card">
+          <div class="area-header">
+            <span class="area-num">04</span>
+            <h3 class="voice-1 area-title">Financial visibility</h3>
+          </div>
+          <p class="voice-2 area-desc">What can you currently see and understand about the business’s finances?</p>
         </div>
-        <div class="col-12 md-col-6 padding-right-md area-item" style="border-bottom: none;">
-          <h3 class="voice-1">Repeatability and stability</h3>
-          <p class="voice-2">How dependent is the business on informal or inconsistent ways of working?</p>
+        <div class="area-card">
+          <div class="area-header">
+            <span class="area-num">05</span>
+            <h3 class="voice-1 area-title">Repeatability and stability</h3>
+          </div>
+          <p class="voice-2 area-desc">How dependent is the business on informal or inconsistent ways of working?</p>
         </div>
-        <div class="col-12 md-col-6 padding-left-md area-item" style="border-bottom: none;">
-          <h3 class="voice-1">Your capacity to carry the work</h3>
-          <p class="voice-2">What can you reasonably manage alongside the demands already placed on you?</p>
+        <div class="area-card">
+          <div class="area-header">
+            <span class="area-num">06</span>
+            <h3 class="voice-1 area-title">Your capacity to carry the work</h3>
+          </div>
+          <p class="voice-2 area-desc">What can you reasonably manage alongside the demands already placed on you?</p>
         </div>
       </div>
       
-      <div style="max-width: 800px; margin: var(--space-lg) auto 0; padding-top: var(--space-md); border-top: 1px solid var(--color-quiet-rule); text-align: center;">
+      <div style="max-width: 800px; margin: var(--space-xl) auto 0; padding-top: var(--space-md); border-top: 1px solid var(--color-quiet-rule); text-align: center;">
         <p class="voice-2" style="font-size: 1rem; color: var(--color-muted-slate); margin: 0; line-height: 1.6;">
           These areas do not cover everything that could matter. They give a structured view of several conditions that may be relevant to your next decision.
         </p>
@@ -144,20 +177,26 @@ const isCheckInActive = true;
   <!-- SECTION 4: WHAT YOU RECEIVE -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Deliverable</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">What you receive</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-md);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 4px;">
+          Deliverable
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          What you receive
+        </h2>
       </div>
       
-      <div class="col-12 md-col-8">
-        <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-lg); color: var(--color-tidal-ink);">
-          Your result includes your stage under the current Check-In model, an explanation of your score, observations based on your answers and a suggested practical next step. The score summarizes self-reported answers; it is not a percentage, grade, funding probability or independently verified assessment. Compare the guidance with what you know about your business.
-        </p>
-        
-        <div style="background-color: var(--color-parchment); padding: var(--space-md); border-left: 2px solid var(--color-deep-teal);">
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin: 0; line-height: 1.6;">
-            The result is based on self-reported answers. Combine it with your knowledge of the business, its direction and its circumstances. It does not establish a verified root cause, and you may decide another issue deserves attention first.
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl));">
+          <p class="voice-2" style="font-size: 1.1875rem; line-height: 1.65; margin-bottom: var(--space-lg); color: var(--color-tidal-ink);">
+            Your result includes your stage under the current Check-In model, an explanation of your score, observations based on your answers and a suggested practical next step. The score summarizes self-reported answers; it is not a percentage, grade, funding probability or independently verified assessment. Compare the guidance with what you know about your business.
           </p>
+          
+          <div style="background-color: var(--color-parchment); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-deep-teal); padding: var(--space-md); border-radius: 2px;">
+            <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); margin: 0; line-height: 1.6;">
+              The result is based on self-reported answers. Combine it with your knowledge of the business, its direction and its circumstances. It does not establish a verified root cause, and you may decide another issue deserves attention first.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -167,26 +206,34 @@ const isCheckInActive = true;
   <section class="bg-quiet-sand chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container">
       <div style="text-align: center; margin-bottom: var(--space-xl);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Applications</span>
-        <h2 class="voice-1" style="font-size: 2.25rem; color: var(--color-tidal-ink); margin: 0;">How this approach may be used</h2>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 4px;">
+          Applications
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(2rem, 4vw, 2.75rem); color: var(--color-tidal-ink); margin: 0;">
+          How this approach may be used
+        </h2>
       </div>
       
       <div class="grid-12">
         <div class="col-12 md-col-6 padding-right-md border-right-md" style="margin-bottom: var(--space-lg);">
-          <h3 class="voice-1" style="font-size: 1.375rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">
-            For founders and business owners
-          </h3>
-          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.6; color: var(--color-deep-body-ink); margin: 0;">
-            Use the result to organize questions, identify an area to investigate or prepare for a conversation with an adviser. It is a starting point for judgment, not a final decision.
-          </p>
+          <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-xl); height: 100%; border-radius: 2px;">
+            <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm); line-height: 1.2;">
+              For founders and business owners
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin: 0;">
+              Use the result to organize questions, identify an area to investigate or prepare for a conversation with an adviser. It is a starting point for judgment, not a final decision.
+            </p>
+          </div>
         </div>
-        <div class="col-12 md-col-6 padding-left-md">
-          <h3 class="voice-1" style="font-size: 1.375rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm);">
-            For organizations
-          </h3>
-          <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.6; color: var(--color-deep-body-ink); margin: 0;">
-            A proposed institutional application is being developed. It has not been tested with a partner organization, and any use of founder-level information would need consent, privacy and data-governance design.
-          </p>
+        <div class="col-12 md-col-6 padding-left-md" style="margin-bottom: var(--space-lg);">
+          <div style="background-color: var(--color-porcelain); border: 1px solid var(--color-quiet-rule); padding: var(--space-xl); height: 100%; border-radius: 2px;">
+            <h3 class="voice-1" style="font-size: 1.5rem; color: var(--color-tidal-ink); margin-bottom: var(--space-sm); line-height: 1.2;">
+              For organizations
+            </h3>
+            <p class="voice-2" style="font-size: 1.0625rem; line-height: 1.65; color: var(--color-deep-body-ink); margin: 0;">
+              A proposed institutional application is being developed. It has not been tested with a partner organization, and any use of founder-level information would need consent, privacy and data-governance design.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -195,23 +242,31 @@ const isCheckInActive = true;
   <!-- SECTION 6: WHAT THE CHECK-IN DOES NOT DO -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Boundaries</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">What the Check-In does not do</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-md);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 4px;">
+          Boundaries
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          What the Check-In does not do
+        </h2>
       </div>
       
-      <div class="col-12 md-col-8">
-        <ul class="editorial-list voice-2" style="margin-bottom: var(--space-lg);">
-          <li>It is not a funding or program-eligibility decision.</li>
-          <li>It is not a definitive business diagnosis.</li>
-          <li>It is not legal, financial, tax or other specialist advice.</li>
-          <li>It is not a guarantee of the correct next step.</li>
-          <li>It is not a grade or judgment about your potential.</li>
-        </ul>
-        
-        <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-teal); margin: 0; line-height: 1.5;">
-          It offers general guidance based on a limited set of responses at a particular point in time.
-        </p>
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl));">
+          <ul class="editorial-list voice-2" style="margin-bottom: var(--space-lg);">
+            <li>It is not a funding or program-eligibility decision.</li>
+            <li>It is not a definitive business diagnosis.</li>
+            <li>It is not legal, financial, tax or other specialist advice.</li>
+            <li>It is not a guarantee of the correct next step.</li>
+            <li>It is not a grade or judgment about your potential.</li>
+          </ul>
+          
+          <div style="background-color: var(--color-parchment); border: 1px solid var(--color-quiet-rule); padding: var(--space-md); border-radius: 2px;">
+            <p class="voice-2" style="font-size: 1.125rem; color: var(--color-deep-teal); margin: 0; line-height: 1.5; font-weight: 500;">
+              It offers general guidance based on a limited set of responses at a particular point in time.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -220,36 +275,46 @@ const isCheckInActive = true;
   <section class="bg-parchment chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container">
       <div style="text-align: center; margin-bottom: var(--space-xl);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Time and process</span>
-        <h2 class="voice-1" style="font-size: 2.25rem; color: var(--color-tidal-ink); margin: 0;">What to expect</h2>
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 4px;">
+          Time and process
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(2rem, 4vw, 2.75rem); color: var(--color-tidal-ink); margin: 0;">
+          What to expect
+        </h2>
       </div>
       
-      <div class="grid-12">
-        <div class="col-12 md-col-4 process-step">
-          <div class="step-number voice-1">1</div>
-          <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Complete a short profile</h3>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5;">
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="step-num">01</div>
+          <h3 class="voice-1" style="font-size: 1.35rem; margin-bottom: var(--space-xs); color: var(--color-tidal-ink); line-height: 1.25;">
+            Complete a short profile
+          </h3>
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.6; margin: 0;">
             Provide basic contact and business-context information so the Check-In can process and deliver your result.
           </p>
         </div>
-        <div class="col-12 md-col-4 process-step">
-          <div class="step-number voice-1">2</div>
-          <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Answer the business questions</h3>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5;">
+        <div class="process-card">
+          <div class="step-num">02</div>
+          <h3 class="voice-1" style="font-size: 1.35rem; margin-bottom: var(--space-xs); color: var(--color-tidal-ink); line-height: 1.25;">
+            Answer the business questions
+          </h3>
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.6; margin: 0;">
             Answer based on what is true in the business today, not only what you intend or expect.
           </p>
         </div>
-        <div class="col-12 md-col-4 process-step" style="border-right: none;">
-          <div class="step-number voice-1">3</div>
-          <h3 class="voice-1" style="font-size: 1.25rem; margin-bottom: var(--space-sm);">Request your result by email</h3>
-          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.5;">
+        <div class="process-card">
+          <div class="step-num">03</div>
+          <h3 class="voice-1" style="font-size: 1.35rem; margin-bottom: var(--space-xs); color: var(--color-tidal-ink); line-height: 1.25;">
+            Request your result by email
+          </h3>
+          <p class="voice-2" style="font-size: 1rem; color: var(--color-deep-body-ink); line-height: 1.6; margin: 0;">
             When the Check-In is accepting submissions, submitting the form requests your readiness-stage explanation and general guidance. Occasional updates are optional.
           </p>
         </div>
       </div>
       
       <div style="text-align: center; margin-top: var(--space-xl); padding-top: var(--space-md); border-top: 1px solid var(--color-quiet-rule);">
-        <p class="voice-2" style="font-size: 1.125rem; color: var(--color-tidal-ink); margin: 0;">
+        <p class="voice-2" style="font-size: 1.125rem; color: var(--color-tidal-ink); margin: 0; font-weight: 500;">
           You will not be asked to upload financial statements or supporting documents.
         </p>
       </div>
@@ -259,24 +324,28 @@ const isCheckInActive = true;
   <!-- SECTION 8: PRIVACY AND DATA -->
   <section class="bg-porcelain chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Data governance</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Privacy and data</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-md);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 4px;">
+          Data governance
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          Privacy and data
+        </h2>
       </div>
       
-      <div class="col-12 md-col-8">
-        <div style="max-width: 680px;">
-          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-md); color: var(--color-deep-body-ink);">
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl)); max-width: 720px;">
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.65; margin-bottom: var(--space-md); color: var(--color-deep-body-ink);">
             The Check-In collects your contact details, answers and the business context requested by the form. Ethnoir uses Tally, Airtable, Make and MailerLite to process submissions, generate and deliver results, retain operational delivery records and provide support. Occasional updates use a separate optional checkbox; leaving it unchecked does not prevent an eligible new result request from being delivered.
           </p>
           
-          <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border-left: 2px solid var(--color-deep-teal); margin-bottom: var(--space-lg);">
-            <p class="voice-2" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 500; margin: 0; line-height: 1.5;">
+          <div style="background-color: var(--color-quiet-sand); padding: var(--space-md); border: 1px solid var(--color-quiet-rule); border-left: 3px solid var(--color-deep-teal); margin-bottom: var(--space-lg); border-radius: 2px;">
+            <p class="voice-2" style="font-size: 1rem; color: var(--color-tidal-ink); font-weight: 500; margin: 0; line-height: 1.55;">
               Do not submit Social Security numbers, bank-account or payment-card information, passwords, health information or other sensitive personal information through the Check-In.
             </p>
           </div>
           
-          <a href="/privacy" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink);">
+          <a href="/privacy" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink); text-decoration: none; font-weight: 600;">
             Read the Ethnoir Privacy Notice &rarr;
           </a>
         </div>
@@ -287,18 +356,22 @@ const isCheckInActive = true;
   <!-- SECTION 9: SUPPORT -->
   <section class="bg-parchment chapter chapter-large-spacing" style="border-top: 1px solid var(--color-strong-boundary);">
     <div class="container grid-12">
-      <div class="col-12 md-col-4" style="margin-bottom: var(--space-md);">
-        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">Assistance</span>
-        <h2 class="voice-1" style="font-size: 2rem; color: var(--color-tidal-ink); line-height: 1.1;">Support</h2>
+      <div class="col-12 md-col-4 lg-col-3" style="margin-bottom: var(--space-md);">
+        <span class="voice-3" style="color: var(--color-muted-slate); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8125rem; display: block; margin-bottom: 4px;">
+          Assistance
+        </span>
+        <h2 class="voice-1" style="font-size: clamp(1.85rem, 3.5vw, 2.5rem); color: var(--color-tidal-ink); line-height: 1.15; margin: 0;">
+          Support
+        </h2>
       </div>
       
-      <div class="col-12 md-col-8">
-        <div style="max-width: 680px;">
-          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-md); color: var(--color-deep-body-ink);">
+      <div class="col-12 md-col-8 lg-col-9">
+        <div style="border-left: 1px solid var(--color-strong-boundary); padding-left: clamp(var(--space-md), 3vw, var(--space-xl)); max-width: 720px;">
+          <p class="voice-2" style="font-size: 1.125rem; line-height: 1.65; margin-bottom: var(--space-lg); color: var(--color-deep-body-ink);">
             Need help with your result? Check promotions, updates and spam. If it does not arrive, you previously unsubscribed from Ethnoir emails, or something appears incorrect, contact <a href="mailto:omichael@ethnoirconsulting.com" style="color: var(--color-tidal-ink); text-decoration: underline;">omichael@ethnoirconsulting.com</a> and include the email used. Do not send passwords, financial records or other sensitive information.
           </p>
           
-          <a href="/contact?type=checkin-support" class="link-secondary voice-3" style="font-size: 1rem; color: var(--color-tidal-ink);">
+          <a href="/contact?type=checkin-support" class="btn-primary" style="background-color: var(--color-tidal-ink); color: var(--color-porcelain); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: var(--space-xs) var(--space-md); border-radius: 2px;">
             Contact Ethnoir Support &rarr;
           </a>
         </div>
@@ -309,49 +382,44 @@ const isCheckInActive = true;
   <!-- SECTION 10: CLOSING BLOCK -->
   <section class="bg-tidal-ink chapter chapter-large-spacing">
     <div class="container">
-      <div style="text-align: center; max-width: 720px; margin: 0 auto;">
-        <div>
-          <h2 class="voice-1" style="font-size: clamp(2rem, 5vw, 2.75rem); color: var(--color-porcelain); margin-bottom: var(--space-sm);">
-            Using the Check-In
-          </h2>
-          <p class="voice-2" style="font-size: 1.25rem; color: var(--color-parchment); margin-bottom: var(--space-lg); line-height: 1.5;">
-            Step back, consider what is happening in your business and choose a practical starting point. You can use the guidance whether or not you join an Ethnoir program.
-          </p>
-          <div style="display: flex; flex-direction: column; sm-flex-direction: row; justify-content: center; align-items: center; gap: var(--space-md); flex-wrap: wrap;">
-            <a
-              href="https://tally.so/r/XxEDD4"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primary"
-              style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none;"
-            >
-              Go to the Check-In form &rarr;
-            </a>
-            <a
-              href="/contact?type=checkin-support"
-              class="link-secondary voice-3"
-              style="color: var(--color-parchment); text-decoration: none;"
-            >
-              Need help with an existing submission? &rarr;
-            </a>
-            <a
-              href="/our-work"
-              class="link-secondary voice-3"
-              style="color: var(--color-parchment); text-decoration: none;"
-            >
-              View Our Work &rarr;
-            </a>
-          </div>
+      <div style="text-align: center; max-width: 760px; margin: 0 auto;">
+        <h2 class="voice-1" style="font-size: clamp(2.25rem, 4.5vw, 3.5rem); color: var(--color-porcelain); margin-bottom: var(--space-sm); letter-spacing: -0.02em;">
+          Using the Check-In
+        </h2>
+        <p class="voice-2" style="font-size: clamp(1.15rem, 2vw, 1.35rem); color: var(--color-parchment); margin-bottom: var(--space-xl); line-height: 1.5; font-weight: 400;">
+          Step back, consider what is happening in your business and choose a practical starting point. You can use the guidance whether or not you join an Ethnoir program.
+        </p>
+        <div style="display: flex; justify-content: center; align-items: center; gap: var(--space-md); flex-wrap: wrap;">
+          <a
+            href="https://tally.so/r/XxEDD4"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+            style="background-color: var(--color-porcelain); color: var(--color-tidal-ink); text-decoration: none; padding: var(--space-sm) var(--space-xl); border-radius: 2px; font-weight: 600;"
+          >
+            Go to the Check-In form &rarr;
+          </a>
+          <a
+            href="/contact?type=checkin-support"
+            class="voice-3"
+            style="color: var(--color-parchment); text-decoration: none; padding: var(--space-sm) var(--space-md); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 2px;"
+          >
+            Need help with an existing submission? &rarr;
+          </a>
+          <a
+            href="/our-work"
+            class="voice-3"
+            style="color: var(--color-parchment); text-decoration: none; padding: var(--space-sm) var(--space-md); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 2px;"
+          >
+            View Our Work &rarr;
+          </a>
         </div>
       </div>
     </div>
   </section>
-
 </Layout>
 
 <style>
-  .col-12 { grid-column: span 12; }
-  
   .editorial-list {
     list-style: none;
     padding: 0;
@@ -365,69 +433,91 @@ const isCheckInActive = true;
     color: var(--color-tidal-ink);
     line-height: 1.5;
   }
-  
-  .area-item {
-    margin-bottom: var(--space-lg);
-    border-bottom: 1px solid var(--color-quiet-rule);
-    padding-bottom: var(--space-md);
+
+  /* Areas 6-card Grid */
+  .areas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
-  .area-item h3 {
+  @media (min-width: 640px) {
+    .areas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .areas-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+
+  .area-card {
+    background-color: var(--color-porcelain);
+    border: 1px solid var(--color-quiet-rule);
+    padding: var(--space-lg);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .area-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-xs);
+  }
+  .area-num {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-deep-teal);
+    font-family: var(--font-body);
+    letter-spacing: 0.05em;
+  }
+  .area-title {
     font-size: 1.25rem;
     color: var(--color-tidal-ink);
-    margin-bottom: 6px;
+    margin: 0;
+    line-height: 1.25;
   }
-  .area-item p {
-    font-size: 1rem;
+  .area-desc {
+    font-size: 0.9375rem;
     color: var(--color-deep-body-ink);
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.55;
   }
-  
-  .process-step {
-    padding: var(--space-md);
+
+  /* Process Cards Grid */
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
-  .step-number {
-    font-size: 3rem;
+  @media (min-width: 768px) {
+    .process-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+  }
+
+  .process-card {
+    background-color: var(--color-porcelain);
+    border: 1px solid var(--color-quiet-rule);
+    border-top: 3px solid var(--color-tidal-ink);
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: 2px;
+  }
+  .step-num {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
     color: var(--color-muted-slate);
     line-height: 1;
     margin-bottom: var(--space-sm);
   }
-  
+
   @media (min-width: 768px) {
-    .md-col-9 { grid-column: span 9; }
-    .md-col-8 { grid-column: span 8; }
-    .md-col-4 { grid-column: span 4; }
-    .md-col-6 { grid-column: span 6; }
-    .md-col-5 { grid-column: span 5; }
-    .md-col-7-offset { grid-column: 8 / span 5; }
-    
     .border-right-md { border-right: 1px solid var(--color-quiet-rule); }
     .padding-right-md { padding-right: var(--space-lg); }
     .padding-left-md { padding-left: var(--space-lg); }
-    
-    .process-step {
-      border-right: 1px solid var(--color-quiet-rule);
-    }
-  }
-  
-  @media (max-width: 767px) {
-    .md-col-7-offset {
-      border-left: none !important;
-      padding-left: 0 !important;
-      border-top: 2px solid var(--color-quiet-rule);
-      padding-top: var(--space-md);
-    }
-    .area-item {
-      border-bottom: 1px solid var(--color-quiet-rule) !important;
-    }
-    .area-item:last-child {
-      border-bottom: none !important;
-    }
-    .process-step {
-      border-bottom: 1px solid var(--color-quiet-rule);
-    }
-    .process-step:last-child {
-      border-bottom: none;
-    }
   }
 </style>
