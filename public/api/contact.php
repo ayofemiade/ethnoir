@@ -80,8 +80,10 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // Validate Categories
 $allowedCategories = [
     'Organization inquiry: a program or support challenge',
+    'Organization inquiry',
     'Institutional or venture-development challenge',
     'Collaboration or referral',
+    'Workshop, training or speaking',
     'Venture Readiness Check-In support',
     'General inquiry'
 ];
@@ -93,7 +95,12 @@ if (!in_array($inquiryType, $allowedCategories)) {
 }
 
 // Conditional Validation
-if ($inquiryType === 'Organization inquiry: a program or support challenge' || $inquiryType === 'Institutional or venture-development challenge') {
+if (
+    $inquiryType === 'Organization inquiry' || 
+    $inquiryType === 'Organization inquiry: a program or support challenge' || 
+    $inquiryType === 'Institutional or venture-development challenge' ||
+    $inquiryType === 'Workshop, training or speaking'
+) {
     if (empty($organization) || empty($role)) {
         http_response_code(400);
         echo json_encode(['success' => false, 'message' => 'Please provide your organization name and your role.']);
