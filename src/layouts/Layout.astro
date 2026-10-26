@@ -119,27 +119,21 @@ const canonicalURL = canonical || new URL(currentPath, Astro.site || 'https://et
         <nav class="drawer-nav">
           <a href="/" class={`drawer-link ${currentPath === '/' ? 'active' : ''}`}>
             <span class="drawer-link-title">Home</span>
-            <span class="drawer-link-desc">Overview & Focus</span>
           </a>
           <a href="/about" class={`drawer-link ${currentPath === '/about' ? 'active' : ''}`}>
             <span class="drawer-link-title">About</span>
-            <span class="drawer-link-desc">Background, Lead & Values</span>
           </a>
           <a href="/for-organizations" class={`drawer-link ${currentPath === '/for-organizations' ? 'active' : ''}`}>
             <span class="drawer-link-title">For Organizations</span>
-            <span class="drawer-link-desc">Program Advisory & Support</span>
           </a>
           <a href="/our-work" class={`drawer-link ${currentPath.startsWith('/our-work') ? 'active' : ''}`}>
             <span class="drawer-link-title">Our Work</span>
-            <span class="drawer-link-desc">Past Initiatives & Delivery</span>
           </a>
           <a href="/venture-readiness-check-in" class={`drawer-link ${currentPath === '/venture-readiness-check-in' ? 'active' : ''}`}>
             <span class="drawer-link-title">Venture Readiness Check-In</span>
-            <span class="drawer-link-desc">Self-Assessment for Founders</span>
           </a>
           <a href="/contact" class={`drawer-link ${currentPath === '/contact' ? 'active' : ''}`}>
             <span class="drawer-link-title">Contact</span>
-            <span class="drawer-link-desc">Inquiries & Discussions</span>
           </a>
         </nav>
 
