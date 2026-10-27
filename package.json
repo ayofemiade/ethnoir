@@ -15,7 +15,7 @@
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
     "typecheck": "tsc --noEmit",
-    "bundle:hostinger": "astro build && powershell -Command \"Compress-Archive -Path dist/* -DestinationPath hostinger-deploy.zip -Force\""
+    "bundle:hostinger": "astro build && python scripts/package-hostinger.py"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
